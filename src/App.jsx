@@ -4,8 +4,11 @@ import Navbar from './components/Navbar.jsx'
 import Footer from './components/Footer.jsx'
 import Home from './pages/Home.jsx'
 import Service from './pages/Service.jsx'
-import { CaseStudies, Blog, Team, Terms } from './pages/Pages.jsx'
 import Contact from './pages/Contact.jsx'
+import CaseStudies from "./pages/CaseStudies.jsx";
+import Blog from "./pages/Blog.jsx";
+import Team from "./pages/Team.jsx";
+import TermsCondition from "./pages/TermsCondition.jsx";
 
 export default function App() {
   const { pathname } = useLocation()
@@ -21,7 +24,7 @@ export default function App() {
           <Route path="/blog" element={<Blog />} />
           <Route path="/team" element={<Team />} />
           <Route path="/reach-us" element={<Contact />} />
-          <Route path="/terms" element={<Terms />} />
+          <Route path="/termsCondition" element={TermsCondition} />
         </Routes>
       </main>
       <Footer />
