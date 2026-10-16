@@ -1,95 +1,429 @@
-import { Link } from 'react-router-dom'
-import { cases } from '../data.js'
 
-const logos = ['Acme Retail', 'Northwind', 'Globex', 'Initech', 'Umbrella Co', 'Stark Logistics', 'Wayne Edu', 'Hooli']
-const how = [
-  ['Capture', 'AI agents collect leads from your website, WhatsApp and email.'],
-  ['Qualify', 'Each lead is scored and routed to the right person.'],
-  ['Follow up', 'Agents send replies and reminders, so no lead goes cold.'],
-  ['Report', 'Live dashboards show pipeline, revenue and team activity.'],
-]
-const steps = ['Click on the Reach Us Out button', 'Fill the form', 'Our team will get back to you']
+import { Link } from "react-router-dom";
 
-function Dashboard() {
-  const bars = [40, 65, 50, 80, 60, 90, 75]
+import {
+  ArrowRight,
+  ArrowUpRight,
+  Check,
+  Sparkles,
+} from "lucide-react";
+
+import CRMPreview from "../components/CRMPreview.jsx";
+import CompamyLogosSection from "../components/CompanyLogosSection.jsx";
+
+import { cases } from "../data.js";
+
+/* =========================
+   PAGE DATA
+========================= */
+
+const workflow = [
+  {
+    number: "01",
+    title: "Capture every lead",
+    description:
+      "Bring website enquiries, emails, and prospects into one organised workspace.",
+  },
+  {
+    number: "02",
+    title: "Qualify with AI",
+    description:
+      "Prioritise opportunities using intelligent lead scoring and smart routing.",
+  },
+  {
+    number: "03",
+    title: "Follow up on time",
+    description:
+      "Automate reminders and follow-ups to keep customer conversations moving.",
+  },
+  {
+    number: "04",
+    title: "Track your progress",
+    description:
+      "Monitor pipeline performance, team activity, and business outcomes.",
+  },
+];
+
+const audiences = [
+  "Sales teams",
+  "Customer success",
+  "Lead generation",
+  "Operations",
+  "Growing businesses",
+  "Service teams",
+];
+
+const contactSteps = [
+  "Tell us about your team and workflow.",
+  "Discuss a CRM setup that fits your goals.",
+  "Plan your next steps with the CoreD team.",
+];
+
+/* =========================
+   FLOATING LABEL
+========================= */
+
+function FloatingLabel({
+  children,
+  className = "",
+  dotClassName = "bg-amber-400 ring-amber-400/20",
+}) {
   return (
-    <div className="mx-auto mt-14 max-w-4xl rounded-3xl bg-ink p-4 shadow-2xl ring-1 ring-black/10">
-      <div className="grid gap-3 md:grid-cols-4 text-white">
-        {[['New leads', '1,284'], ['Qualified', '612'], ['Won deals', '148'], ['Revenue', '₹24.6L']].map(([a, b]) => (
-          <div key={a} className="rounded-2xl bg-white/5 p-4"><p className="text-xs text-white/60">{a}</p><p className="text-2xl font-extrabold">{b}</p></div>
-        ))}
-      </div>
-      <div className="mt-3 grid gap-3 md:grid-cols-3">
-        <div className="md:col-span-2 flex h-40 items-end gap-3 rounded-2xl bg-white/5 p-4">
-          {bars.map((h, i) => <div key={i} className="flex-1 rounded-t bg-brand" style={{ height: `${h}%` }} />)}
-        </div>
-        <div className="rounded-2xl bg-white/5 p-4 text-sm text-white/80 space-y-2">
-          <p className="font-semibold text-white">AI agent activity</p>
-          <p>Replied to 32 leads</p><p>Booked 6 demos</p><p>Updated 90 records</p>
-        </div>
-      </div>
+    <div
+      className={`pointer-events-none absolute z-20 hidden items-center gap-2 rounded-full border border-white/10 bg-[#111113]/95 px-3.5 py-2 text-[11px] font-semibold text-zinc-200 shadow-lg backdrop-blur-md lg:flex ${className}`}
+    >
+      <span
+        className={`h-2 w-2 shrink-0 rounded-full ring-4 ${dotClassName}`}
+      />
+      {children}
     </div>
-  )
+  );
 }
 
-export default function Home() {
+/* =========================
+   REUSABLE SECTION HEADING
+========================= */
+
+function SectionHeading({
+  eyebrow,
+  title,
+  description,
+  align = "center",
+}) {
+  const centered = align === "center";
+
   return (
-    <>
-      <section className="mx-auto max-w-6xl px-6 pt-10 text-center">
-        <h1 className="text-5xl md:text-7xl font-black leading-[1.05] tracking-tight">
-          Your CRM, run by <span className="text-brand-deep">AI agents</span>
+    <div
+      className={`max-w-3xl ${
+        centered ? "mx-auto text-center" : "text-left"
+      }`}
+    >
+      {eyebrow && (
+        <p className="mb-3 text-xs font-bold uppercase tracking-[0.18em] text-orange-600">
+          {eyebrow}
+        </p>
+      )}
+
+      <h2 className="text-3xl font-black leading-tight tracking-tight text-slate-950 sm:text-4xl lg:text-5xl">
+        {title}
+      </h2>
+
+      {description && (
+        <p className="mt-4 text-sm leading-7 text-slate-600 sm:text-base sm:leading-8">
+          {description}
+        </p>
+      )}
+    </div>
+  );
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+
+function HeroSection() {
+  return (
+    <section className="relative isolate overflow-hidden border-b border-white/10 bg-[#070707] text-white">
+      {/* Technical grid background */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 -z-10 opacity-40 [background-image:linear-gradient(rgba(255,255,255,0.035)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.035)_1px,transparent_1px)] [background-size:56px_56px] [mask-image:linear-gradient(to_bottom,black,transparent_90%)]"
+      />
+
+      {/* Subtle orange glow */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute left-1/2 top-[-220px] -z-10 h-[480px] w-[min(800px,100vw)] -translate-x-1/2 rounded-full bg-orange-500/[0.08] blur-[130px]"
+      />
+
+      {/* Hero content */}
+      <div className="mx-auto max-w-7xl px-4 pt-16 text-center sm:px-6 sm:pt-20 lg:px-8 lg:pt-24">
+        {/* Brand badge */}
+        <div className="mx-auto inline-flex items-center gap-2.5 rounded-full border border-white/10 bg-white/[0.045] px-4 py-2 text-[10px] font-bold uppercase tracking-[0.18em] text-zinc-300 sm:text-xs">
+          <span className="relative flex h-2 w-2">
+            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-amber-400 opacity-60" />
+            <span className="relative h-2 w-2 rounded-full bg-amber-400" />
+          </span>
+
+          CoreD · AI Agent-Based CRM
+        </div>
+
+        {/* Main heading */}
+        <h1 className="mx-auto mt-8 max-w-5xl text-[clamp(2.8rem,7.5vw,6.8rem)] font-black leading-[0.98] tracking-[-0.065em] text-white">
+          Your business.
+          <span className="mt-2 block bg-gradient-to-r from-amber-300 via-orange-400 to-amber-500 bg-clip-text pb-2 text-transparent">
+            Powered by AI.
+          </span>
         </h1>
-        <p className="mx-auto mt-6 max-w-2xl text-lg text-ink/70">CoreD is the CRM platform from CoreDhristi. Agents capture, qualify and follow up on leads while your team closes deals.</p>
-        <div className="mt-8 flex justify-center gap-3">
-          <Link to="/reach-us" className="rounded-full bg-ink px-7 py-3 font-bold text-white hover:bg-black">Reach Us Out</Link>
-          <Link to="/case-studies" className="rounded-full border border-ink/20 bg-white px-7 py-3 font-bold hover:border-ink">Read Case Studies</Link>
-        </div>
-        <Dashboard />
-      </section>
 
-      <section className="mt-20 overflow-hidden">
-        <p className="text-center text-sm font-semibold text-ink/60">Company dashboards designed by CoreDhristi</p>
-        <div className="mt-5 flex w-max marquee gap-4">
-          {[...logos, ...logos].map((l, i) => <span key={i} className="rounded-full border border-ink/15 bg-white px-8 py-3 font-extrabold text-ink/50">{l}</span>)}
-        </div>
-      </section>
+        {/* Description */}
+        <p className="mx-auto mt-7 max-w-2xl text-sm leading-7 text-zinc-400 sm:text-base sm:leading-8 lg:text-lg">
+          Meet CoreD — the intelligent CRM that helps your team
+          capture leads, automate follow-ups, and build stronger
+          customer relationships with AI agents.
+        </p>
 
-      <section className="mx-auto mt-24 max-w-6xl px-6">
-        <h2 className="text-3xl md:text-4xl font-extrabold">How an AI agent based CRM works</h2>
-        <div className="mt-8 grid gap-4 md:grid-cols-4">
-          {how.map(([t, d], i) => (
-            <div key={t} className="rounded-3xl border border-ink/10 bg-white p-6">
-              <span className="grid h-9 w-9 place-items-center rounded-full bg-brand font-extrabold">{i + 1}</span>
-              <h3 className="mt-4 text-lg font-bold">{t}</h3><p className="mt-2 text-sm text-ink/70">{d}</p>
-            </div>
+        {/* Action buttons */}
+        <div className="mt-8 flex flex-col justify-center gap-3 min-[420px]:flex-row">
+          <Link
+            to="/reach-us"
+            className="group inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-amber-400 px-7 py-3 text-sm font-extrabold text-black transition duration-300 hover:-translate-y-0.5 hover:bg-amber-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 focus-visible:ring-offset-2 focus-visible:ring-offset-[#070707]"
+          >
+            Start a conversation
+            <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+          </Link>
+
+          <Link
+            to="/case-studies"
+            className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full border border-white/15 bg-white/[0.035] px-7 py-3 text-sm font-semibold text-white transition duration-300 hover:border-white/30 hover:bg-white/[0.08] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/30"
+          >
+            Explore our work
+            <ArrowUpRight className="h-4 w-4" />
+          </Link>
+        </div>
+
+        {/* Dashboard image area */}
+        <div className="relative mx-auto mt-14 max-w-[1200px] sm:mt-16 lg:mt-20">
+          {/* Floating labels */}
+          <FloatingLabel className="left-[2%] top-[16%]">
+            AI lead scoring
+          </FloatingLabel>
+
+          <FloatingLabel
+            dotClassName="bg-sky-400 ring-sky-400/20"
+            className="right-[3%] top-[16%]"
+          >
+            Smart follow-ups
+          </FloatingLabel>
+
+          <FloatingLabel
+            dotClassName="bg-amber-400 ring-amber-400/20"
+            className="-left-[1%] top-[55%]"
+          >
+            Sales pipeline
+          </FloatingLabel>
+
+          <FloatingLabel
+            dotClassName="bg-emerald-400 ring-emerald-400/20"
+            className="-right-[1%] top-[55%]"
+          >
+            Team insights
+          </FloatingLabel>
+
+          {/* Responsive cropped image frame */}
+          <div className="relative h-[250px] overflow-hidden rounded-t-2xl border border-white/15 border-b-0 bg-black sm:h-[340px] sm:rounded-t-3xl md:h-[410px] lg:h-[490px]">
+            <CRMPreview />
+          </div>
+        </div>
+      </div>
+
+      {/* Thin orange accent */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-amber-400/50 to-transparent"
+      />
+    </section>
+  );
+}
+
+
+
+/* =========================
+   WORKFLOW SECTION
+========================= */
+
+function WorkflowSection() {
+  return (
+    <section className="bg-[#fbfaff] px-4 py-20 sm:px-6 sm:py-24 lg:px-8 lg:py-28">
+      <div className="mx-auto max-w-7xl">
+        <SectionHeading
+          eyebrow="How it works"
+          title="From first touch to closed deal."
+          description="Give your team a clearer process while AI agents handle repetitive steps and keep important work moving."
+        />
+
+        <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:mt-14 lg:grid-cols-4">
+          {workflow.map((item) => (
+            <article
+              key={item.number}
+              className="group rounded-3xl border border-violet-100/90 bg-white p-6 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-violet-200 hover:shadow-xl sm:p-7"
+            >
+              <div className="flex items-center justify-between">
+                <span className="grid h-11 w-11 place-items-center rounded-2xl bg-violet-50 text-violet-700 transition-colors group-hover:bg-violet-600 group-hover:text-white">
+                  {item.number === "01" && (
+                    <span className="text-sm font-black">01</span>
+                  )}
+
+                  {item.number === "02" && (
+                    <Sparkles className="h-5 w-5" />
+                  )}
+
+                  {item.number === "03" && (
+                    <ArrowRight className="h-5 w-5" />
+                  )}
+
+                  {item.number === "04" && (
+                    <Check className="h-5 w-5" />
+                  )}
+                </span>
+
+                <span className="text-xs font-bold tracking-widest text-slate-300">
+                  {item.number}
+                </span>
+              </div>
+
+              <h3 className="mt-6 text-lg font-extrabold tracking-tight text-slate-900">
+                {item.title}
+              </h3>
+
+              <p className="mt-3 text-sm leading-6 text-slate-600">
+                {item.description}
+              </p>
+            </article>
           ))}
         </div>
-      </section>
+      </div>
+    </section>
+  );
+}
 
-      <section className="mx-auto mt-24 max-w-6xl px-6">
-        <div className="rounded-3xl bg-ink p-8 md:p-12 text-white">
-          <h2 className="text-3xl md:text-4xl font-extrabold">Reach us out in 3 simple steps</h2>
-          <ol className="mt-8 grid gap-4 md:grid-cols-3">
-            {steps.map((s, i) => (
-              <li key={s} className="rounded-2xl bg-white/5 p-5"><span className="text-brand font-extrabold text-xl">{i + 1}</span><p className="mt-2 font-semibold">{s}</p></li>
+/* =========================
+   CONTACT SECTION
+========================= */
+
+function ContactSteps() {
+  return (
+    <section className="px-4 py-8 sm:px-6 lg:px-8">
+      <div className="relative mx-auto max-w-7xl overflow-hidden rounded-[30px] border border-white/10 bg-[#101010] px-6 py-10 text-white sm:px-10 sm:py-14 lg:px-14 lg:py-16">
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute -right-20 -top-24 h-72 w-72 rounded-full bg-amber-500/[0.10] blur-[90px]"
+        />
+
+        <div className="relative grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+          <div>
+            <p className="mb-3 inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.18em] text-amber-400">
+              <Sparkles className="h-4 w-4" />
+              Let's build a better workflow
+            </p>
+
+            <h2 className="max-w-xl text-3xl font-black leading-tight tracking-tight sm:text-4xl lg:text-5xl">
+              Ready to put your CRM to work?
+            </h2>
+
+            <p className="mt-4 max-w-lg text-sm leading-7 text-zinc-400 sm:text-base">
+              Tell us what your team needs. Let's explore an AI-powered
+              CRM workflow that fits your business.
+            </p>
+
+            <Link
+              to="/reach-us"
+              className="mt-7 inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-amber-400 px-6 py-3 text-sm font-extrabold text-black transition hover:-translate-y-0.5 hover:bg-amber-300"
+            >
+              Reach us out
+              <ArrowRight className="h-4 w-4" />
+            </Link>
+          </div>
+
+          <ol className="space-y-3">
+            {contactSteps.map((step, index) => (
+              <li
+                key={step}
+                className="flex items-start gap-4 rounded-2xl border border-white/10 bg-white/[0.04] p-4 sm:p-5"
+              >
+                <span className="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-amber-400 text-sm font-black text-black">
+                  {index + 1}
+                </span>
+
+                <span className="pt-1 text-sm font-semibold leading-6 text-zinc-200">
+                  {step}
+                </span>
+              </li>
             ))}
           </ol>
-          <Link to="/reach-us" className="mt-8 inline-block rounded-full bg-brand px-7 py-3 font-bold text-ink">Reach Us Out</Link>
         </div>
-      </section>
+      </div>
+    </section>
+  );
+}
 
-      <section className="mx-auto mt-24 max-w-6xl px-6">
-        <h2 className="text-3xl md:text-4xl font-extrabold">Real results</h2>
-        <div className="mt-8 grid gap-4 md:grid-cols-3">
-          {cases.map((c) => (
-            <Link to="/case-studies" key={c.name} className="rounded-3xl border border-ink/10 bg-white p-6 hover:border-brand">
-              <p className="text-sm font-semibold text-ink/60">{c.name}</p>
-              <p className="mt-3 text-5xl font-black text-brand-deep">{c.stat}</p><p className="mt-2 text-sm">{c.text}</p>
+/* =========================
+   CASE STUDIES
+========================= */
+
+function CaseStudiesSection() {
+  if (!Array.isArray(cases) || cases.length === 0) {
+    return null;
+  }
+
+  return (
+    <section className="bg-[#fbfaff] px-4 py-20 sm:px-6 sm:py-24 lg:px-8">
+      <div className="mx-auto max-w-7xl">
+        <div className="flex flex-col gap-5 sm:flex-row sm:items-end sm:justify-between">
+          <SectionHeading
+            align="left"
+            eyebrow="Case studies"
+            title="Better systems. Clearer outcomes."
+            description="Explore how thoughtful workflows and automation can help teams work with greater clarity."
+          />
+
+          <Link
+            to="/case-studies"
+            className="inline-flex shrink-0 items-center gap-2 self-start rounded-full border border-slate-300 bg-white px-5 py-3 text-sm font-bold text-slate-800 transition hover:border-violet-300 hover:text-violet-700 sm:self-auto"
+          >
+            All case studies
+            <ArrowRight className="h-4 w-4" />
+          </Link>
+        </div>
+
+        <div className="mt-9 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+          {cases.map((item) => (
+            <Link
+              to="/case-studies"
+              key={item.name}
+              className="group rounded-3xl border border-violet-100 bg-white p-6 transition duration-300 hover:-translate-y-1 hover:border-violet-200 hover:shadow-xl sm:p-7"
+            >
+              <div className="flex items-start justify-between gap-4">
+                <p className="text-xs font-bold uppercase tracking-widest text-slate-500">
+                  {item.name}
+                </p>
+
+                <ArrowUpRight className="h-4 w-4 text-slate-400 transition group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-violet-700" />
+              </div>
+
+              <p className="mt-6 text-4xl font-black tracking-tight text-violet-700 sm:text-5xl">
+                {item.stat}
+              </p>
+
+              <p className="mt-3 text-sm leading-6 text-slate-600">
+                {item.text}
+              </p>
+
+              <span className="mt-6 inline-flex items-center gap-2 text-sm font-bold text-slate-800 transition-colors group-hover:text-violet-700">
+                Read case study
+                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+              </span>
             </Link>
           ))}
         </div>
-        <Link to="/case-studies" className="mt-8 inline-block rounded-full border-2 border-ink px-6 py-3 font-bold hover:bg-ink hover:text-white">Read all case studies</Link>
-      </section>
-    </>
-  )
+      </div>
+    </section>
+  );
+}
+
+/* =========================
+   HOME PAGE
+========================= */
+
+export default function Home() {
+  return (
+    <main className="min-h-screen overflow-hidden bg-[#fbfaff] text-slate-950">
+      <HeroSection />
+           <CompamyLogosSection />
+      
+      <WorkflowSection />
+      <ContactSteps />
+      <CaseStudiesSection />
+    </main>
+  );
 }
