@@ -1,5 +1,5 @@
 import { Link, useParams, Navigate } from 'react-router-dom'
-import { services } from '../data.js'
+import { services } from "../data/PortfolioData.js";
 export default function Service() {
   const s = services[useParams().slug]
   if (!s) return <Navigate to="/" />

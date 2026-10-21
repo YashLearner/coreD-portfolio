@@ -1,5 +1,5 @@
 
-import { posts } from "../data.js";
+import { posts } from "../data/PortfolioData.js";
 import PageSection from "../components/ui/PageSection.jsx";
 import Card from "../components/ui/Card.jsx";
 

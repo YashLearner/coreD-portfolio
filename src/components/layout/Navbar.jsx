@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
-import { services } from '../data.js'
+import { services } from "../../data/PortfolioData.js";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false)
