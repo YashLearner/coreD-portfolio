@@ -22,3 +22,48 @@ export const team = [
   { n: 'Team Member 1', r: 'Founder & CEO' }, { n: 'Team Member 2', r: 'Lead Engineer' },
   { n: 'Team Member 3', r: 'AI Engineer' }, { n: 'Team Member 4', r: 'UI/UX Designer' },
 ]
+
+
+
+export const data = {
+  // Navbar navigation links
+  navLinks: [
+    {
+      label: "Home",
+      href: "#hero",
+    },
+    {
+      label: "About",
+      href: "#about",
+    },
+    {
+      label: "Skills",
+      href: "#skills",
+    },
+    {
+      label: "Experience",
+      href: "#experience",
+    },
+    {
+      label: "Projects",
+      href: "#projects",
+    },
+    {
+      label: "Blog",
+      href: "#blog",
+    },
+    {
+      label: "Contact",
+      href: "#contact",
+    },
+  ],
+
+  // Hero section data used by Navbar
+  hero: {
+    name: "Krishanu Kaundilya",
+
+    ctaPrimary: {
+      label: "Let's Connect",
+    },
+  },
+};

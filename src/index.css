@@ -1,4 +1,18 @@
 @import "tailwindcss";
+html,
+body,
+#root {
+  min-height: 100%;
+  margin: 0;
+}
+
+body {
+  background: #050505;
+}
+
+#root {
+  min-height: 100vh;
+}
 @theme {
   --font-sans: "Inter", system-ui, sans-serif;
   --color-cream: #faf8f3;
@@ -11,3 +25,4 @@ body { background: var(--color-cream); color: var(--color-ink); font-family: var
 .marquee { animation: slide 25s linear infinite; }
 @media (prefers-reduced-motion: reduce) { .marquee { animation: none; } }
 :focus-visible { outline: 2px solid var(--color-brand); outline-offset: 2px; }
+

@@ -1,13 +1,12 @@
 import { Routes, Route, useLocation } from 'react-router-dom'
 import { useEffect } from 'react'
-import Navbar from './components/Navbar.jsx'
-import Footer from './components/Footer.jsx'
+import Navbar from './components/Layout/Navbar.jsx'
+import Footer from './components/Layout/Footer.jsx'
 import Home from './pages/Home.jsx'
 import Service from './pages/Service.jsx'
 import Contact from './pages/Contact.jsx'
 import CaseStudies from "./pages/CaseStudies.jsx";
 import Blog from "./pages/Blog.jsx";
-import Team from "./pages/Team.jsx";
 import TermsCondition from "./pages/TermsCondition.jsx";
 
 export default function App() {
@@ -22,7 +21,6 @@ export default function App() {
           <Route path="/services/:slug" element={<Service />} />
           <Route path="/case-studies" element={<CaseStudies />} />
           <Route path="/blog" element={<Blog />} />
-          <Route path="/team" element={<Team />} />
           <Route path="/reach-us" element={<Contact />} />
           <Route path="/termsCondition" element={TermsCondition} />
         </Routes>
