@@ -1,69 +1,131 @@
-export const services = {
-  'gpt-services': { title: 'GPT Services', lead: 'Custom GPT assistants trained on your business data, wired into your CRM.',
-    points: ['Custom GPT chat assistants for sales and support', 'Knowledge-base search over your documents', 'Lead summaries and email drafts inside the CRM', 'Prompt design, evaluation and guardrails'] },
-  'cyber-security': { title: 'Cyber Security', lead: 'Security checks built into every CRM we ship, from code to cloud.',
-    points: ['Vulnerability assessment and penetration testing (VAPT)', 'Secrets, dependency and static code scanning', 'Role-based access and audit logs', 'Incident response playbooks'] },
-  'ai-crm': { title: 'AI Agent Based CRM', lead: 'A CRM where AI agents capture leads, follow up and update records for you.',
-    points: ['Lead capture and auto-qualification', 'Follow-up agents for email, WhatsApp and calls', 'Pipeline dashboards with live forecasts', 'Integrations with your existing tools'] },
-  'cloud-devops': { title: 'Cloud Solution & DevOps', lead: 'Reliable hosting, CI/CD and monitoring so your CRM stays fast and online.',
-    points: ['AWS / Azure / GCP setup and migration', 'CI/CD pipelines and automated testing', 'Docker and Kubernetes deployments', 'Monitoring, backups and cost control'] },
-}
+
+import aiAgentDev from "./image/aiAgentDev.png";
+import aiBasedCRM from "./image/aiBasedCRM.png";
+import crmDevlopment from "./image/crmDevlopment.png";
+const cyberSecurityImage = crmDevlopment;
+
 export const cases = [
-  { name: 'Retail chain', stat: '3x', text: 'faster lead follow-up after switching to AI agents.' },
-  { name: 'Education group', stat: '40%', text: 'more admissions enquiries converted.' },
-  { name: 'Logistics firm', stat: '12 hrs', text: 'saved per week on manual data entry.' },
-]
-export const posts = [
-  { t: 'How an AI agent based CRM works', d: 'A plain walk-through from lead capture to follow-up.' },
-  { t: 'CRM security checklist for small teams', d: 'Seven checks to run before you go live.' },
-  { t: 'When to move your CRM to the cloud', d: 'Cost, speed and risk, compared.' },
-]
-export const team = [
-  { n: 'Team Member 1', r: 'Founder & CEO' }, { n: 'Team Member 2', r: 'Lead Engineer' },
-  { n: 'Team Member 3', r: 'AI Engineer' }, { n: 'Team Member 4', r: 'UI/UX Designer' },
-]
-
-
-
-export const data = {
-  // Navbar navigation links
-  navLinks: [
-    {
-      label: "Home",
-      href: "#hero",
-    },
-    {
-      label: "About",
-      href: "#about",
-    },
-    {
-      label: "Skills",
-      href: "#skills",
-    },
-    {
-      label: "Experience",
-      href: "#experience",
-    },
-    {
-      label: "Projects",
-      href: "#projects",
-    },
-    {
-      label: "Blog",
-      href: "#blog",
-    },
-    {
-      label: "Contact",
-      href: "#contact",
-    },
-  ],
-
-  // Hero section data used by Navbar
-  hero: {
-    name: "Krishanu Kaundilya",
-
-    ctaPrimary: {
-      label: "Let's Connect",
-    },
+  {
+    name: "Retail chain",
+    stat: "3x",
+    text: "faster lead follow-up after switching to AI agents.",
   },
-};
+  {
+    name: "Education group",
+    stat: "40%",
+    text: "more admissions enquiries converted.",
+  },
+  {
+    name: "Logistics firm",
+    stat: "12 hrs",
+    text: "saved per week on manual data entry.",
+  },
+];
+
+export const posts = [
+  {
+    t: "How an AI agent based CRM works",
+    d: "A plain walk-through from lead capture to follow-up.",
+  },
+  {
+    t: "CRM security checklist for small teams",
+    d: "Seven checks to run before you go live.",
+  },
+  {
+    t: "When to move your CRM to the cloud",
+    d: "Cost, speed and risk, compared.",
+  },
+];
+
+export const team = [
+  {
+    n: "Team Member 1",
+    r: "Founder & CEO",
+  },
+  {
+    n: "Team Member 2",
+    r: "Lead Engineer",
+  },
+  {
+    n: "Team Member 3",
+    r: "AI Engineer",
+  },
+  {
+    n: "Team Member 4",
+    r: "UI/UX Designer",
+  },
+];
+
+export const services = [
+  {
+    id: "ai-based-crm",
+    title: "AI Based CRM",
+    image: aiAgentDev,
+    description:
+      "AI Based CRM solutions help businesses manage customer relationships with intelligent automation, customer data, sales workflows, lead management, analytics, and AI-powered insights. We build CRM systems around your business process to improve productivity, automate repetitive tasks, and help teams make faster decisions. Our solutions are scalable, secure, responsive, and designed for long-term business growth.",
+    points: [
+      "AI-powered lead management",
+      "Automated customer follow-ups",
+      "Sales pipeline management",
+      "Customer data centralization",
+      "AI-powered business insights",
+      "Workflow automation",
+      "Custom CRM dashboards",
+      "Third-party API integrations",
+    ],
+  },
+
+  {
+    id: "ai-development",
+    title: "AI Development",
+    image: aiBasedCRM,
+    description:
+      "Our AI development services help businesses build intelligent applications, automation systems, AI assistants, recommendation engines, and data-driven solutions. We integrate modern AI technologies into websites, applications, and existing business platforms. Our development approach focuses on performance, security, scalability, and real business value while keeping AI solutions simple and practical for everyday use.",
+    points: [
+      "Custom AI applications",
+      "AI chatbot development",
+      "AI automation workflows",
+      "AI API integration",
+      "Recommendation systems",
+      "Document processing",
+      "AI business tools",
+      "Machine learning solutions",
+    ],
+  },
+
+  {
+    id: "crm-development",
+    title: "CRM Development",
+    image: crmDevlopment,
+    description:
+      "Custom CRM development helps businesses manage leads, customers, sales, communication, tasks, and workflows through one connected platform. We develop CRM software according to your business requirements and create features that match the way your team works. Our CRM solutions are responsive, scalable, secure, and easy to integrate with websites, APIs, payment systems, email platforms, and other business applications.",
+    points: [
+      "Custom CRM software",
+      "Lead management",
+      "Customer management",
+      "Sales pipeline development",
+      "CRM dashboards",
+      "Workflow automation",
+      "Business analytics",
+      "API integrations",
+    ],
+  },
+
+  {
+    id: "cyber-security",
+    title: "Cyber Security",
+    image: cyberSecurityImage,
+    description:
+      "Our cyber security services help businesses protect applications, systems, networks, and sensitive information from modern digital threats. We focus on identifying vulnerabilities, improving application security, protecting business data, and implementing secure development practices. Our security solutions include access control, authentication, monitoring, vulnerability management, and secure architecture designed to provide businesses with a stronger and more reliable digital security foundation.",
+    points: [
+      "Application security",
+      "Security assessment",
+      "Vulnerability management",
+      "Secure development",
+      "Access control",
+      "Data protection",
+      "Security monitoring",
+      "Cyber security consulting",
+    ],
+  },
+];
