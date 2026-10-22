@@ -1,5 +1,5 @@
 
-import { team } from "../data.js";
+import { team } from "../data/PortfolioData.js";
 import PageSection from "../components/ui/PageSection.jsx";
 import Card from "../components/ui/Card.jsx";
 

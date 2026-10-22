@@ -1,5 +1,7 @@
 
 import { Link } from "react-router-dom";
+import image from "../image/Hero.png";
+
 import {
   ArrowRight,
   ArrowUpRight,
@@ -7,38 +9,14 @@ import {
   Sparkles,
 } from "lucide-react";
 
-import image from "../image/Hero.png";
-import CompanyLogosSection from "../components/CompanyLogosSection.jsx";
-import { cases } from "../data.js";
+
+import CompamyLogoSection from "../components/CompanyLogoSection.jsx";
+
+import { workflow, caseStudies } from "../data/PortfolioData.js";
+
 
 /* PAGE DATA */
 
-const workflow = [
-  {
-    number: "01",
-    title: "Capture every lead",
-    description:
-      "Bring website enquiries, emails, and prospects into one organised workspace.",
-  },
-  {
-    number: "02",
-    title: "Qualify with AI",
-    description:
-      "Prioritise opportunities using intelligent lead scoring and smart routing.",
-  },
-  {
-    number: "03",
-    title: "Follow up on time",
-    description:
-      "Automate reminders and follow-ups to keep customer conversations moving.",
-  },
-  {
-    number: "04",
-    title: "Track your progress",
-    description:
-      "Monitor pipeline performance, team activity, and business outcomes.",
-  },
-];
 
 const audiences = [
   "Sales teams",
@@ -198,7 +176,8 @@ function HeroSection() {
           </FloatingLabel>
 
           <div className="relative h-[250px] overflow-hidden rounded-t-2xl border border-white/15 border-b-0 bg-black sm:h-[340px] sm:rounded-t-3xl md:h-[410px] lg:h-[490px]">
-            <img
+           <div className="relative h-full w-full overflow-hidden bg-black">
+      <img
         src={image}
         alt="CoreD AI CRM dashboard"
         className="block h-full w-full select-none object-cover object-top"
@@ -206,6 +185,7 @@ function HeroSection() {
         loading="eager"
         decoding="async"
       />
+    </div>
           </div>
         </div>
       </div>
@@ -336,7 +316,7 @@ function ContactSteps() {
 /* CASE STUDIES — LIGHT */
 
 function CaseStudiesSection() {
-  if (!Array.isArray(cases) || cases.length === 0) {
+  if (!Array.isArray(caseStudies) || caseStudies.length === 0) {
     return null;
   }
 
@@ -361,7 +341,7 @@ function CaseStudiesSection() {
         </div>
 
         <div className="mt-9 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-          {cases.map((item) => (
+          {caseStudies.map((item) => (
             <Link
               to="/case-studies"
               key={item.name}
@@ -401,8 +381,8 @@ export default function Home() {
   return (
     <main className="min-h-screen overflow-hidden bg-[#fbfaff] text-slate-950">
       <HeroSection />
-      <CompanyLogosSection />
-      
+      <CompamyLogoSection />
+
       <WorkflowSection />
       <ContactSteps />
       <CaseStudiesSection />

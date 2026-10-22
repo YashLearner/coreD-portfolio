@@ -272,6 +272,9 @@ function TimelineArticle({ post }) {
 /* -------------------------------------------------------------------------- */
 /* Blog page                                                                  */
 /* -------------------------------------------------------------------------- */
+import { posts } from "../data/PortfolioData.js";
+import PageSection from "../components/ui/PageSection.jsx";
+import Card from "../components/ui/Card.jsx";
 
 export default function Blog() {
   return (
