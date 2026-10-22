@@ -1,0 +1,267 @@
+/**
+ * Services-page content, kept separate from presentation so each service can
+ * reuse the same accessible React components.
+ */
+export const SERVICES = [
+  {
+    id: "crm",
+    label: "AI-based CRM",
+    number: "01 / 03",
+    code: "CORE-CRM-v2",
+    footer: "CRM Architectural Blueprint",
+    footerMeta: "100% Native Sync",
+    eyebrow: "Customer Operations & Workflows",
+    title: "A CRM that helps your team act.",
+    description:
+      "Keep customer records, sales activity and AI-assisted workflows together. Built to reduce manual record keeping while enabling intelligent handoffs.",
+    capabilities: ["Lead management", "Follow-ups", "Connected tools"],
+    comparison: {
+      eyebrow: "Quotations & Specifications",
+      title: "Choose your CRM scope.",
+      description:
+        "Start with one AI workflow, connect three agents, or define a custom system.",
+    },
+    packages: [
+      {
+        id: "basic",
+        tier: "Basic",
+        badge: "Entry Tier",
+        title: "1 AI agent",
+        price: null,
+        status: "Quoted after scope review",
+        description: "A focused CRM with one AI-assisted workflow.",
+        features: [
+          "Customer and lead records",
+          "Sales pipeline",
+          "One lead-qualification agent",
+          "Agent activity history",
+          "Agreed data source and integration scope",
+        ],
+        cta: "Request Basic quotation",
+        packageName: "Basic Package (1 Agent)",
+      },
+      {
+        id: "standard",
+        tier: "Standard",
+        badge: "Connected workflows",
+        title: "3 AI agents",
+        price: null,
+        status: "Quoted after scope review",
+        description: "Coordinate lead handling, follow-ups and appointments.",
+        features: [
+          "Customer and lead records",
+          "Sales pipeline",
+          "Lead-qualification agent",
+          "Follow-up agent",
+          "Appointment-coordination agent",
+          "Shared activity history and team handoffs",
+        ],
+        cta: "Request Standard quotation",
+        packageName: "Standard Package (3 Agents)",
+        featured: true,
+      },
+      {
+        id: "custom",
+        tier: "Custom Solution",
+        badge: "Tailored Scope",
+        title: "Built around your requirements",
+        price: null,
+        status: "Quoted after scope review",
+        description:
+          "Define the CRM, agents and integrations your business needs.",
+        features: [
+          "Requirements and workflow discovery",
+          "Custom CRM modules",
+          "Agent roles agreed during scoping",
+          "Integration and data-migration planning",
+          "Permissions, reporting and deployment scope",
+        ],
+        cta: "Discuss a custom CRM",
+        packageName: "Custom CRM Solution",
+      },
+    ],
+    form: {
+      title: "Get your tailored CRM scope",
+      description:
+        "Share the workflows and systems your team needs to bring together.",
+      requirementsLabel: "Specific Requirements / Target Workflows",
+      requirementsPlaceholder:
+        "Describe the team workflows, volume, or key pain points...",
+      systemsLabel: "Existing Tools (CRM, Databases, Messaging)",
+      systemsPlaceholder: "e.g. HubSpot, Postgres, Slack, WhatsApp",
+    },
+  },
+  {
+    id: "agent",
+    label: "AI Agent Development",
+    number: "02 / 03",
+    code: "AGENT-TOPOLOGY-v1",
+    footer: "Multi-Agent Workflow Topology",
+    footerMeta: "Secure & Sandboxed",
+    eyebrow: "Targeted AI Automations",
+    title: "AI agents for the work you repeat.",
+    description:
+      "Build assistants that answer questions, qualify enquiries and support everyday operations. Connect them to your software stack with an agreed implementation scope.",
+    capabilities: ["Knowledge assistants", "Sales workflows", "Business integrations"],
+    comparison: {
+      eyebrow: "Agent Scopes & Comparison",
+      title: "Choose your agent scope.",
+      description:
+        "Begin with a knowledge assistant or connect a three-agent workflow.",
+    },
+    packages: [
+      {
+        id: "basic",
+        tier: "Basic",
+        badge: "1 Agent",
+        title: "1 AI agent",
+        price: "$300",
+        billing: "/ setup",
+        status: "Quoted after scope review",
+        description:
+          "A focused FAQ assistant using approved business information.",
+        listTitle: "Example agent types",
+        features: [
+          { label: "FAQ & knowledge assistant", status: "Included", included: true },
+          { label: "Lead-qualification agent", status: "Available", included: false },
+          { label: "Sales follow-up agent", status: "Available", included: false },
+          { label: "Appointment-booking agent", status: "Available", included: false },
+          { label: "Voice-calling agent", status: "Available", included: false },
+          { label: "Document-processing agent", status: "Available", included: false },
+          { label: "Reporting assistant", status: "Available", included: false },
+          { label: "Internal operations agent", status: "Available", included: false },
+        ],
+        cta: "Request Basic quotation",
+        packageName: "Basic Package (1 Agent)",
+      },
+      {
+        id: "standard",
+        tier: "Standard",
+        badge: "3-Agent Stack",
+        title: "3 AI agents",
+        price: "$700",
+        billing: "/ setup",
+        status: "Quoted after scope review",
+        description:
+          "Connect knowledge, qualification and follow-up. Follow-up uses an agreed email or WhatsApp channel.",
+        listTitle: "Example agent types",
+        features: [
+          { label: "FAQ & knowledge assistant", status: "Included", included: true },
+          { label: "Lead-qualification agent", status: "Included", included: true },
+          { label: "Sales follow-up agent", status: "Included", included: true },
+          { label: "Appointment-booking agent", status: "Available", included: false },
+          { label: "Voice-calling agent", status: "Available", included: false },
+          { label: "Document-processing agent", status: "Available", included: false },
+          { label: "Reporting assistant", status: "Available", included: false },
+          { label: "Internal operations agent", status: "Available", included: false },
+        ],
+        cta: "Request Standard quotation",
+        packageName: "Standard Package (3 Agents)",
+        featured: true,
+      },
+      {
+        id: "custom",
+        tier: "Custom Solution",
+        badge: "Custom Fleet",
+        title: "Your workflow, custom-built",
+        price: null,
+        status: "Quoted after scope review",
+        description:
+          "Discuss the agent types and integrations your use case requires. Scope and feasibility are confirmed during discovery.",
+        listTitle: "Example agent types",
+        features: [
+          { label: "FAQ & knowledge assistant", status: "Custom scope", included: true },
+          { label: "Lead-qualification agent", status: "Custom scope", included: true },
+          { label: "Sales follow-up agent", status: "Custom scope", included: true },
+          { label: "Appointment-booking agent", status: "Custom scope", included: true },
+          { label: "Voice-calling agent", status: "Custom scope", included: true },
+          { label: "Document-processing agent", status: "Custom scope", included: true },
+          { label: "Reporting assistant", status: "Custom scope", included: true },
+          { label: "Internal operations agent", status: "Custom scope", included: true },
+        ],
+        cta: "Discuss custom agents",
+        packageName: "Custom Agent Fleet",
+      },
+    ],
+    form: {
+      title: "Get your tailored agent scope",
+      description:
+        "Tell us about the tasks, integrations and information sources involved.",
+      requirementsLabel: "Desired Agent Workflows / Enquiries",
+      requirementsPlaceholder:
+        "Target tasks (e.g. answering inbound FAQs, WhatsApp lead triage)...",
+      systemsLabel: "Existing Systems & Documentation Sources",
+      systemsPlaceholder: "e.g. Notion, Zendesk, PostgreSQL, Google Drive",
+    },
+  },
+  {
+    id: "consultancy",
+    label: "Consultancy",
+    number: "03 / 03",
+    code: "ADVISORY-FRAMEWORK",
+    footer: "Decision & Governance Framework",
+    footerMeta: "Objective Strategy",
+    eyebrow: "Advisory & Risk Governance",
+    title: "Make the next AI decision with clarity.",
+    description:
+      "Review your AI opportunities, system risks and implementation options. Plan for measurable business value and sound data governance.",
+    capabilities: ["AI strategy", "AI security", "Implementation roadmap"],
+    comparison: {
+      eyebrow: "Expert Advisory",
+      title: "Choose the guidance you need.",
+      description:
+        "From security posture analysis to pragmatic architecture and deployment blueprints.",
+    },
+    packages: [
+      {
+        id: "security-review",
+        tier: "Security & Risk",
+        badge: "Technical Review",
+        title: "AI Cybersecurity Consultancy",
+        price: null,
+        status: "Quoted after scope review",
+        description:
+          "Review how your AI systems handle information, access and connected tools.",
+        features: [
+          "AI application and workflow review",
+          "Data handling and access-permission review",
+          "Prompt-injection and tool-use risk assessment",
+          "Prioritised recommendations",
+          "Findings and next-step report",
+        ],
+        cta: "Discuss an AI security review",
+        packageName: "AI Cybersecurity Review",
+      },
+      {
+        id: "strategic-planning",
+        tier: "Strategic Planning",
+        badge: "Roadmap & Architecture",
+        title: "AI Consultancy",
+        price: null,
+        status: "Quoted after scope review",
+        description:
+          "Identify useful AI opportunities and plan an achievable implementation.",
+        features: [
+          "Business-process discovery",
+          "Use-case prioritisation",
+          "Tool and architecture options",
+          "Feasibility and running-cost considerations",
+          "Pilot and implementation roadmap",
+        ],
+        cta: "Book an AI consultation",
+        packageName: "AI Strategic Planning",
+        featured: true,
+      },
+    ],
+    form: {
+      title: "Schedule an advisory session",
+      description:
+        "Provide background on your existing architecture or upcoming initiatives.",
+      requirementsLabel: "Key Questions or Vulnerabilities to Review",
+      requirementsPlaceholder:
+        "Describe your AI initiative, risk concerns, or decision to make...",
+      systemsLabel: "Current AI Infrastructure",
+      systemsPlaceholder: "e.g. model providers, APIs, data sources, tools",
+    },
+  },
+];
