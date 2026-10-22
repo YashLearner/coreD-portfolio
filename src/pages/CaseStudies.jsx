@@ -30,7 +30,7 @@ function CaseStudyCard({ study }) {
 
   return (
     <>
-      <article className="grid w-full min-w-0 grid-cols-1 gap-8 rounded-3xl border border-zinc-200 bg-white p-5 shadow-sm sm:p-8 lg:grid-cols-2 lg:gap-10 lg:p-10 xl:gap-12">
+      <article className="grid w-full min-w-0 grid-cols-1 gap-8 rounded-3xl border border-zinc-200 bg p-5 shadow-sm sm:p-8 lg:grid-cols-2 lg:gap-10 lg:p-10 xl:gap-12">
         {/* LEFT: Screenshot gallery + Our Solution */}
         <div className="flex min-w-0 flex-col">
           <div className="mb-5 flex flex-wrap items-center justify-between gap-3">
@@ -256,7 +256,7 @@ export default function CaseStudies() {
     <section
       id="case-studies"
       aria-labelledby="case-studies-heading"
-      className="w-full min-w-0 bg-white px-4 py-16 text-zinc-950 sm:px-6 sm:py-20 lg:px-8 lg:py-24"
+      className="w-full min-w-0 bg-[#faf7f1] px-4 py-16 text-zinc-950 sm:px-6 sm:py-20 lg:px-8 lg:py-24"
     >
       <div className="mx-auto w-full max-w-[1600px]">
         {/* Section heading */}

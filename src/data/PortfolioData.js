@@ -1,6 +1,4 @@
 
-
-
 export const brand = {
   name: "CoreD",
   href: "#hero",
@@ -115,6 +113,89 @@ export const services = {
 
 export const caseStudies = [
 
+  
+  {
+    id: "crawl-digitally-crm",
+    client: "Crawl Digitally",
+    category: "CRM Development",
+    // website: "https://www.crawldigitally.com/",
+
+    title: "One CRM. A Clearer View of Every Lead.",
+
+    summary:
+      "A centralized CRM built to bring lead management, sales opportunities, pipeline visibility, and follow-up workflows into one workspace.",
+
+    problemTitle: "Their Problem",
+
+    problem:
+      "Lead details, sales opportunities, and follow-ups can become scattered across tools. Without clear pipeline and lead-source visibility, teams may struggle to identify pending actions and keep every opportunity moving.",
+
+    solutionTitle: "Our Solution",
+    shortDescription: "We developed a centralized CRM for leads, pipeline and follow-ups.",
+
+
+    solution:
+      "CoreD developed a centralized CRM bringing lead management, sales opportunities, and follow-up coordination into one workspace. Teams can review lead details, track active and closed deals, and compare enquiries from organic, paid, and referral sources. Follow-up tracking highlights pending tasks, unassigned leads, and proposals awaiting review. An AI Co-pilot concept surfaces suggested next steps for approval, improving pipeline visibility, organizing sales activity, and supporting smoother hand-offs between marketing and sales.",
+    features: [
+      { title: "Lead Management" },
+      { title: "Sales Pipeline" },
+      { title: "Lead-Source Analytics" },
+      { title: "Follow-up Tracking" },
+      { title: "AI Co-pilot" },
+    ],
+    features: [
+      {
+        title: "Lead Management",
+        description:
+          "Organize incoming enquiries and review lead activity from a single dashboard.",
+      },
+      {
+        title: "Sales Pipeline",
+        description:
+          "Get an overview of active opportunities, closed deals, and pipeline value.",
+      },
+      {
+        title: "Lead-Source Analytics",
+        description:
+          "Compare enquiries across organic traffic, paid advertising, and referrals.",
+      },
+      {
+        title: "Follow-up Tracking",
+        description:
+          "Identify pending follow-ups, proposals awaiting review, and unassigned enquiries.",
+      },
+      {
+        title: "AI Co-pilot",
+        description:
+          "Surface suggested next actions and proposal-review tasks for team approval.",
+      },
+    ],
+
+    screenshots: [
+      {
+        src: "/Images/Crawl01.png",
+        alt: "Crawl Digitally CRM dashboard",
+        label: "Dashboard",
+        caption: "CRM dashboard overview",
+      },
+      {
+        src: "/Images/Crawl03.png",
+        alt: "CRM lead management page",
+        label: "Leads",
+        caption: "Lead management",
+      },
+      {
+        src: "/Images/Crawl02.png",
+        alt: "CRM follow-up page",
+        label: "AI Follow-ups",
+        caption: "Follow-up management",
+      },
+    ],
+
+    result:
+      "One workspace for reviewing leads, monitoring opportunities, and organizing follow-up activities.",
+  },
+
   {
     id: "adsmark01MarketingCRM",
     client: "Adsmark01",
@@ -131,6 +212,9 @@ export const caseStudies = [
       "Agencies need a reliable way to qualify enquiries, assign owners, and track follow-ups. When lead details, outreach drafts, and booking updates are scattered, teams can miss pending actions and lose visibility into each enquiry's status.",
 
     solutionTitle: "Our Solution",
+
+    shortDescription: "We built an AI marketing CRM for enquiry qualification and follow-ups.",
+
 
     solution:
       "CoreD designed an AI marketing CRM workflow that takes enquiries from capture through qualification, team review, and discovery-call handoff. The dashboard organizes lead details, service requirements, budgets, timelines, and activity history in one place. Its staged workflow tracks duplicate checks, owner assignment, and follow-up preparation. Email drafts support review before sending, while WhatsApp options and dispatch safeguards help coordinate outreach. Booking status keeps pending confirmations distinct from completed scheduling steps.",
@@ -177,7 +261,7 @@ export const caseStudies = [
       },
 
       {
-        src: "/Images/AdsMark01.png",
+        src: "/Images/AdsMark03.png",
         alt:
           "Adsmark01 AI marketing CRM dashboard showing enquiry qualification, workflow stages, and follow-up review",
         label: "Growth Overview",
@@ -190,85 +274,6 @@ export const caseStudies = [
       "A structured CRM interface that brings lead qualification, communication review, workflow progress, and booking status into one workspace.",
   },
 
-  {
-    id: "crawl-digitally-crm",
-    client: "Crawl Digitally",
-    category: "CRM Development",
-    // website: "https://www.crawldigitally.com/",
-
-    title: "One CRM. A Clearer View of Every Lead.",
-
-    summary:
-      "A centralized CRM built to bring lead management, sales opportunities, pipeline visibility, and follow-up workflows into one workspace.",
-
-    problemTitle: "Their Problem",
-
-    problem:
-      "Lead details, sales opportunities, and follow-ups can become scattered across tools. Without clear pipeline and lead-source visibility, teams may struggle to identify pending actions and keep every opportunity moving.",
-
-    solutionTitle: "Our Solution",
-
-    solution:
-      "CoreD developed a centralized CRM bringing lead management, sales opportunities, and follow-up coordination into one workspace. Teams can review lead details, track active and closed deals, and compare enquiries from organic, paid, and referral sources. Follow-up tracking highlights pending tasks, unassigned leads, and proposals awaiting review. An AI Co-pilot concept surfaces suggested next steps for approval, improving pipeline visibility, organizing sales activity, and supporting smoother hand-offs between marketing and sales.",
-    features: [
-      { title: "Lead Management" },
-      { title: "Sales Pipeline" },
-      { title: "Lead-Source Analytics" },
-      { title: "Follow-up Tracking" },
-      { title: "AI Co-pilot" },
-    ],
-    features: [
-      {
-        title: "Lead Management",
-        description:
-          "Organize incoming enquiries and review lead activity from a single dashboard.",
-      },
-      {
-        title: "Sales Pipeline",
-        description:
-          "Get an overview of active opportunities, closed deals, and pipeline value.",
-      },
-      {
-        title: "Lead-Source Analytics",
-        description:
-          "Compare enquiries across organic traffic, paid advertising, and referrals.",
-      },
-      {
-        title: "Follow-up Tracking",
-        description:
-          "Identify pending follow-ups, proposals awaiting review, and unassigned enquiries.",
-      },
-      {
-        title: "AI Co-pilot",
-        description:
-          "Surface suggested next actions and proposal-review tasks for team approval.",
-      },
-    ],
-
-    screenshots: [
-      {
-        src: "/public/Images/Crawl01.png",
-        alt: "Crawl Digitally CRM dashboard",
-        label: "Dashboard",
-        caption: "CRM dashboard overview",
-      },
-      {
-        src: "/public/Images/Crawl03.png",
-        alt: "CRM lead management page",
-        label: "Leads",
-        caption: "Lead management",
-      },
-      {
-        src: "/public/Images/Crawl02.png",
-        alt: "CRM follow-up page",
-        label: "AI Follow-ups",
-        caption: "Follow-up management",
-      },
-    ],
-
-    result:
-      "One workspace for reviewing leads, monitoring opportunities, and organizing follow-up activities.",
-  },
 
 
 
@@ -288,6 +293,9 @@ export const caseStudies = [
       "Educational institutions need an organized way to track student payments, identify outstanding fees, and communicate with students. Managing fee records and reminders separately can make payment follow-ups and campus updates harder to coordinate.",
 
     solutionTitle: "Our Solution",
+
+
+    shortDescription: "We designed an education CRM for fee tracking and student communication.",
 
     solution:
       "CoreD designed an education CRM dashboard that centralizes student fee records, invoice tracking, payment balances, and due dates. The interface highlights outstanding payments and collection summaries, helping staff identify accounts that need attention. A dedicated communication workspace supports fee reminders and campus announcements with reviewable message drafts. The reminder workflow includes balance rechecks, audience selection, staff approval, and safeguards to pause reminders after payment, supporting more controlled communication and payment follow-ups.",

@@ -1,10 +1,15 @@
 
-import React from "react";
+import { useLayoutEffect, useRef } from "react";
+import gsap from "gsap";
 
 import TohfaBazzarLogo from "../image/tohfabazzar.png";
 import CrawlDigitallyLogo from "../image/crawldigitally.png";
 import NextTechWavesLogo from "../image/nexttechwaves.png";
-import AdsMarker from "../image/ads-marker.png";
+import AdsMarkerLogo from "../image/ads-marker.png";
+
+/* =========================
+   COMPANY LOGO DATA
+========================= */
 
 const companyLogos = [
   {
@@ -17,82 +22,166 @@ const companyLogos = [
     id: "crawldigitally",
     name: "Crawl Digitally",
     logo: CrawlDigitallyLogo,
-    size: "rounded",
+    size: "medium",
   },
   {
     id: "nexttechwaves",
     name: "NextTechWaves",
     logo: NextTechWavesLogo,
-    size: "rounded",
+    size: "medium",
   },
-   {
+  {
     id: "ads-marker",
     name: "Ads Marker",
-    logo: AdsMarker,
+    logo: AdsMarkerLogo,
     size: "large",
   },
 ];
 
+/* =========================
+   LOGO ITEM
+========================= */
+
+function CompanyLogo({ company }) {
+  const isLarge = company.size === "large";
+
+  return (
+    <div className="flex shrink-0 items-center gap-4 sm:gap-7">
+      <div className="flex h-12 min-w-[118px] items-center justify-center rounded-xl border border-white/10 bg-white px-3 py-2 transition duration-300 hover:-translate-y-0.5 hover:border-amber-400/50 sm:h-14 sm:min-w-[145px] sm:px-4">
+        <img
+          src={company.logo}
+          alt={company.name}
+          width={isLarge ? 200 : 150}
+          height={isLarge ? 70 : 42}
+          loading="eager"
+          decoding="async"
+          draggable={false}
+          className={`w-auto max-w-[145px] object-contain ${
+            isLarge ? "h-8 sm:h-10" : "h-6 sm:h-8"
+          }`}
+        />
+      </div>
+
+      <span
+        aria-hidden="true"
+        className="select-none text-lg font-light text-zinc-600 sm:text-xl"
+      >
+        +
+      </span>
+    </div>
+  );
+}
+
+/* =========================
+   GSAP MARQUEE
+========================= */
+
 export default function CompanyLogosSection() {
-  if (!companyLogos.length) return null;
+  const trackRef = useRef(null);
+  const animationRef = useRef(null);
+
+  useLayoutEffect(() => {
+    const track = trackRef.current;
+
+    if (!track) return undefined;
+
+    const mm = gsap.matchMedia();
+
+    // Animate from right to left.
+    mm.add("(prefers-reduced-motion: no-preference)", () => {
+      const tween = gsap.fromTo(
+        track,
+        { xPercent: 0 },
+        {
+          xPercent: -50,
+          duration: 24,
+          ease: "none",
+          repeat: -1,
+        }
+      );
+
+      animationRef.current = tween;
+
+      return () => {
+        tween.kill();
+
+        if (animationRef.current === tween) {
+          animationRef.current = null;
+        }
+      };
+    });
+
+    // Keep the logos still when reduced motion is requested.
+    mm.add("(prefers-reduced-motion: reduce)", () => {
+      gsap.set(track, { xPercent: 0 });
+    });
+
+    return () => {
+      mm.revert();
+      animationRef.current = null;
+    };
+  }, []);
+
+  const pauseAnimation = () => {
+    animationRef.current?.pause();
+  };
+
+  const resumeAnimation = () => {
+    animationRef.current?.resume();
+  };
 
   return (
     <section
-      aria-label="Selected client and venture work"
-      className="w-full overflow-hidden border-y border-black/[0.06] bg-white/70 py-4 backdrop-blur-sm sm:py-5"
+      aria-label="Selected companies and partners"
+      className="relative w-full overflow-hidden bg-white  py-5 sm:py-6"
+      onMouseEnter={pauseAnimation}
+      onMouseLeave={resumeAnimation}
+      onFocus={pauseAnimation}
+      onBlur={(event) => {
+        if (!event.currentTarget.contains(event.relatedTarget)) {
+          resumeAnimation();
+        }
+      }}
     >
-      <h2 className="mb-3 px-4 text-center text-[11px] font-semibold uppercase tracking-wider text-zinc-500 sm:mb-4 sm:text-xs">
-        Selected client and venture work
-      </h2>
+      
 
-      <div className="company-marquee w-full overflow-hidden">
-        <div className="company-marquee-track flex w-max">
-          {[0, 1].map((groupIndex) => (
-            <div
-              key={groupIndex}
-              aria-hidden={groupIndex === 1 ? "true" : undefined}
-              className="company-marquee-group flex shrink-0 items-center gap-6 px-3 sm:gap-9 sm:px-5 md:gap-12 md:px-7"
-            >
-              {companyLogos.map((company) => (
-                <React.Fragment key={company.id}>
-                  <div className="group flex shrink-0 items-center justify-center py-1 transition-transform duration-200 hover:-translate-y-0.5">
-                    <img
-                      src={company.logo}
-                      alt={
-                        groupIndex === 0
-                          ? `${company.name} logo`
-                          : ""
-                      }
-                      width={company.size === "large" ? 200 : 150}
-                      height={company.size === "large" ? 70 : 42}
-                      loading="lazy"
-                      decoding="async"
-                      className={[
-                        "w-auto object-contain transition-transform duration-300",
-                        company.size === "large"
-                          ? "h-9 sm:h-11 md:h-12"
-                          : "h-6 sm:h-7 md:h-8",
-                        company.size === "rounded"
-                          ? "rounded-lg shadow-sm sm:rounded-xl"
-                          : "",
-                      ]
-                        .filter(Boolean)
-                        .join(" ")}
-                    />
-                  </div>
+      {/* Marquee viewport */}
+  <div className="relative w-full overflow-hidden">
+  {/* Left fade */}
+  <div
+    aria-hidden="true"
+    className="pointer-events-none absolute inset-y-0 left-0 z-6
+    w-8 bg-gradient-to-r
+    sm:w-16 lg:w-24"
+  />
 
-                  <span
-                    aria-hidden="true"
-                    className="select-none text-sm font-light text-zinc-300 sm:text-base"
-                  >
-                    +
-                  </span>
-                </React.Fragment>
-              ))}
-            </div>
-          ))}
-        </div>
+  {/* Right fade */}
+  <div
+    aria-hidden="true"
+    className="pointer-events-none absolute inset-y-0 right-0 z-6
+    w-8 bg-gradient-to-l
+    sm:w-16 lg:w-24"
+  />
+
+  {/* Continuous infinite slider */}
+  <div
+    ref={trackRef}
+    className="flex w-max will-change-transform"
+  >
+    {[0, 1].map((groupIndex) => (
+      <div
+        key={groupIndex}
+        aria-hidden={groupIndex === 1 ? true : undefined}
+        className="flex shrink-0 items-center gap-5 px-3
+        sm:gap-8 sm:px-5 md:gap-10 md:px-7"
+      >
+        {companyLogos.map((company) => (
+          <CompanyLogo key={company.id} company={company} />
+        ))}
       </div>
+    ))}
+  </div>
+</div>
     </section>
   );
 }
