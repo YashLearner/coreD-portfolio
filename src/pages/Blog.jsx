@@ -3,6 +3,7 @@ import { ArrowUpRight, Sparkles } from "lucide-react";
 import { posts } from "../data/PortfolioData.js";
 import PageSection from "../components/ui/PageSection.jsx";
 import Card from "../components/ui/Card.jsx";
+
 const COREDHRISTI_URL = "https://www.coredhristi.com/";
 const PAGE_BG = "#faf7f1";
 

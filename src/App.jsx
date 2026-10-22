@@ -19,6 +19,7 @@ export default function App() {
 
   return (
     <>
+    
       <Navbar />
 
       <main className="min-h-screen pt-28">
@@ -31,9 +32,9 @@ export default function App() {
           <Route path="/termsCondition" element={<TermsCondition />}
           />
         </Routes>
-      </main>
 
+      </main>
       <Footer />
     </>
-  )
+  );
 }

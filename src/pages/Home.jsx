@@ -15,7 +15,7 @@ import {
 
 import { workflow, caseStudies } from "../data/PortfolioData.js";
 
-import CompanyLogosSection from "../components/CompanyLogosSection.jsx";
+import CompanyLogoSection from "../components/CompanyLogoSection.jsx";
 
 /* PAGE DATA */
 
@@ -412,7 +412,8 @@ export default function Home() {
   return (
     <main className="min-h-screen overflow-hidden  bg-[#faf7f1] text-slate-950">
       <HeroSection />
-      <CompanyLogosSection />
+      <CompanyLogoSection />
+
       <WorkflowSection />
       <ContactSteps />
       <CaseStudiesSection />

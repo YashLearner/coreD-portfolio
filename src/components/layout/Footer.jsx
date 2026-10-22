@@ -1,9 +1,11 @@
 import { Link } from "react-router-dom";
+
 import {
   brand,
   navLinks,
   socialLinks,
   footerCopy,
+
 } from "../../data/PortfolioData";
 
 export default function Footer() {

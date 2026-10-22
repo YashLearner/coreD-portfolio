@@ -54,6 +54,25 @@ export const workflow = [
   },
 ];
 
+export const cases = [
+  {
+    name: "Retail chain",
+    stat: "3x",
+    text: "faster lead follow-up after switching to AI agents.",
+  },
+  {
+    name: "Education group",
+    stat: "40%",
+    text: "more admissions enquiries converted.",
+  },
+  {
+    name: "Logistics firm",
+    stat: "12 hrs",
+    text: "saved per week on manual data entry.",
+  },
+];
+
+
 // External platform links
 export const socialLinks = [
   {
@@ -379,5 +398,35 @@ export const team = [
   { n: 'Team Member 1', r: 'Founder & CEO' }, { n: 'Team Member 2', r: 'Lead Engineer' },
   { n: 'Team Member 3', r: 'AI Engineer' }, { n: 'Team Member 4', r: 'UI/UX Designer' },
 ]
+
+export const testimonials = [
+ {
+    review:
+      "CoreD designed an AI-powered marketing CRM to streamline lead management from enquiry capture to discovery-call handoff. Its centralized dashboard organizes lead details, service requirements, budgets, timelines, and activity history in one place.",
+    name: "Adsmark01",
+    initials: "OL",
+    role: "Product Growth",
+    company: "CRM & AI Automation",
+  },
+  {
+        review:
+      "CoreD designed an education CRM dashboard that centralizes student fee records, invoice tracking, payment balances, and due dates. The interface highlights outstanding payments and collection summaries, helping staff identify accounts that need attention. ",
+    name: "Crawl Digitally  ",
+    initials: "TP",
+    role: "Systems Integration",
+    company: "Business Operations",
+  },
+  {
+    review:
+      "CoreD designed an education CRM dashboard that centralizes student fee records, invoice tracking, payment balances, and due dates. The interface highlights outstanding payments and collection summaries, helping staff identify accounts that need attention.",
+    name: "NextTechWaves",
+    initials: "PS",
+    role: "Client Team",
+    company: "Workflow Automation",
+  },
+
+]
+
+
 
 
