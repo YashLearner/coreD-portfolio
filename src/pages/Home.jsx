@@ -205,7 +205,7 @@ function HeroSection() {
 
 function WorkflowSection() {
   return (
-    <section className="bg-[#fbfaff] px-4 py-20 sm:px-6 sm:py-24 lg:px-8 lg:py-28">
+    <section className="bg-[#faf7f1] px-4 py-20 sm:px-6 sm:py-24 lg:px-8 lg:py-28">
       <div className="mx-auto max-w-7xl">
         <SectionHeading
           eyebrow="How it works"
@@ -224,15 +224,9 @@ function WorkflowSection() {
                   {item.number === "01" && (
                     <span className="text-sm font-black">01</span>
                   )}
-                  {item.number === "02" && (
-                    <Sparkles className="h-5 w-5" />
-                  )}
-                  {item.number === "03" && (
-                    <ArrowRight className="h-5 w-5" />
-                  )}
-                  {item.number === "04" && (
-                    <Check className="h-5 w-5" />
-                  )}
+                  {item.number === "02" && <Sparkles className="h-5 w-5" />}
+                  {item.number === "03" && <ArrowRight className="h-5 w-5" />}
+                  {item.number === "04" && <Check className="h-5 w-5" />}
                 </span>
 
                 <span className="text-xs font-bold tracking-widest text-slate-300">
@@ -259,7 +253,7 @@ function WorkflowSection() {
 
 function ContactSteps() {
   return (
-    <section className="bg-[#fbfaff] px-4 py-8 sm:px-6 lg:px-8">
+    <section className="bg-[#faf7f1] px-4 py-8 sm:px-6 lg:px-8">
       <div className="relative mx-auto max-w-7xl overflow-hidden rounded-[30px] border border-slate-200 bg-white px-6 py-10 text-slate-900 sm:px-10 sm:py-14 lg:px-14 lg:py-16">
         <div
           aria-hidden="true"
@@ -278,8 +272,8 @@ function ContactSteps() {
             </h2>
 
             <p className="mt-4 max-w-lg text-sm leading-7 text-slate-600 sm:text-base">
-              Tell us what your team needs. Let's explore an AI-powered
-              CRM workflow that fits your business.
+              Tell us what your team needs. Let's explore an AI-powered CRM
+              workflow that fits your business.
             </p>
 
             <Link
@@ -321,7 +315,7 @@ function CaseStudiesSection() {
   }
 
   return (
-    <section className="bg-[#fbfaff] px-4 py-20 sm:px-6 sm:py-24 lg:px-8">
+    <section className="bg-[#faf7f1] px-4 py-20 sm:px-6 sm:py-24 lg:px-8">
       <div className="mx-auto max-w-7xl">
         <div className="flex flex-col gap-5 sm:flex-row sm:items-end sm:justify-between">
           <SectionHeading
@@ -379,7 +373,7 @@ function CaseStudiesSection() {
 
 export default function Home() {
   return (
-    <main className="min-h-screen overflow-hidden bg-[#fbfaff] text-slate-950">
+    <main className="min-h-screen overflow-hidden bg-[#faf7f1] text-slate-950">
       <HeroSection />
       <CompamyLogoSection />
 

@@ -17,19 +17,18 @@ export default function App() {
 
   return (
     <>
-    
       <Navbar />
-    <main className="min-h-screen pt-28">
-       
+      <main className="min-h-screen pt-28">
+           
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/services" element={<Services />} />
           <Route path="/case-studies" element={<CaseStudies />} />
           <Route path="/blog" element={<Blog />} />
+          <Route path="/contact" element={<Contact />} />
           <Route path="/reach-us" element={<Contact />} />
-          <Route path="/termsCondition" element={<TermsCondition />} /> 
+          <Route path="/termsCondition" element={<TermsCondition />} />
         </Routes>
-
       </main>
       <Footer />
     </>

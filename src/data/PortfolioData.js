@@ -24,7 +24,12 @@ export const navLinks = [
   {
     label: "Case Studies",
     href: "/case-studies"
+  },
+  {
+    label: "Terms & Condition",
+    href: "/termsCondition"
   }
+
 ];
 
 
@@ -386,10 +391,7 @@ export const posts = [
   { t: 'CRM security checklist for small teams', d: 'Seven checks to run before you go live.' },
   { t: 'When to move your CRM to the cloud', d: 'Cost, speed and risk, compared.' },
 ]
-export const team = [
-  { n: 'Team Member 1', r: 'Founder & CEO' }, { n: 'Team Member 2', r: 'Lead Engineer' },
-  { n: 'Team Member 3', r: 'AI Engineer' }, { n: 'Team Member 4', r: 'UI/UX Designer' },
-]
+
 
 export const testimonials = [
  {
@@ -419,6 +421,104 @@ export const testimonials = [
 
 ]
 
+
+
+//terms & condition section
+
+export const termsSections = [
+  {
+    title: "Acceptance of Terms",
+    paragraphs: [
+      "By accessing or using the CoreDhristi website, you agree to follow these Terms & Conditions and applicable laws. If you do not agree with these terms, please discontinue use of the website.",
+    ],
+  },
+  {
+    title: "Website and Portfolio Information",
+    paragraphs: [
+      "This website presents information about CRM solutions, AI agents, automation systems, development services, and related projects. Portfolio examples, screenshots, demonstrations, and descriptions are provided for informational purposes. They may not represent the exact features, scope, or results of every client project.",
+    ],
+  },
+  {
+    title: "CRM, AI and Automation Services",
+    paragraphs: [
+      "Our services may include AI Based CRM, AI Agent CRM, Custom CRM development, workflow automation, integrations, consultation, and related technology services. The actual features, deliverables, timeline, support arrangements, and project scope will be defined in the applicable proposal or written agreement.",
+    ],
+  },
+  {
+    title: "AI Outputs and Service Limitations",
+    paragraphs: [
+      "AI-generated content, recommendations, automated decisions, and workflow outputs may contain errors or require human review. You are responsible for reviewing outputs before relying on them for important business decisions. Unless expressly agreed in writing, we do not guarantee specific revenue, conversion, productivity, or business results.",
+    ],
+  },
+  {
+    title: "Customer Responsibilities",
+    paragraphs: [
+      "You agree to provide accurate project information, use the services lawfully, and ensure that you have the necessary rights and permissions for any data, content, or materials you provide. You must not use our website or services to violate applicable laws, infringe third-party rights, or disrupt systems.",
+    ],
+  },
+  {
+    title: "Privacy and Data Protection",
+    paragraphs: [
+      "When you submit a contact or project enquiry, we may use the information you provide, including your name or company details, email address, phone number, selected service, budget, and project description, to respond to your enquiry and manage communications. Enquiry information may be processed through spreadsheet, email, and related service providers.",
+      "Our Privacy Policy explains how personal information is collected, used, stored, shared, retained, and protected, as well as applicable rights and contact procedures. Please avoid submitting passwords, payment credentials, or unnecessary sensitive information through general enquiry forms.",
+    ],
+  },
+  {
+    title: "Third-Party Services and Integrations",
+    paragraphs: [
+      "CRM implementations may depend on third-party platforms, APIs, cloud services, communication tools, or other integrations. These services may be subject to their own terms, privacy policies, availability requirements, and charges. Third-party changes or outages may affect integrated functionality.",
+    ],
+  },
+  {
+    title: "Pricing, Payments and Cancellations",
+    paragraphs: [
+      "Pricing, payment schedules, taxes, subscriptions, project milestones, cancellation terms, refunds, and additional charges will be specified in the relevant quotation, proposal, invoice, or written agreement. A website enquiry alone does not establish a paid subscription or guarantee acceptance of a project.",
+    ],
+  },
+  {
+    title: "Intellectual Property",
+    paragraphs: [
+      "Unless otherwise stated, website text, branding, graphics, designs, and original portfolio materials are owned by or licensed to their respective rights holders. You may not copy, reproduce, redistribute, or commercially exploit these materials without appropriate permission. Ownership and licensing of custom project deliverables will be determined by the applicable written agreement.",
+    ],
+  },
+  {
+    title: "Confidential Information",
+    paragraphs: [
+      "Please do not submit confidential business information, production credentials, or sensitive customer records through a general contact form. Confidentiality obligations for a specific project should be documented in an appropriate written agreement where required.",
+    ],
+  },
+  {
+    title: "Website Availability and Changes",
+    paragraphs: [
+      "We may update website content, service descriptions, portfolio materials, or website functionality from time to time. We aim to maintain availability but cannot guarantee uninterrupted access or the absence of every technical error.",
+    ],
+  },
+  {
+    title: "Warranties and Limitation of Liability",
+    paragraphs: [
+      "Website information is provided for general informational purposes and should not be treated as a guarantee of service performance or business outcomes. Any service warranties, remedies, and liability limitations should be set out in the relevant written agreement and apply only to the extent permitted by applicable law.",
+    ],
+  },
+  {
+    title: "Changes to These Terms",
+    paragraphs: [
+      "We may revise these Terms & Conditions when our website, services, or applicable requirements change. Updated terms will be published on this page with a revised update date. Continued use after changes take effect will be subject to applicable law and any requirements for notice or acceptance.",
+    ],
+  },
+  {
+    title: "Governing Law and Disputes",
+    paragraphs: [
+      "These terms are subject to the laws and jurisdiction specified in the final published version, to the extent permitted by applicable law. The appropriate governing location and dispute-resolution process should be confirmed before publication.",
+    ],
+  },
+  {
+    title: "Contact Us",
+    paragraphs: [
+      "If you have questions about these Terms & Conditions, project scope, or our services, please contact the CoreDhristi team through our Contact Us page.",
+    ],
+    contact: true,
+  },
+];
 
 
 
