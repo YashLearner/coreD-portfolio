@@ -1,7 +1,4 @@
-
-import { team } from "../data/PortfolioData.js";
 import PageSection from "../components/ui/PageSection.jsx";
-import Card from "../components/ui/Card.jsx";
 
 export default function Terms() {
   return (
@@ -54,38 +51,10 @@ export default function Terms() {
             </p>
           </section>
         </article>
-
-        {/* Team section */}
-        <section>
-          <div className="mb-6">
-            <h2 className="text-2xl font-bold text-ink">
-              Meet the Team
-            </h2>
-            <p className="mt-2 text-ink/60">
-              The people building CoreD.
-            </p>
-          </div>
-
-          <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-4">
-            {team.map((member) => (
-              <Card key={member.n}>
-                <div
-                  aria-hidden="true"
-                  className="h-24 w-24 rounded-full bg-brand/30"
-                />
-
-                <h3 className="mt-4 font-bold text-ink">
-                  {member.n}
-                </h3>
-
-                <p className="text-sm text-ink/60">
-                  {member.r}
-                </p>
-              </Card>
-            ))}
-          </div>
-        </section>
       </div>
     </PageSection>
   );
 }
+
+
+

@@ -9,6 +9,8 @@ import Contact from './pages/Contact.jsx'
 import CaseStudies from './pages/CaseStudies.jsx'
 import Blog from './pages/Blog.jsx'
 import TermsCondition from './pages/TermsCondition.jsx'
+import WordReveal from './components/ui/WordReveal.jsx'
+import CustomCursor from './components/ui/CustomCurser.jsx'
 
 export default function App() {
   const { pathname } = useLocation()
@@ -17,16 +19,22 @@ export default function App() {
     window.scrollTo(0, 0)
   }, [pathname])
 
+
+
   return (
     <>
-    
+      <CustomCursor />
+      <WordReveal />
+
+
       <Navbar />
 
       <main className="min-h-screen pt-28">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/services" element={<Services />} />
-          <Route path="/case-studies" element={<CaseStudies />} />
+          <Route path="/case-studies/" element={<CaseStudies />} />
+          <Route path="/case-studies/:id" element={<CaseStudies />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/reach-us" element={<Contact />} />
           <Route path="/termsCondition" element={<TermsCondition />}

@@ -1,4 +1,4 @@
-import { cases, posts, team } from '../data/PortfolioData.js'
+import { cases, posts } from '../data/PortfolioData.js'
 const Wrap = ({ title, lead, children }) => (
   <section className="mx-auto max-w-6xl px-6 pt-10">
     <h1 className="text-4xl md:text-6xl font-black tracking-tight">{title}</h1>
@@ -21,13 +21,6 @@ export const Blog = () => (
   </Wrap>
 )
 
-export const Team = () => (
-  <Wrap title="Meet the team" lead="The people building CoreD.">
-    <div className="grid gap-4 md:grid-cols-4">
-      {team.map((m) => <Card key={m.n}><div className="h-24 w-24 rounded-full bg-brand/30" /><p className="mt-4 font-bold">{m.n}</p><p className="text-sm text-ink/60">{m.r}</p></Card>)}
-    </div>
-  </Wrap>
-)
 export const Terms = () => (
   <Wrap title="Terms & Conditions" lead="Replace this text with your final legal terms.">
     <div className="max-w-3xl space-y-4 text-ink/80">
