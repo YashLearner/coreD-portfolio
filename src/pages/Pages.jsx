@@ -1,4 +1,4 @@
-import { cases, posts} from '../data/PortfolioData.js'
+import { cases, posts } from '../data/PortfolioData.js'
 const Wrap = ({ title, lead, children }) => (
   <section className="mx-auto max-w-6xl px-6 pt-10">
     <h1 className="text-4xl md:text-6xl font-black tracking-tight">{title}</h1>

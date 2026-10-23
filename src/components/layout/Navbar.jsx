@@ -2,8 +2,8 @@ import { useEffect, useState } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import { ArrowUpRight, Menu, X } from "lucide-react";
 
-const HOME_BG = "#050505";
-const PAGE_BG = "#f9f8f4";
+const NAVBAR_BG = "#14161aeb";
+const CONTACT_BG = "#0b0b0b";
 
 const navigation = [
   { label: "Home", path: "/", end: true },
@@ -18,11 +18,9 @@ export default function Navbar() {
 
   const location = useLocation();
 
-  // Home is dark; all other routes use the light page theme.
-  const isHome = location.pathname === "/";
-  const pageBackground = isHome ? HOME_BG : PAGE_BG;
+  // Navigation has its own dark surface, independent of the current page.
 
-  // Desktop navigation styles.
+  // Keep navigation contrast consistent across routes.
   const navLinkClass = ({ isActive }) =>
     [
       "relative inline-flex items-center rounded-full px-3.5 py-2.5",
@@ -30,13 +28,9 @@ export default function Navbar() {
       "transition-colors duration-200",
       "focus-visible:outline-none focus-visible:ring-2",
       "focus-visible:ring-orange-400",
-      isHome
-        ? isActive
-          ? "bg-white/[0.08] text-orange-400"
-          : "text-white/70 hover:bg-white/[0.05] hover:text-white"
-        : isActive
-          ? "bg-black/[0.05] text-orange-600"
-          : "text-black/70 hover:bg-black/[0.04] hover:text-black",
+      isActive
+        ? "bg-white/[0.08] text-orange-400"
+        : "text-white/70 hover:bg-white/[0.05] hover:text-white",
     ].join(" ");
 
   // Mobile navigation styles.
@@ -46,13 +40,9 @@ export default function Navbar() {
       "text-sm font-medium transition-colors duration-200",
       "focus-visible:outline-none focus-visible:ring-2",
       "focus-visible:ring-orange-400",
-      isHome
-        ? isActive
-          ? "bg-orange-400/10 text-orange-400"
-          : "text-white/75 hover:bg-white/[0.05] hover:text-white"
-        : isActive
-          ? "bg-orange-500/10 text-orange-700"
-          : "text-black/75 hover:bg-black/[0.04] hover:text-black",
+      isActive
+        ? "bg-orange-400/10 text-orange-400"
+        : "text-white/75 hover:bg-white/[0.05] hover:text-white",
     ].join(" ");
 
   // Mobile menu button styles.
@@ -61,11 +51,8 @@ export default function Navbar() {
     border transition-colors duration-200
     focus-visible:outline-none focus-visible:ring-2
     focus-visible:ring-orange-400 lg:hidden
-    ${
-      isHome
-        ? "border-white/10 bg-white/[0.03] text-white hover:border-orange-400/50 hover:bg-orange-400/10 hover:text-orange-400"
-        : "border-black/10 bg-black/[0.02] text-black hover:border-orange-400/50 hover:bg-orange-400/10 hover:text-orange-700"
-    }
+    border-white/10 bg-white/[0.03] text-white
+    hover:border-orange-400/50 hover:bg-orange-400/10 hover:text-orange-400
   `;
 
   // Close mobile navigation whenever the route changes.
@@ -101,18 +88,14 @@ export default function Navbar() {
       <header className="fixed inset-x-0 top-0 z-50 px-3 pt-3 sm:px-6 sm:pt-5">
         <nav
           aria-label="Main navigation"
-          style={{ backgroundColor: pageBackground }}
+          style={{ backgroundColor: NAVBAR_BG }}
           className={`
             relative mx-auto flex max-w-7xl
             items-center justify-between gap-3
             rounded-full border px-3 py-2.5
             sm:px-5 sm:py-3
             transition-colors duration-200
-            ${
-              isHome
-                ? "border-white/10 text-white"
-                : "border-transparent text-black"
-            }
+            border-white/10 text-white
           `}
         >
           {/* Logo */}
@@ -130,7 +113,6 @@ export default function Navbar() {
                 transition-opacity duration-200
                 group-hover:opacity-80
                 sm:h-9 sm:max-w-[140px]
-                ${isHome ? "" : "brightness-0"}
               `}
             />
           </Link>
@@ -151,22 +133,10 @@ export default function Navbar() {
 
           {/* Desktop Reach Us Out + mobile menu button */}
           <div className="flex shrink-0 items-center gap-2">
-            <Link
-              to="/contact"
-              onClick={handleNavigation}
-              className="
-                group hidden items-center gap-2
-                rounded-full border border-orange-400/40
-                bg-gradient-to-r from-orange-400 to-amber-300
-                px-4 py-2.5 text-[13px] font-semibold text-black
-                transition-all duration-200
-                hover:-translate-y-0.5 hover:border-orange-300
-                hover:shadow-[0_0_24px_rgba(249,115,22,0.18)]
-                active:scale-[0.98]
-                focus-visible:outline-none focus-visible:ring-2
-                focus-visible:ring-orange-400
-                sm:inline-flex sm:px-5
-              "
+            <button
+              type="button"
+              onClick={openContactForm}
+              className="group hidden sm:inline-flex items-center gap-2 rounded-full border border-orange-400/40 bg-gradient-to-r from-orange-400 to-amber-300 px-4 py-2.5 sm:px-5 text-[13px] font-semibold text-black transition-all duration-200 hover:-translate-y-0.5 hover:border-orange-300 hover:shadow-[0_0_24px_rgba(249,115,22,0.18)] active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-400"
             >
               Reach Us Out
               <ArrowUpRight
@@ -201,17 +171,13 @@ export default function Navbar() {
           id="mobile-navigation"
           aria-label="Mobile navigation"
           aria-hidden={!menuOpen}
-          style={{ backgroundColor: pageBackground }}
+          style={{ backgroundColor: NAVBAR_BG }}
           className={`
             mx-auto mt-3 max-w-7xl overflow-hidden
             rounded-2xl border
             transition-all duration-200
             lg:hidden
-            ${
-              isHome
-                ? "border-white/10 text-white"
-                : "border-black/10 text-black"
-            }
+            border-white/10 text-white
             ${
               menuOpen
                 ? "visible translate-y-0 opacity-100"
@@ -224,7 +190,7 @@ export default function Navbar() {
               <span
                 className={`
                   text-[10px] font-semibold uppercase tracking-[0.24em]
-                  ${isHome ? "text-white/40" : "text-black/45"}
+                  text-white/40
                 `}
               >
                 Navigation

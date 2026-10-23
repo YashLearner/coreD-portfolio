@@ -1,0 +1,162 @@
+/* Supplied Stitch design: warm cream surfaces, orange accents, five-section continuation. */
+.home-continuation {
+  --crm-shadow-subtle:
+    0 2px 8px -2px rgb(20 22 26 / 0.04), 0 1px 3px rgb(20 22 26 / 0.02);
+  --crm-shadow-card:
+    0 8px 24px -4px rgb(20 22 26 / 0.06), 0 2px 6px -1px rgb(20 22 26 / 0.03);
+  --crm-shadow-raised:
+    0 20px 40px -8px rgb(20 22 26 / 0.08), 0 4px 12px -2px rgb(20 22 26 / 0.04);
+  --crm-shadow-orange: 0 12px 32px -4px rgb(255 145 0 / 0.22);
+}
+
+.home-continuation {
+  color: #14161a;
+  background: #faf7f1;
+  -webkit-font-smoothing: antialiased;
+}
+
+.home-continuation > section {
+  scroll-margin-top: 112px;
+}
+
+.home-continuation .shadow-warm-sm {
+  box-shadow: var(--crm-shadow-subtle);
+}
+
+.home-continuation .shadow-warm-md,
+.home-continuation .hover\:shadow-warm-md:hover {
+  box-shadow: var(--crm-shadow-card);
+}
+
+.home-continuation .shadow-warm-lg,
+.home-continuation .hover\:shadow-warm-lg:hover {
+  box-shadow: var(--crm-shadow-raised);
+}
+
+.home-continuation .shadow-glow-orange {
+  box-shadow: var(--crm-shadow-orange);
+}
+
+.home-continuation .no-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.home-continuation .no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.home-continuation .portfolio-carousel,
+.home-continuation .testimonial-carousel {
+  scroll-snap-type: x proximity;
+  overscroll-behavior-x: contain;
+}
+
+.home-continuation .portfolio-carousel > *,
+.home-continuation .testimonial-carousel > * {
+  scroll-snap-align: start;
+}
+
+.home-continuation button:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+.home-continuation button:focus-visible,
+.home-continuation a:focus-visible,
+.home-continuation [tabindex="0"]:focus-visible {
+  outline: 2px solid #a35d00;
+  outline-offset: 4px;
+}
+
+.home-continuation button,
+.home-continuation a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+@media (max-width: 767px) {
+  .home-continuation > section {
+    padding-block: 64px;
+  }
+
+  .home-continuation h2 {
+    font-size: clamp(1.875rem, 7vw, 2.25rem);
+  }
+
+  .home-continuation .portfolio-project-card {
+    width: 100%;
+  }
+
+  .home-continuation .crm-lifecycle-funnel {
+    padding: 20px 12px;
+  }
+
+  .home-continuation .crm-lifecycle-funnel > div:first-child {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .home-continuation .crm-lifecycle-funnel > div:last-child {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .home-continuation .crm-lifecycle-funnel .group > div:first-child {
+    padding-inline: 12px;
+    gap: 6px;
+  }
+
+  .home-continuation .crm-lifecycle-funnel .group > div:first-child > div {
+    gap: 8px;
+    min-width: 0;
+  }
+
+  .home-continuation .crm-lifecycle-funnel .group > div:first-child > span {
+    display: none;
+  }
+
+  .home-continuation
+    .crm-lifecycle-funnel
+    .group
+    > div:first-child
+    > div
+    > div:first-child {
+    flex-shrink: 0;
+  }
+
+  .home-continuation .crm-importance-card {
+    padding: 24px;
+    min-width: 0;
+  }
+
+  .home-continuation .crm-illustration {
+    height: auto;
+    min-height: 224px;
+    overflow: hidden;
+    padding-inline: 12px;
+  }
+
+  .home-continuation .crm-illustration > .grid {
+    margin-block: 12px;
+  }
+
+  .home-continuation .crm-illustration .flex.justify-between {
+    gap: 8px;
+  }
+
+  .home-continuation .crm-illustration .grid > div {
+    padding: 8px;
+    min-width: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-continuation *,
+  .home-continuation *::before,
+  .home-continuation *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
