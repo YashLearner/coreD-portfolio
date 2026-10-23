@@ -2,7 +2,7 @@ import { Routes, Route, useLocation } from 'react-router-dom'
 import { useEffect } from 'react'
 
 import Navbar from './components/layout/Navbar.jsx'
-import Footer from './components/Layout/Footer.jsx'
+import Footer from './components/layout/Footer.jsx'
 import Home from './pages/Home.jsx'
 import Services from './pages/Services.jsx'
 import Contact from './pages/Contact.jsx'
@@ -29,7 +29,7 @@ export default function App() {
 
       <Navbar />
 
-      <main className="min-h-screen pt-28">
+      <main className={pathname === '/' ? 'min-h-screen' : 'min-h-screen pt-28'}>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/services" element={<Services />} />

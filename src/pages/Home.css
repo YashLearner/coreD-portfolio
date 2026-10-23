@@ -1,0 +1,23 @@
+.home-hero-content {
+  padding-top: clamp(104px, 14vh, 144px);
+}
+
+.home-hero-dashboard {
+  margin-top: clamp(20px, 4vh, 48px);
+}
+
+@media (max-width: 639px) {
+  .home-hero h1 {
+    margin-top: 24px;
+    font-size: clamp(2rem, 11vw, 2.8rem);
+  }
+
+  .home-hero-copy > p {
+    margin-top: 20px;
+    line-height: 24px;
+  }
+
+  .home-hero-copy > div:last-child {
+    margin-top: 24px;
+  }
+}
