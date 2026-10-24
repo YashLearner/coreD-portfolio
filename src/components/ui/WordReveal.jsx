@@ -7,7 +7,7 @@ const REVEAL_SELECTOR =
 const INITIAL_CLASS = "global-reveal-init";
 const VISIBLE_CLASS = "global-reveal-visible";
 
-export default function GlobalWordReveal() {
+export default function WordReveal() {
   useEffect(() => {
     const root = document.querySelector("main");
 

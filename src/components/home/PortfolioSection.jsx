@@ -73,23 +73,17 @@ export default function PortfolioSection() {
   }
 
   return (
-    <section className=" bg-[#faf7f1] px-4 py-20 sm:px-6 sm:py-24 lg:px-8">
-      <div className="mx-auto max-w-7xl">
+    <section className="bg-[#F3EDE2] px-4 py-20 sm:px-6 sm:py-24 lg:px-8">
+      <div className="bg-[#F3EDE2] mx-auto max-w-7xl">
         <div className="flex flex-col gap-5 sm:flex-row sm:items-end sm:justify-between">
           <SectionHeading
-            align="left"
+            align="center"
             eyebrow="Case studies"
-            title="Better systems. Clearer outcomes."
+            title={<> Better system <br/>
+                       Clearer outcome
+                  </>}
             description="Explore how thoughtful workflows and automation can help teams work with greater clarity."
           />
-
-          <Link
-            to={`/case-studies`}
-            className="inline-flex shrink-0 items-center gap-2 self-start rounded-full border border-slate-300 bg-white px-5 py-3 text-sm font-bold text-slate-800 transition hover:border-amber-400 hover:text-amber-700 sm:self-auto"
-          >
-            All case studies
-            <ArrowRight className="h-4 w-4" />
-          </Link>
         </div>
 
         <div

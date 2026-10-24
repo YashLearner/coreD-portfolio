@@ -138,35 +138,94 @@ export const services = {
 export const caseStudies = [
 
 
+
   {
     id: "crawl-digitally-crm",
+
+    // Used by Home and See Our Work cards
     client: "Crawl Digitally",
+    shortDescription:
+      "We developed a centralized CRM for leads, pipeline and follow-ups.",
+
     category: "CRM Development",
-    // website: "https://www.crawldigitally.com/",
+    website: "https://www.crawldigitally.com/",
 
     title: "One CRM. A Clearer View of Every Lead.",
 
     summary:
       "A centralized CRM built to bring lead management, sales opportunities, pipeline visibility, and follow-up workflows into one workspace.",
 
-    problemTitle: "Their Problem",
+    // Fill these with the actual project details.
+    duration: "12 Weeks",
+    industry: "Creative Agency & Digital Marketing",
+    stack: "MERN",
 
-    problem:
-      "Lead details, sales opportunities, and follow-ups can become scattered across tools. Without clear pipeline and lead-source visibility, teams may struggle to identify pending actions and keep every opportunity moving.",
+    problem: {
+      tag: "The Challenge",
 
-    solutionTitle: "Our Solution",
-    shortDescription: "We developed a centralized CRM for leads, pipeline and follow-ups.",
+      heading: "Scattered Leads. Limited Pipeline Visibility.",
+
+      paragraphs: [
+        "Lead details, sales opportunities, and follow-ups can become scattered across tools. Without clear pipeline and lead-source visibility, teams may struggle to identify pending actions and keep every opportunity moving.",
+      ],
+
+      highlights: [
+        "Lead details scattered across different tools",
+        "Limited visibility into pending follow-ups",
+        "Difficulty tracking active and closed opportunities",
+        "Lead sources and sales activity harder to compare",
+      ],
+    },
+
+    solution: {
+      tag: "Our Solution",
+
+      heading: "A Centralized CRM for the Entire Sales Workflow",
+      detailsHeading: "How the CRM Works",
+
+     paragraphs: [
+  "CoreD developed a centralized Customer Relationship Management (CRM) platform for Crawl Digitally to bring lead management, sales opportunities, and follow-up coordination into a single workspace. The goal was to make essential sales information easier to access, review. Through a consolidated dashboard, team members can review incoming enquiries, examine lead details, monitor active opportunities.",
+    
+
+  "The CRM also focuses on improving pipeline visibility and helping the team understand where its enquiries originate. Lead-source analytics allow users to compare enquiries from organic traffic, paid advertising, and referral channels, making it easier to review lead acquisition activity in one place. Sales pipeline views provide visibility into active opportunities.",
+
+  "An AI Co-pilot concept adds another layer to the CRM by surfacing suggested next actions and highlighting activities that may require attention or team approval. Rather than treating AI suggestions as automatically completed actions, the workflow is designed to keep the team involved in reviewing proposed next steps. Combined with centralized lead records, and follow-up management, this approach supports a more structured way of handling sales activity."
+],
 
 
-    solution:
-      "CoreD developed a centralized CRM bringing lead management, sales opportunities, and follow-up coordination into one workspace. Teams can review lead details, track active and closed deals, and compare enquiries from organic, paid, and referral sources. Follow-up tracking highlights pending tasks, unassigned leads, and proposals awaiting review. An AI Co-pilot concept surfaces suggested next steps for approval, improving pipeline visibility, organizing sales activity, and supporting smoother hand-offs between marketing and sales.",
-    features: [
-      { title: "Lead Management" },
-      { title: "Sales Pipeline" },
-      { title: "Lead-Source Analytics" },
-      { title: "Follow-up Tracking" },
-      { title: "AI Co-pilot" },
+
+      highlights: [
+        "Centralized lead and sales opportunity management",
+        "Visibility into active deals and pipeline value",
+        "Lead-source analytics for organic, paid, and referral enquiries",
+        "Follow-up tracking and proposal review workflows",
+        "AI Co-pilot suggestions for team approval",
+      ],
+    },
+
+    // Keep all project screenshots in an array.
+    screenshots: [
+      {
+        src: "/Images/Crawl01.png",
+        alt: "Crawl Digitally CRM dashboard overview",
+        label: "Dashboard",
+        caption: "CRM dashboard overview",
+      },
+      {
+        src: "/Images/Crawl03.png",
+        alt: "Crawl Digitally CRM lead management interface",
+        label: "Lead Management",
+        caption: "Lead management and opportunity tracking",
+      },
+      {
+        src: "/Images/Crawl02.png",
+        alt: "Crawl Digitally CRM follow-up interface",
+        label: "AI Follow-ups",
+        caption: "Follow-up management and suggested next steps",
+      },
     ],
+
+    // The component reads feature.title and feature.description.
     features: [
       {
         title: "Lead Management",
@@ -195,297 +254,482 @@ export const caseStudies = [
       },
     ],
 
-    screenshots: [
+    // Add actual CRM project metrics when you have verified results.
+    // Each result uses metric, label, and detail.
+    results: [
       {
-        // src: "/Images/Crawl01.",
-        src : "/Images/aish.png",
-        alt: "Crawl Digitally CRM dashboard",
-        label: "Dashboard",
-        caption: "CRM dashboard overview",
+        metric: "Verified value",
+        label: "Result description",
+        detail: "Context supporting this result",
       },
       {
-        src: "/Images/Crawl03.png",
-        alt: "CRM lead management page",
-        label: "Leads",
-        caption: "Lead management",
+        metric: "$110k+",
+        label: "Annual Cost Saved",
+        detail: "Direct reduction in finding leads"
       },
       {
-        src: "/Images/Crawl02.png",
-        alt: "CRM follow-up page",
-        label: "AI Follow-ups",
-        caption: "Follow-up management",
+        metric: "98.4%",
+        label: "On Time Delievery",
+        detail: "up to 80 % prior to implementation"
       },
+      {
+        metric: "10x",
+        label: "Scalability Capacity",
+        detail: "Handeled peak season efficiently"
+      }
     ],
+
+    resultsNote:
+      "The CRM brings lead management, sales opportunities, pipeline visibility, and follow-up activities into one workspace.",
 
     result:
       "One workspace for reviewing leads, monitoring opportunities, and organizing follow-up activities.",
   },
 
   {
-    id: "adsmark01MarketingCRM",
-    client: "Adsmark01",
-    category: "AI Marketing CRM",
+  id: "adsmark01MarketingCRM",
+  client: "Adsmark01",
+  category: "AI Marketing CRM",
 
-    title: "From Enquiry to Discovery, All in One Workflow.",
+  shortDescription:
+    "We built an AI marketing CRM for enquiry qualification and follow-ups.",
 
-    summary:
-      "An agency CRM dashboard designed to organize incoming enquiries, qualify marketing leads, coordinate follow-ups, and manage discovery-call handoffs.",
+  title: "From Enquiry to Discovery, All in One Workflow.",
 
-    problemTitle: "The Challenge",
+  summary:
+    "An agency CRM dashboard designed to organize incoming enquiries, qualify marketing leads, coordinate follow-ups, and manage discovery-call handoffs.",
 
-    problem:
-      "Agencies need a reliable way to qualify enquiries, assign owners, and track follow-ups. When lead details, outreach drafts, and booking updates are scattered, teams can miss pending actions and lose visibility into each enquiry's status.",
+  duration: "",
+  industry: "Digital Marketing & Advertising",
+  stack: "",
 
-    solutionTitle: "Our Solution",
+  problem: {
+    tag: "The Challenge",
 
-    shortDescription: "We built an AI marketing CRM for enquiry qualification and follow-ups.",
+    heading: "Scattered Enquiries and Unstructured Follow-ups.",
 
-
-    solution:
-      "CoreD designed an AI marketing CRM workflow that takes enquiries from capture through qualification, team review, and discovery-call handoff. The dashboard organizes lead details, service requirements, budgets, timelines, and activity history in one place. Its staged workflow tracks duplicate checks, owner assignment, and follow-up preparation. Email drafts support review before sending, while WhatsApp options and dispatch safeguards help coordinate outreach. Booking status keeps pending confirmations distinct from completed scheduling steps.",
-    features: [
-      {
-        title: "Enquiry Management",
-        description:
-          "Bring incoming enquiries and relevant client details into a centralized workspace.",
-      },
-      {
-        title: "Lead Qualification",
-        description:
-          "Review requested services, budgets, and expected start dates.",
-      },
-      {
-        title: "Workflow Tracking",
-        description:
-          "Follow each stage from enquiry receipt through team review and booking handoff.",
-      },
-      {
-        title: "Follow-up Drafts",
-        description:
-          "Review email and WhatsApp follow-up workflows before contacting a lead.",
-      },
+    paragraphs: [
+      "Agencies receive enquiries from different sources, each with its own service requirements, budget expectations, and preferred timelines. Without a unified workflow, reviewing lead details, assigning ownership, and qualifying potential customers can become difficult. Important information may be spread across conversations, notes, and separate tools, making it harder for teams to understand the status of each enquiry and identify which leads need attention.",
     ],
 
-    screenshots: [
-      {
-        src: "/Images/AdsMark01.png",
-        alt:
-          "Adsmark01 AI marketing CRM dashboard showing enquiry qualification, workflow stages, and follow-up review",
-        label: "Dashboard",
-        caption:
-          "Enquiry qualification, follow-up approval, workflow tracking, and discovery-call handoff.",
-      },
-
-      {
-        src: "/Images/AdsMark02.png",
-        alt:
-          "Adsmark01 AI marketing CRM dashboard showing enquiry qualification, workflow stages, and follow-up review",
-        label: "AI Workflow",
-        caption:
-          "Enquiry qualification, follow-up approval, workflow tracking, and discovery-call handoff.",
-      },
-
-      {
-        src: "/Images/AdsMark03.png",
-        alt:
-          "Adsmark01 AI marketing CRM dashboard showing enquiry qualification, workflow stages, and follow-up review",
-        label: "Growth Overview",
-        caption:
-          "Enquiry qualification, follow-up approval, workflow tracking, and discovery-call handoff.",
-      },
+    highlights: [
+      "Incoming enquiries requiring qualification",
+      "Lead ownership and duplicate checks",
+      "Follow-ups requiring preparation and review",
+      "Discovery-call bookings needing status tracking",
     ],
-
-    result:
-      "A structured CRM interface that brings lead qualification, communication review, workflow progress, and booking status into one workspace.",
   },
 
+  solution: {
+    tag: "Our Solution",
 
+    heading: "An AI Marketing CRM for the Entire Enquiry Journey.",
+    detailsHeading: "How the CRM Works",
 
+    paragraphs: [
+      "CoreD designed an AI marketing CRM workflow that takes enquiries from initial capture through qualification, team review, and discovery-call handoff. The dashboard brings important lead information into one workspace, including requested services, budget expectations, preferred timelines, contact details, and activity history. This allows team members to review the context behind an enquiry before deciding how to proceed, while keeping each lead's progress visible throughout the workflow.",
 
-  {
-    id: "nextTechWavesCRM",
-    client: "NextTechWaves",
-    category: "Education CRM",
+      "The workflow organizes enquiry processing into clearly defined stages. Email drafts give the team an opportunity to review communication before sending it, while WhatsApp follow-up options help coordinate outreach through a structured process. Rather than treating a generated message as an automatically completed action, the workflow keeps communication review and approval distinct from dispatch.",
 
-    title: "Simplifying Student Fees and Campus Communication.",
-
-    summary:
-      "An education CRM dashboard designed to manage student fee records, monitor outstanding balances, and coordinate campus communications from one workspace.",
-
-    problemTitle: "Their Problem",
-
-    problem:
-      "Educational institutions need an organized way to track student payments, identify outstanding fees, and communicate with students. Managing fee records and reminders separately can make payment follow-ups and campus updates harder to coordinate.",
-
-    solutionTitle: "Our Solution",
-
-
-    shortDescription: "We designed an education CRM for fee tracking and student communication.",
-
-    solution:
-      "CoreD designed an education CRM dashboard that centralizes student fee records, invoice tracking, payment balances, and due dates. The interface highlights outstanding payments and collection summaries, helping staff identify accounts that need attention. A dedicated communication workspace supports fee reminders and campus announcements with reviewable message drafts. The reminder workflow includes balance rechecks, audience selection, staff approval, and safeguards to pause reminders after payment, supporting more controlled communication and payment follow-ups.",
-
-    features: [
-      {
-        title: "Student Fee Ledger",
-        description:
-          "Review course fees, payments received, outstanding balances, and due dates.",
-      },
-      {
-        title: "Fee Collection Overview",
-        description:
-          "Monitor billed amounts, realized collections, and outstanding balances.",
-      },
-      {
-        title: "Invoice Management",
-        description:
-          "Identify student dues and access invoice-related actions from the ledger.",
-      },
-      {
-        title: "Communication Workspace",
-        description:
-          "Prepare fee reminders and campus announcements using organized message drafts.",
-      },
-      {
-        title: "Reminder Workflow",
-        description:
-          "Track balance checks, audience selection, draft preparation, and staff review.",
-      },
-      {
-        title: "Dispatch Safeguards",
-        description:
-          "Represent payment rechecks, payment-triggered pauses, and business-hour delivery rules.",
-      },
+      "Discovery-call coordination completes the workflow by making booking progress visible alongside the lead's existing information. Booking status helps distinguish pending confirmations handoffs, the CRM provides a more organized way to manage potential customers from their first enquiry through the next stage of engagement.",
     ],
 
-    screenshots: [
-      {
-        src: "/Images/NextTech01.png",
-        alt:
-          "NextTechWaves Education CRM dashboard displaying student fee records, payment balances, communication drafts, and reminder workflow",
-        label: "Fees & Communication",
-        caption:
-          "Education CRM dashboard for fee tracking, student communication, and reminder review.",
-      },
-
-      {
-        src: "/Images/NextTech02.png",
-        alt:
-          "NextTechWaves Education CRM dashboard displaying student fee records, payment balances, communication drafts, and reminder workflow",
-        label: "Fees & Communication",
-        caption:
-          "Education CRM dashboard for fee tracking, student communication, and reminder review.",
-      },
-
-      {
-        src: "/Images/NextTech03.png",
-        alt:
-          "NextTechWaves Education CRM dashboard displaying student fee records, payment balances, communication drafts, and reminder workflow",
-        label: "Fees & Communication",
-        caption:
-          "Education CRM dashboard for fee tracking, student communication, and reminder review.",
-      },
+    highlights: [
+      "Centralized enquiry and lead management",
+      "Service, budget, and timeline qualification",
+      "Duplicate checks and lead-owner assignment",
+      "Reviewable email and WhatsApp follow-ups",
+      "Discovery-call handoff and booking-status tracking",
     ],
-
-    result:
-      "A unified education CRM interface for reviewing student dues, tracking collections, preparing communications, and coordinating controlled fee-reminder workflows.",
   },
 
+  screenshots: [
+    {
+      src: "/Images/AdsMark01.png",
+      alt: "Adsmark01 AI marketing CRM dashboard showing enquiry qualification, workflow stages, and follow-up review",
+      label: "Dashboard",
+      caption:
+        "Enquiry qualification, follow-up approval, workflow tracking, and discovery-call handoff.",
+    },
+    {
+      src: "/Images/AdsMark02.png",
+      alt: "Adsmark01 CRM workflow interface for marketing leads and follow-ups",
+      label: "AI Workflow",
+      caption:
+        "Lead processing, communication preparation, and workflow-stage visibility.",
+    },
+    {
+      src: "/Images/AdsMark03.png",
+      alt: "Adsmark01 CRM growth overview and lead-management interface",
+      label: "Growth Overview",
+      caption:
+        "A consolidated overview of enquiry activity and lead-management workflows.",
+    },
+  ],
 
-  {
-    id: "IndiprastPetroliumCRM",
-    client: "Indiprast Petroleum",
-    category: "Fuel & Loyalty CRM",
+  features: [
+    {
+      title: "Enquiry Management",
+      description:
+        "Bring incoming enquiries and relevant client details into a centralized workspace.",
+    },
+    {
+      title: "Lead Qualification",
+      description:
+        "Review requested services, budgets, and expected start dates before progressing an enquiry.",
+    },
+    {
+      title: "Workflow Tracking",
+      description:
+        "Follow each stage from enquiry receipt through team review and booking handoff.",
+    },
+    {
+      title: "Follow-up Drafts",
+      description:
+        "Prepare and review email and WhatsApp follow-up workflows before contacting a lead.",
+    },
+    {
+      title: "Duplicate & Ownership Checks",
+      description:
+        "Organize duplicate checking and lead assignment as part of enquiry processing.",
+    },
+    {
+      title: "Discovery-Call Coordination",
+      description:
+        "Track booking status and distinguish pending confirmations from completed scheduling.",
+    },
+  ],
 
-    title: "Connecting Fuel Operations with Smarter Loyalty Management.",
+  results: [],
 
-    summary:
-      "A fuel and loyalty CRM dashboard for monitoring refuelling activity, fleet transactions, reward points, and station operations from one workspace.",
+  resultsNote: "",
 
-    shortDescription:
-      "A centralized dashboard for fuel transactions, fleet activity, and loyalty rewards.",
+  result:
+    "A structured CRM interface that brings lead qualification, communication review, workflow progress, and discovery-call booking status into one workspace.",
+},
 
-    problemTitle: "Their Problem",
 
-    problem:
-      "Fuel stations need a clear view of refuelling transactions, fleet activity, and customer rewards. Without centralized tracking, reviewing exceptions, inactive loyalty cards, and pending offer approvals can become difficult.",
 
-    solutionTitle: "Our Solution",
+ {
+  id: "nextTechWavesCRM",
+  client: "NextTechWaves",
+  category: "Education CRM",
 
-    solution:
-      "CoreD designed a fuel and loyalty CRM dashboard that brings refuelling transactions, fleet activity, loyalty cards, and reward points into one view. Station teams can monitor fuel volumes, compare diesel and petrol usage, review transactions, and flag items needing attention. The interface supports loyalty-card tracking, reward-rule visibility, pump synchronization, and offer approvals. Together, these features help teams review station activity, manage rewards, and organize fuel operations across fleets and stations.",
+  shortDescription:
+    "We designed an education CRM for fee tracking and student communication.",
 
-    features: [
-      {
-        title: "Fuel Transaction Tracking",
-        description:
-          "Review refuelling records, fuel types, dispensed litres, and transaction status.",
-      },
-      {
-        title: "Fleet Fuel Analytics",
-        description:
-          "Monitor fuel volumes and compare diesel and petrol consumption.",
-      },
-      {
-        title: "Loyalty Card Management",
-        description:
-          "Review active loyalty cards and identify inactive cards requiring attention.",
-      },
-      {
-        title: "Points Ledger",
-        description:
-          "Track reward points associated with eligible fuel transactions.",
-      },
-      {
-        title: "Reward Rule Management",
-        description:
-          "Review earning rules and loyalty reward configurations.",
-      },
-      {
-        title: "Operational Alerts",
-        description:
-          "Highlight transactions awaiting review and offer drafts pending approval.",
-      },
+  title: "Simplifying Student Fees and Campus Communication.",
+
+  summary:
+    "An education CRM dashboard designed to manage student fee records, monitor outstanding balances, and coordinate campus communications from one workspace.",
+
+  duration: "",
+  industry: "Education",
+  stack: "",
+
+  problem: {
+    tag: "The Challenge",
+
+    heading: "Disconnected Fee Records and Payment Follow-ups.",
+
+    paragraphs: [
+      "Educational institutions need an organized way to review student fee records, monitor received payments, identify outstanding balances, and keep track of payment due dates. When information is spread across separate records and communication channels, staff may need to check multiple places to understand a student's payment status. This can make it harder to prioritize outstanding accounts and maintain a clear view of the institution's overall fee collection activity.",
+
+      "Fee reminders and campus announcements also require careful coordination. Without a structured communication workflow, staff may have difficulty preparing relevant messages, reviewing the intended audience, and ensuring that reminders reflect the latest payment status. A centralized system can bring financial records and communication preparation closer together while preserving the review steps needed before messages are dispatched.",
     ],
 
-    screenshots: [
-      {
-        src: "/Images/Indeprast01.png",
-        alt:
-          "Indiprast Petroleum fuel and loyalty CRM dashboard showing fuel analytics, loyalty cards, reward points, and recent transactions",
-        label: "Fuel & Loyalty Dashboard",
-        caption:
-          "Fuel volume analytics, loyalty management, transaction monitoring, and operational alerts.",
-      },
+    highlights: [
+      "Student payment records and dues",
+      "Outstanding balances and approaching due dates",
+      "Invoice and collection-status visibility",
+      "Fee reminders and announcements requiring review",
     ],
-
-    result:
-      "A unified fuel operations interface for reviewing refuelling activity, monitoring loyalty rewards, and identifying transactions or offers requiring attention.",
   },
 
-  
-{
+  solution: {
+    tag: "Our Solution",
+
+    heading: "A Unified Workspace for Student Fees and Communication.",
+    detailsHeading: "How the Education CRM Works",
+
+    paragraphs: [
+      "CoreD designed an education CRM dashboard that centralizes student fee records, invoice tracking, payment balances, and due dates. The interface organizes fee information so staff can review course fees, payments received, remaining balances, and invoice-related actions from a single workspace. Collection summaries provide a broader view of billed amounts, realized collections, and outstanding dues, while account-level records help staff identify students whose payments may require additional attention.",
+
+      "The dashboard also connects financial records with a dedicated communication workspace for preparing fee reminders and campus announcements.This separates message preparation from actual dispatch and provides a more structured way to coordinate routine student communication without losing sight of the underlying payment context.",
+
+      "A controlled reminder workflow adds further checks before communication moves forward. The process represents balance rechecks, audience selection. Together, these capabilities bring student fee tracking, collection visibility, invoice management, and communication preparation into one interface designed to support more organized administrative work.",
+    ],
+
+    highlights: [
+      "Centralized student fee ledger and invoice tracking",
+      "Billed amounts, collections, and outstanding balances",
+      "Reviewable fee reminders and campus announcements",
+      "Audience selection and staff approval workflow",
+      "Payment rechecks and reminder-dispatch safeguards",
+    ],
+  },
+
+  screenshots: [
+    {
+      src: "/Images/NextTech01.png",
+      alt: "NextTechWaves Education CRM dashboard showing student fee records and payment balances",
+      label: "Education Dashboard",
+      caption:
+        "An overview of student fee tracking, outstanding balances, and collection activity.",
+    },
+    {
+      src: "/Images/NextTech02.png",
+      alt: "NextTechWaves Education CRM interface for student fees and invoices",
+      label: "Fees & Invoices",
+      caption:
+        "Student payment records, invoice information, and fee follow-up visibility.",
+    },
+    {
+      src: "/Images/NextTech03.png",
+      alt: "NextTechWaves Education CRM communication and reminder workflow",
+      label: "Communication Workflow",
+      caption:
+        "Fee-reminder preparation, student communication, and controlled review steps.",
+    },
+  ],
+
+  features: [
+    {
+      title: "Student Fee Ledger",
+      description:
+        "Review course fees, payments received, outstanding balances, and due dates.",
+    },
+    {
+      title: "Fee Collection Overview",
+      description:
+        "Monitor billed amounts, realized collections, and outstanding balances.",
+    },
+    {
+      title: "Invoice Management",
+      description:
+        "Identify student dues and access invoice-related actions from the ledger.",
+    },
+    {
+      title: "Communication Workspace",
+      description:
+        "Prepare fee reminders and campus announcements using organized message drafts.",
+    },
+    {
+      title: "Reminder Workflow",
+      description:
+        "Track balance checks, audience selection, draft preparation, and staff review.",
+    },
+    {
+      title: "Dispatch Safeguards",
+      description:
+        "Represent payment rechecks, payment-triggered pauses, and business-hour delivery rules.",
+    },
+  ],
+
+  results: [],
+
+  resultsNote: "",
+
+  result:
+    "A unified education CRM interface for reviewing student dues, tracking collections, preparing communications, and coordinating controlled fee-reminder workflows.",
+},
+
+
+ {
+  id: "IndiprastPetroliumCRM",
+  client: "Indiprast Petroleum",
+  category: "Fuel & Loyalty CRM",
+
+  shortDescription:
+    "A centralized dashboard for fuel transactions, fleet activity, and loyalty rewards.",
+
+  title: "Connecting Fuel Operations with Loyalty Management.",
+
+  summary:
+    "A fuel and loyalty CRM dashboard for monitoring refuelling activity, fleet transactions, reward points, and station operations from one workspace.",
+
+  duration: "",
+  industry: "Petroleum & Energy",
+  stack: "",
+
+  problem: {
+    tag: "The Challenge",
+
+    heading: "Limited Visibility Across Fuel Operations and Loyalty Activity.",
+
+    paragraphs: [
+      "Fuel stations and fleet operations need a clear view of refuelling transactions, fuel volumes, vehicle activity, and customer loyalty records. When operational information is difficult to review in one place, teams may spend additional time checking transactions, comparing fuel types, and investigating records that require attention. A lack of consolidated visibility can also make it harder to understand current activity across the station and its associated fleet operations.",
+
+      "Loyalty programmes add another layer of operational responsibility. Teams need to review loyalty-card activity, understand reward-point records, manage reward rules, and identify inactive cards or offers that are still awaiting approval. Bringing these responsibilities into a common dashboard can make the relationship between fuelling activity, customer rewards, and operational follow-ups easier to review.",
+    ],
+
+    highlights: [
+      "Fuel transactions and dispensed-volume tracking",
+      "Diesel and petrol usage visibility",
+      "Loyalty cards and reward-point records",
+      "Pending operational reviews and offer approvals",
+    ],
+  },
+
+  solution: {
+    tag: "Our Solution",
+
+    heading: "A Centralized Dashboard for Fuel and Loyalty Operations.",
+    detailsHeading: "How the Fuel CRM Works",
+
+    paragraphs: [
+      "CoreD designed a fuel and loyalty CRM dashboard that brings refuelling transactions, fleet activity, loyalty cards, and reward points into one view. Station teams can review fuel volumes, compare diesel and petrol usage, inspect individual transactions, and identify records that need additional attention. By organizing this information in a consolidated interface, the dashboard makes key operational details easier to access without requiring teams to treat each activity as an isolated record.",
+
+      "The loyalty-management workflow complements transaction monitoring by making customer-card activity and reward information easier to review. Teams can inspect active and inactive loyalty cards, follow reward-point records associated with eligible transactions, and review the rules governing reward earning. This provides a clearer view of how loyalty activity is represented alongside everyday fuel operations and creates a centralized place for reviewing relevant programme information.",
+
+      "The interface also brings operational alerts and approval-related tasks into the same workflow. Pump-synchronization status, and offer drafts awaiting approval can be represented as items that staff need to check. Combined with fuel-volume analytics to review station operations and coordinate outstanding work across fuel and loyalty activities.",
+    ],
+
+    highlights: [
+      "Centralized fuel transaction and fleet-activity tracking",
+      "Petrol and diesel volume comparisons",
+      "Loyalty-card and reward-point management",
+      "Reward-rule visibility and offer review",
+      "Operational alerts and pump-synchronization status",
+    ],
+  },
+
+  screenshots: [
+    {
+      src: "/Images/Indeprast01.png",
+      alt: "Indiprast Petroleum fuel and loyalty CRM dashboard showing fuel analytics, loyalty cards, reward points, and recent transactions",
+      label: "Fuel & Loyalty Dashboard",
+      caption:
+        "Fuel-volume analytics, loyalty management, transaction monitoring, and operational alerts.",
+    },
+    {
+      src: "/Images/Indeprast02.png",
+      alt: "Indiprast Petroleum fuel and loyalty CRM dashboard showing fuel analytics, loyalty cards, reward points, and recent transactions",
+      label: "Loyalty Cards",
+      caption:
+        "Fuel-volume analytics, loyalty management, transaction monitoring, and operational alerts.",
+    },
+    {
+      src: "/Images/Indeprast03.png",
+      alt: "Indiprast Petroleum fuel and loyalty CRM dashboard showing fuel analytics, loyalty cards, reward points, and recent transactions",
+      label: "Offer and Campaign",
+      caption:
+        "Fuel-volume analytics, loyalty management, transaction monitoring, and operational alerts.",
+    },
+
+
+  ],
+
+  features: [
+    {
+      title: "Fuel Transaction Tracking",
+      description:
+        "Review refuelling records, fuel types, dispensed litres, and transaction status.",
+    },
+    {
+      title: "Fleet Fuel Analytics",
+      description:
+        "Monitor fuel volumes and compare diesel and petrol consumption.",
+    },
+    {
+      title: "Loyalty Card Management",
+      description:
+        "Review active loyalty cards and identify inactive cards requiring attention.",
+    },
+    {
+      title: "Points Ledger",
+      description:
+        "Track reward points associated with eligible fuel transactions.",
+    },
+    {
+      title: "Reward Rule Management",
+      description:
+        "Review earning rules and loyalty reward configurations.",
+    },
+    {
+      title: "Operational Alerts",
+      description:
+        "Highlight transactions awaiting review and offer drafts pending approval.",
+    },
+  ],
+
+  results: [],
+
+  resultsNote: "",
+
+  result:
+    "A unified fuel operations interface for reviewing refuelling activity, monitoring loyalty rewards, and identifying transactions or offers requiring attention.",
+},
+
+ {
   id: "IndiganicFoodCRM",
   client: "Indiganic Foods",
   category: "AI Sales & WhatsApp CRM",
+
+  shortDescription:
+    "An AI-assisted CRM concept connecting customer conversations, follow-ups, and draft orders.",
 
   title: "From Customer Conversations to Order Preparation.",
 
   summary:
     "An AI-enabled sales workspace designed to organize customer conversations, coordinate WhatsApp follow-ups, share product catalogues, and prepare orders for review.",
 
-  shortDescription:
-    "An AI-assisted CRM concept connecting customer conversations, follow-ups, and draft orders.",
+  duration: "",
+  industry: "Food & Beverage",
+  stack: "",
 
-  problemTitle: "Their Problem",
+  problem: {
+    tag: "The Challenge",
 
-  problem:
-    "Food businesses need to coordinate customer enquiries, product information, and order follow-ups across conversations. Without a clear workflow, teams can lose track of pending replies, draft orders, and customer confirmations.",
+    heading: "Customer Conversations Without a Connected Order Workflow.",
 
-  solutionTitle: "Our Solution",
+    paragraphs: [
+      "Food businesses often need to coordinate customer enquiries, product information, follow-up conversations, and order details across different communication channels. When the context behind a conversation is separated from product selections and order preparation, teams can find it harder to understand what a customer requested, which questions remain unanswered, and what should happen next. Pending replies and incomplete order details can also make hand-offs between team members less straightforward.",
 
-  solution:
-    "CoreD designed an AI sales and WhatsApp workspace connecting lead conversations, call outcomes, catalogue sharing, and draft orders. Teams can review customer requests, confirm ownership, and prepare messages for approval before sending. The order panel summarizes products, quantities, and estimated subtotals while clearly marking payment and delivery as pending. Workflow stages support staff review and customer confirmation, helping teams coordinate follow-ups and avoid treating drafts as completed orders by mistake.",
+      "Preparing an order requires more than recording a customer message. Product selections, quantities, subtotals, customer confirmation, payment status, and delivery status need to remain distinguishable as the request progresses. A structured sales workspace can help teams review the details together while ensuring that a draft order or prepared message is not mistaken for a confirmed purchase or completed transaction.",
+    ],
+
+    highlights: [
+      "Customer enquiries and follow-ups across conversations",
+      "AI call outcomes and customer-interest context",
+      "Product catalogue sharing and draft orders",
+      "Pending customer, payment, and delivery confirmations",
+    ],
+  },
+
+  solution: {
+    tag: "Our Solution",
+
+    heading: "A Connected AI Sales and WhatsApp Workspace.",
+    detailsHeading: "From Conversation to Draft Order",
+
+    paragraphs: [
+      "CoreD designed an AI sales and WhatsApp workspace connecting lead conversations, call outcomes, catalogue sharing, and draft orders. Team members can review customer requests, inspect call summaries, understand product interests, and confirm who is responsible for the next follow-up. By keeping conversation context and customer activity together, the interface helps staff review the history behind an enquiry before preparing a response or progressing an order request.",
+
+      "The communication workflow organizes WhatsApp conversations, reply status, assigned team members, and catalogue-sharing activity in a structured interface. Product information can be prepared for customer review, while messages can be drafted and checked before sending. Human approval remains a distinct stage in the process, allowing the team to review the intended communication rather than treating an AI-generated response as something that has already been dispatched.",
+
+      "The draft-order workflow brings selected products, quantities, and estimated subtotals into an order summary that the team can inspect before proceeding. Payment and delivery remain explicitly pending until their respective stages are confirmed. Follow-up safeguards represent customer opt-out, pause-on-reply, and staff hand-off rules so that the workflow can account for updated conversations. Together, these elements create a connected process for reviewing customer context, coordinating communication, preparing draft orders, and managing confirmation steps.",
+    ],
+
+    highlights: [
+      "Customer conversation and AI call-outcome review",
+      "WhatsApp inbox and follow-up coordination",
+      "Product catalogue sharing",
+      "Draft orders with product and quantity summaries",
+      "Human approval before messages are sent",
+      "Follow-up safeguards and status-aware hand-offs",
+    ],
+  },
+
+  screenshots: [
+    {
+      src: "/Images/IndiganicFoods01.png",
+      alt: "Indiganic Foods AI sales CRM showing WhatsApp conversations, AI call outcomes, draft order summary, and staff approval workflow",
+      label: "WhatsApp & Orders",
+      caption:
+        "Customer conversations, product catalogue sharing, and draft-order review.",
+    },
+  ],
 
   features: [
     {
@@ -520,46 +764,101 @@ export const caseStudies = [
     },
   ],
 
-  screenshots: [
-    {
-      src: "/Images/IndiganicFoods01.png",
-      alt:
-        "Indiganic Foods AI sales CRM showing WhatsApp conversations, AI call outcomes, draft order summary, and staff approval workflow",
-      label: "WhatsApp & Orders",
-      caption:
-        "Customer conversation management, product catalogue sharing, and draft-order review.",
-    },
-  ],
+  results: [],
+
+  resultsNote: "",
 
   result:
-    "A CRM prototype that brings customer conversations, AI call summaries, catalogue sharing, and order preparation into one review workflow.",
+    "A CRM interface that brings customer conversations, AI call summaries, catalogue sharing, and order preparation into one review workflow.",
 },
 
 
-{
+  {
   id: "CreativeFieldsCRM",
   client: "Creative Fields LLP",
   category: "Digital Marketing & PR",
+
+  shortDescription:
+    "A digital growth experience focused on SEO, PR, content, and brand visibility.",
 
   title: "Building Brand Authority Through Digital Growth.",
 
   summary:
     "A digital growth and marketing-services concept focused on connecting search visibility, content, public relations, and performance marketing within a consistent brand experience.",
 
-  shortDescription:
-    "A digital growth experience focused on SEO, PR, content, and brand visibility.",
-
-  problemTitle: "Their Problem",
-
-  problem:
-    "Brands need a consistent digital presence to build credibility, attract relevant audiences, and generate enquiries. Disconnected SEO, content, PR, and advertising efforts can make it harder to maintain a clear brand message across channels.",
-
-  solutionTitle: "Our Solution",
-
-  solution:
-    "CoreD organized the digital-growth experience around search visibility, content, public relations, reputation management, and paid campaigns. Service pages clearly explain offerings while consistent messaging connects website content with outreach and performance marketing. The structure helps visitors understand the agency's capabilities and identify relevant services. Analytics-led campaign planning can connect marketing activity with lead-generation goals, while technical SEO and responsive web design support discoverability and usability across devices.",
+  duration: "",
+  industry: "Digital Marketing & Public Relations",
+  stack: "",
 
   website: "https://creativefields.io/",
+
+  problem: {
+    tag: "The Challenge",
+
+    heading: "Disconnected Marketing Efforts and Inconsistent Brand Messaging.",
+
+    paragraphs: [
+      "Businesses need a consistent digital presence to explain their services, build credibility, attract relevant audiences, and generate enquiries. When search engine optimization, content marketing, public relations, and paid advertising operate as disconnected activities, it can become harder to maintain a clear brand message across channels. Visitors may also struggle to understand how different services fit together or which offering best matches their business needs.",
+
+      "An effective digital-growth experience needs to present service information clearly while supporting discoverability and usability. Website structure, relevant content, technical SEO, and consistent messaging all contribute to how an agency explains its capabilities online. Bringing these elements together provides a more cohesive foundation for communicating value and helping potential clients explore relevant services.",
+    ],
+
+    highlights: [
+      "Consistent service messaging across digital channels",
+      "Search visibility and technical SEO considerations",
+      "Clear presentation of PR, content, and marketing services",
+      "A coherent experience for potential clients",
+    ],
+  },
+
+  solution: {
+    tag: "Our Solution",
+
+    heading: "A Connected Digital Growth and Brand Experience.",
+    detailsHeading: "How the Digital Experience Works",
+
+    paragraphs: [
+      "CoreD organized the digital-growth experience around search visibility, content, public relations, reputation management, and performance marketing. The service structure explains the different capabilities in a more connected way, helping visitors understand the available offerings and how they relate to their marketing goals. Consistent messaging across service descriptions provides a clearer experience for people exploring the agency's capabilities and considering which services may be relevant to their business.",
+
+      "Search engine optimization and content planning form part of the approach to discoverability. On-page structure, technical SEO considerations, and search-focused content can help organize information around audience needs and relevant topics.",
+      "Performance marketing and website development complete the broader digital experience by connecting service presentation with campaign and conversion goals. A clear website structure. Together content, and online usability within a coherent experience.",
+    ],
+
+    highlights: [
+      "Search engine optimization and technical SEO",
+      "Digital PR and outreach service presentation",
+      "Content marketing and topical relevance",
+      "Online reputation and brand credibility messaging",
+      "Performance marketing and campaign planning",
+      "Responsive website experience and clear service navigation",
+    ],
+  },
+
+  screenshots: [
+    {
+      src: "/Images/CreativeFields01.png",
+      alt: "Creative Fields LLP digital marketing and public relations website",
+      label: "Website Overview",
+      caption:
+        "Digital marketing, PR, content, and brand-growth services overview.",
+    },
+
+     {
+      src: "/Images/CreativeFields02.png",
+      alt: "Creative Fields LLP digital marketing and public relations website",
+      label: "Website Overview",
+      caption:
+        "Digital marketing, PR, content, and brand-growth services overview.",
+    },
+
+     {
+      src: "/Images/CreativeFields03.png",
+      alt: "Creative Fields LLP digital marketing and public relations website",
+      label: "Website Overview",
+      caption:
+        "Digital marketing, PR, content, and brand-growth services overview.",
+    },
+  ],
 
   features: [
     {
@@ -594,22 +893,13 @@ export const caseStudies = [
     },
   ],
 
-  screenshots: [
-    {
-      src: "/Images/CreativeFields01.png",
-      alt:
-        "Creative Fields LLP digital marketing and PR website",
-      label: "Website Overview",
-      caption:
-        "Digital marketing, PR, and brand-growth services overview.",
-    },
-  ],
+  results: [],
+
+  resultsNote: "",
 
   result:
-    "A structured digital-growth concept that brings marketing services, brand messaging, and online visibility into one consistent experience.",
+    "A structured digital-growth experience that brings marketing services, brand messaging, and online visibility into one consistent presentation.",
 },
-
-
 
 ];
 
