@@ -23,9 +23,11 @@ export default function App() {
 
   return (
     <>
+      <CustomCursor />
+      <WordReveal />
       <Navbar />
-      <main className="min-h-screen pt-28">
-           
+      {/* The home hero supplies its own navbar clearance; outer padding exposes the cream body. */}
+      <main className={pathname === '/' ? 'min-h-screen' : 'min-h-screen pt-28'}>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/services" element={<Services />} />

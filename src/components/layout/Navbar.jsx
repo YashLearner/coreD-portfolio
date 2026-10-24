@@ -3,7 +3,6 @@ import { Link, NavLink, useLocation } from "react-router-dom";
 import { ArrowUpRight, Menu, X } from "lucide-react";
 
 const NAVBAR_BG = "#14161aeb";
-const CONTACT_BG = "#0b0b0b";
 
 const navigation = [
   { label: "Home", path: "/", end: true },
@@ -133,9 +132,9 @@ export default function Navbar() {
 
           {/* Desktop Reach Us Out + mobile menu button */}
           <div className="flex shrink-0 items-center gap-2">
-            <button
-              type="button"
-              onClick={openContactForm}
+            <Link
+              to="/contact"
+              onClick={handleNavigation}
               className="group hidden sm:inline-flex items-center gap-2 rounded-full border border-orange-400/40 bg-gradient-to-r from-orange-400 to-amber-300 px-4 py-2.5 sm:px-5 text-[13px] font-semibold text-black transition-all duration-200 hover:-translate-y-0.5 hover:border-orange-300 hover:shadow-[0_0_24px_rgba(249,115,22,0.18)] active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-400"
             >
               Reach Us Out
