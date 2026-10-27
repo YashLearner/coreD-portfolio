@@ -15,25 +15,25 @@ const companyLogos = [
   {
     id: "tohfabazzar",
     name: "TohfaBazzar",
-    logo: TohfaBazzarLogo,
+    logo: "TohfaBazzarLogo",
     size: "large",
   },
   {
     id: "crawldigitally",
     name: "Crawl Digitally",
-    logo: CrawlDigitallyLogo,
+    logo: "CrawlDigitallyLogo",
     size: "medium",
   },
   {
     id: "nexttechwaves",
     name: "NextTechWaves",
-    logo: NextTechWavesLogo,
+    logo: "NextTechWavesLogo",
     size: "medium",
   },
   {
     id: "ads-marker",
     name: "Ads Marker",
-    logo: AdsMarkerLogo,
+    logo: "AdsMarkerLogo",
     size: "large",
   },
 ];

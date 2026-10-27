@@ -16,7 +16,7 @@ function FloatingLabel({
 }) {
   return (
     <div
-      className={`pointer-events-none absolute z-20 hidden items-center gap-2 rounded-full border border-white/10 bg-[#151515]/95 px-3.5 py-2 text-[11px] font-semibold text-zinc-200 shadow-lg backdrop-blur-md lg:flex ${className}`}
+      className={`pointer-events-none absolute vh-100-full z-20 hidden items-center gap-2 rounded-full border border-white/10 bg-[#151515]/95 px-3.5 py-2 text-[11px] font-semibold text-zinc-200 shadow-lg backdrop-blur-md lg:flex ${className}`}
     >
       <span
         className={`h-2 w-2 shrink-0 rounded-full ring-4 ${dotClassName}`}
@@ -30,7 +30,7 @@ function HeroSection() {
   return (
     <section
       id="home-hero"
-      className="home-hero relative isolate overflow-hidden border-b border-white/10 bg-[#070707] text-white"
+      className="home-hero relative isolate overflow-hidden border-b border-white/10 bg-black text-white"
     >
       {/* Technical grid */}
       <div
