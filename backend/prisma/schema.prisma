@@ -1,0 +1,14 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model UnansweredQuestion {
+  id        String   @id @default(cuid())
+  question  String   @db.Text
+  createdAt DateTime @default(now())
+}
