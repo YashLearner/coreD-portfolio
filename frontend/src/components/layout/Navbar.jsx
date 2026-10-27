@@ -100,7 +100,7 @@ export default function Navbar() {
             className="group flex shrink-0 items-center"
           >
             <img
-              src="/Images/CoreD.svg"
+              src="/Images/CoreD.png"
               alt="CoreD"
               className="
                 h-8 w-auto max-w-[112px] object-contain

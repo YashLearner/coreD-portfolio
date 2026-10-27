@@ -1,13 +1,12 @@
 import { ArrowUpRight, Sparkles } from "lucide-react";
-import { blogPosts } from "../data/PortfolioData.js";
-import blog  from "../data/PortfolioData.js";
+import { blog } from "../data/PortfolioData.js";
 
 const COREDHRISTI_URL = "https://www.coredhristi.com/";
 
 /* -------------------------------------------------------------------------- */
 /* Timeline date marker                                                       */
 /* -------------------------------------------------------------------------- */
-
+const article = blog;
 function ArticleDate({ dateTime, dateLabel, year }) {
   return (
     <div className="relative mb-4 pl-7 sm:mb-5 lg:pl-10">
