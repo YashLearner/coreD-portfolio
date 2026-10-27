@@ -1,5 +1,6 @@
 import { ArrowUpRight, Sparkles } from "lucide-react";
-import { Blog as blogPosts } from "../data/PortfolioData.js";
+import { blogPosts } from "../data/PortfolioData.js";
+import blog  from "../data/PortfolioData.js";
 
 const COREDHRISTI_URL = "https://www.coredhristi.com/";
 
@@ -125,8 +126,9 @@ export default function Blog() {
         className=" w-full max-w-7xl mx-auto pt-0 sm:pt-0 lg:pt-0
       flex flex-col items-center justify-center text-center
        px-4 sm:px-6 md:px-8 lg:px-10 xl:px-14 2xl:px-20
-       pb-16 sm:pb-20 lg:pb-24" >
-       <div className="mb-6 inline-flex items-center gap-2 sm:mb-8">
+       pb-16 sm:pb-20 lg:pb-24"
+      >
+        <div className="mb-6 inline-flex items-center gap-2 sm:mb-8">
           <Sparkles
             size={15}
             strokeWidth={1.8}
@@ -175,7 +177,6 @@ export default function Blog() {
         className="
          w-full max-w-7xl mx-auto border-b border-black/10 pt-0 pb-8 sm:pb-10 lg:pb-12 flex flex-col items-center justify-center"
       >
-
         <ol className="relative">
           {/* Timeline rail */}
           <div
@@ -183,9 +184,9 @@ export default function Blog() {
             className="absolute bottom-0 left-[4px] top-0 w-px bg-black/10"
           />
 
-          {blogPosts.map((post, index) => (
+          {/* {blogPosts.map((post, index) => (
             <TimelineArticle key={post.id} post={post} isFirst={index === 0} />
-          ))}
+          ))} */}
         </ol>
       </section>
 
