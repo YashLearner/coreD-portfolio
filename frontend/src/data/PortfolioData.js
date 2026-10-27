@@ -29,7 +29,66 @@ export const navLinks = [
   }
 
 
-];
+]
+
+
+export const blog  = [
+  {
+    id: "future-of-ai-crm",
+    dateTime: "2026-10-21",
+    dateLabel: "OCT 21",
+    year: "2026",
+    category: "Future of AI",
+    readTime: "8 MIN READ",
+    title: "AI AGENTS IN THE NEXT FIVE YEARS",
+    excerpt:
+      "The next five years could fundamentally change how businesses operate, communicate, and manage customer relationships. AI agents are evolving beyond simple chatbots into systems that can assist with research, organise information, coordinate tasks, and support complex business workflows. In AI-powered CRM platforms, these agents could help identify promising leads, analyse customer interactions, recommend the next sales action, and personalise follow-ups according to customer needs. Businesses may also use intelligent automation to reduce repetitive administration, improve response times, and gain clearer insights from their customer data. However, successful adoption will require more than implementing new technology. Organisations must consider data privacy, security, reliability, and meaningful human oversight. Discover how businesses can prepare for this changing landscape, identify practical opportunities for AI adoption, and combine human expertise with intelligent systems to build more efficient operations, stronger customer relationships, and sustainable long-term growth.",
+  },
+  {
+    id: "customer-relationships",
+    dateTime: "2026-10-14",
+    dateLabel: "OCT 14",
+    year: "2026",
+    category: "Customer Experience",
+    readTime: "7 MIN READ",
+    title: "HOW AI AGENTS CAN TRANSFORM CUSTOMER RELATIONSHIPS",
+    excerpt:
+      "Building lasting customer relationships requires timely communication, a clear understanding of customer needs, and consistent service throughout the customer journey. AI-powered CRM agents can help teams bring these activities together by organising customer records, summarising previous conversations, identifying unanswered enquiries, and recommending relevant follow-up actions. Intelligent workflows may also help businesses personalise communication, prioritise urgent requests, and make customer information easier for sales and support teams to access. Instead of spending hours updating records and tracking routine activities, employees can focus more attention on solving problems, understanding customer expectations, and developing meaningful relationships. The goal is not to replace human interaction, but to support it with better information and more efficient processes. Explore how businesses can introduce AI into their customer management strategy, maintain appropriate human supervision, protect sensitive information, and create more consistent customer experiences that encourage satisfaction, trust, repeat purchases, and long-term loyalty.",
+  },
+  {
+    id: "ai-crm-revenue",
+    dateTime: "2026-10-07",
+    dateLabel: "OCT 07",
+    year: "2026",
+    category: "Business Growth",
+    readTime: "9 MIN READ",
+    title: "TURN CUSTOM AI CRM SOLUTIONS INTO REVENUE",
+    excerpt:
+      "Custom AI CRM solutions can create business opportunities for developers, agencies, startups, and entrepreneurs who understand real customer-management challenges. Businesses may need specialised systems for lead qualification, sales pipeline management, automated follow-ups, customer support, reporting, and internal operations. Instead of building a generic product, developers can identify a specific industry or recurring problem and create a solution that delivers measurable value. Potential revenue models include project-based development, custom CRM implementation, workflow integration, monthly subscriptions, and ongoing maintenance or support. A successful approach begins with understanding the target customer, validating demand, defining a clear solution, and demonstrating how the product saves time or improves business performance. Strong security, reliable integrations, and an easy-to-use interface can further strengthen the offering. Discover how to turn practical AI and CRM development skills into service opportunities, build long-term client relationships, price solutions around the value delivered, and develop sustainable business models without relying on unrealistic promises of guaranteed income.",
+  },
+  {
+    id: "intelligent-sales",
+    dateTime: "2026-09-30",
+    dateLabel: "SEP 30",
+    year: "2026",
+    category: "Sales Automation",
+    readTime: "7 MIN READ",
+    title: "BUILD A SMARTER SALES PIPELINE WITH AI",
+    excerpt:
+      "An effective sales pipeline helps a business understand where every opportunity stands, which customers need attention, and what actions may move a deal forward. Manual spreadsheets and disconnected tools can make this process difficult, especially when a team manages hundreds of leads and multiple conversations. AI-powered CRM systems can help centralise prospect information, summarise interactions, identify engagement patterns, and highlight opportunities that deserve closer attention. Automated reminders and follow-up workflows can reduce missed tasks, while pipeline dashboards can give managers a clearer view of sales activity and potential bottlenecks. AI-generated recommendations can support prioritisation, but sales teams should verify important information and apply their own judgement before taking action. Learn how to design a more organised sales process, define useful performance indicators, connect customer communication with CRM records, and use automation to reduce repetitive work. With the right processes in place, businesses can improve visibility, respond more consistently to prospects, and make better-informed decisions throughout the sales cycle.",
+  },
+  {
+    id: "connected-business",
+    dateTime: "2026-09-23",
+    dateLabel: "SEP 23",
+    year: "2026",
+    category: "AI Integrations",
+    readTime: "8 MIN READ",
+    title: "CONNECT AI AGENTS WITH YOUR BUSINESS WORKFLOWS",
+    excerpt:
+      "AI agents become more useful when they can work with the business systems and information employees already depend on. Connecting CRM platforms with communication tools, databases, scheduling systems, and internal applications can reduce repetitive data entry and help teams coordinate activities more consistently. Well-designed integrations may allow an agent to retrieve approved information, prepare a summary, update a permitted record, or recommend a next step within a defined workflow. However, connecting systems requires careful planning. Businesses need clear access permissions, secure handling of customer data, reliable error management, and safeguards against unauthorised actions. Sensitive updates and high-impact decisions may also require human approval. Discover how to identify suitable automation opportunities, map existing workflows, select the right integration approach, and test each step before deployment. By combining useful integrations with clear rules, monitoring, and ongoing improvement, organisations can create more connected operations while keeping their AI systems transparent, manageable, and aligned with business requirements.",
+  },
+]
 
 
 
