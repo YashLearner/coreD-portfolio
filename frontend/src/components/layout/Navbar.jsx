@@ -16,9 +16,7 @@ export default function Navbar() {
 
   const location = useLocation();
 
-  // Navigation has its own dark surface, independent of the current page.
-
-  // Keep navigation contrast consistent across routes.
+  // Desktop navigation link styles
   const navLinkClass = ({ isActive }) =>
     [
       "relative inline-flex items-center rounded-full px-3.5 py-2.5",
@@ -31,7 +29,7 @@ export default function Navbar() {
         : "text-white/70 hover:bg-white/[0.05] hover:text-white",
     ].join(" ");
 
-  // Mobile navigation styles.
+  // Mobile navigation link styles
   const mobileLinkClass = ({ isActive }) =>
     [
       "flex w-full items-center justify-between rounded-xl px-4 py-3.5",
@@ -43,7 +41,7 @@ export default function Navbar() {
         : "text-white/75 hover:bg-white/[0.05] hover:text-white",
     ].join(" ");
 
-  // Mobile menu button styles.
+  // Mobile menu button styles
   const menuButtonClass = `
     grid h-10 w-10 shrink-0 place-items-center rounded-full
     border transition-colors duration-200
@@ -53,12 +51,12 @@ export default function Navbar() {
     hover:border-orange-400/50 hover:bg-orange-400/10 hover:text-orange-400
   `;
 
-  // Close mobile navigation whenever the route changes.
+  // Close mobile menu when the route changes
   useEffect(() => {
     setMenuOpen(false);
   }, [location.pathname]);
 
-  // Close mobile navigation when Escape is pressed.
+  // Close mobile menu when Escape is pressed
   useEffect(() => {
     const handleKeyDown = (event) => {
       if (event.key === "Escape") {
@@ -73,28 +71,26 @@ export default function Navbar() {
     };
   }, []);
 
+  // Close the menu after navigation
   const handleNavigation = () => {
     setMenuOpen(false);
   };
 
   return (
     <>
-      {/* =============================================================== */}
-      {/* FIXED NAVBAR                                                    */}
-      {/* =============================================================== */}
-
-      <header className="fixed inset-x-0 top-0 z-50 px-3 pt-3 sm:px-6 sm:pt-5">
+      {/* Fixed Navbar */}
+      <header className=" fixed inset-x-0 top-0 z-50 px-3 pt-3 sm:px-6 sm:pt-5">
         <nav
           aria-label="Main navigation"
           style={{ backgroundColor: NAVBAR_BG }}
-          className={`
+          className="
             relative mx-auto flex max-w-7xl
             items-center justify-between gap-3
             rounded-full border px-3 py-2.5
             sm:px-5 sm:py-3
-            transition-colors duration-200
             border-white/10 text-white
-          `}
+            transition-colors duration-200
+          "
         >
           {/* Logo */}
           <Link
@@ -104,18 +100,18 @@ export default function Navbar() {
             className="group flex shrink-0 items-center"
           >
             <img
-              src="https://www.coredhristi.com/coredhristi-logo-light.png"
-              alt="CoreDhristi"
-              className={`
+              src="/Images/CoreD.png"
+              alt="CoreD"
+              className="
                 h-8 w-auto max-w-[112px] object-contain
                 transition-opacity duration-200
                 group-hover:opacity-80
                 sm:h-9 sm:max-w-[140px]
-              `}
+              "
             />
           </Link>
 
-          {/* Desktop navigation */}
+          {/* Desktop Navigation */}
           <div className="hidden items-center gap-1 lg:flex">
             {navigation.map((item) => (
               <NavLink
@@ -129,24 +125,24 @@ export default function Navbar() {
             ))}
           </div>
 
-          {/* Desktop Reach Us Out + mobile menu button */}
+          {/* Contact Link + Mobile Menu Button */}
           <div className="flex shrink-0 items-center gap-2">
             <Link
               to="/contact"
               onClick={handleNavigation}
               className="group hidden sm:inline-flex items-center gap-2 rounded-full border border-orange-400/40 bg-gradient-to-r from-orange-400 to-amber-300 px-4 py-2.5 sm:px-5 text-[13px] font-semibold text-black transition-all duration-200 hover:-translate-y-0.5 hover:border-orange-300 hover:shadow-[0_0_24px_rgba(249,115,22,0.18)] active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-400"
-            /> 
-              Reach Us Out
-              <ArrowUpRight
-                size={16}
-                aria-hidden="true"
-                className="
+            />
+            Reach Us Out
+            <ArrowUpRight
+              size={16}
+              aria-hidden="true"
+              className="
                   transition-transform duration-200
                   group-hover:translate-x-0.5
                   group-hover:-translate-y-0.5
                 "
-              />
-
+            />
+            {/* Mobile Menu Toggle */}
             <button
               type="button"
               aria-label={menuOpen ? "Close navigation" : "Open navigation"}
@@ -155,26 +151,28 @@ export default function Navbar() {
               onClick={() => setMenuOpen((open) => !open)}
               className={menuButtonClass}
             >
-              {menuOpen ? <X size={20} /> : <Menu size={20} />}
+              {menuOpen ? (
+                <X size={20} aria-hidden="true" />
+              ) : (
+                <Menu size={20} aria-hidden="true" />
+              )}
             </button>
           </div>
         </nav>
 
-        {/* =============================================================== */}
-        {/* MOBILE NAVIGATION                                              */}
-        {/* =============================================================== */}
-
+        {/* Mobile Navigation */}
         <div
           id="mobile-navigation"
           aria-label="Mobile navigation"
           aria-hidden={!menuOpen}
+          inert={!menuOpen ? "" : undefined}
           style={{ backgroundColor: NAVBAR_BG }}
           className={`
             mx-auto mt-3 max-w-7xl overflow-hidden
             rounded-2xl border
+            border-white/10 text-white
             transition-all duration-200
             lg:hidden
-            border-white/10 text-white
             ${
               menuOpen
                 ? "visible translate-y-0 opacity-100"
@@ -183,12 +181,13 @@ export default function Navbar() {
           `}
         >
           <div className="p-3">
+            {/* Mobile Menu Heading */}
             <div className="mb-2 flex items-center justify-between px-4 py-2">
               <span
-                className={`
-                  text-[10px] font-semibold uppercase tracking-[0.24em]
-                  text-white/40
-                `}
+                className="
+                  text-[10px] font-semibold uppercase
+                  tracking-[0.24em] text-white/40
+                "
               >
                 Navigation
               </span>
@@ -199,13 +198,13 @@ export default function Navbar() {
               />
             </div>
 
+            {/* Mobile Links */}
             <div className="space-y-1">
               {navigation.map((item) => (
                 <NavLink
                   key={item.path}
                   to={item.path}
                   end={item.end}
-                  tabIndex={menuOpen ? 0 : -1}
                   onClick={handleNavigation}
                   className={mobileLinkClass}
                 >
@@ -216,11 +215,10 @@ export default function Navbar() {
               ))}
             </div>
 
-            {/* Mobile Reach Us Out */}
+            {/* Mobile Contact Link */}
             <Link
               to="/contact"
               onClick={handleNavigation}
-              tabIndex={menuOpen ? 0 : -1}
               className="
                 mt-3 flex w-full items-center justify-center gap-2
                 rounded-xl bg-gradient-to-r
@@ -229,8 +227,8 @@ export default function Navbar() {
                 transition-all duration-200
                 hover:brightness-105
                 active:scale-[0.99]
-                focus-visible:outline-none focus-visible:ring-2
-                focus-visible:ring-orange-400
+                focus-visible:outline-none
+                focus-visible:ring-2 focus-visible:ring-orange-400
                 sm:hidden
               "
             >
