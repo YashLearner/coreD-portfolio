@@ -15,18 +15,24 @@ export const navLinks = [
     label: "Services",
     href: "/services",
   },
-  {
+   {
     label: "See Our Work",
-    href: "/seeOurWork",
+    href: "/see-our-work",
+  },
+   {
+    label: "Contact",
+    href: "/contact"
   },
   {
     label: "Blogs",
     href: "/blog"
   },
   {
-    label: "Terms & Condition",
+    label: "Terms &Condition",
     href: "/termsCondition"
-  }
+  },
+   
+ 
 ];
 
 
@@ -139,19 +145,20 @@ export const cases = [
 export const socialLinks = [
   {
     platform: "LinkedIn",
-    // url: "https://www.linkedin.com/",
+    url: "https://www.linkedin.com/company/coredhristi?trk=blended-typeahead",
     label: "Visit CoreD on LinkedIn",
   },
   {
     platform: "GitHub",
-    // url: "https://github.com/",
+    url: "https://github.com/krishanumishra778",
     label: "Visit CoreD on GitHub",
   },
   {
-    platform: "Website",
-    // url: "https://your-website.com",
-    label: "Visit the CoreD website",
+    platform: "Gmail",
+    url:"mailto:coredhristi@gmail.com",
+    label: "Contact CoreD on gmail",
   },
+
 ];
 
 
@@ -160,7 +167,7 @@ export const footerCopy = {
     "CoreD builds custom CRM platforms, AI-powered agents, and digital solutions that help businesses streamline operations and grow.",
 
   navigationTitle: "Navigation",
-  connectTitle: "Connect with us",
+  connectTitle: "CONNECT WITH US",
 
   copyrightNotice: "© 2026 CoreD. All rights reserved.",
   backToTop: "Back to top",

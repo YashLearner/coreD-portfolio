@@ -3,9 +3,7 @@ import { blog } from "../data/PortfolioData.js";
 
 const COREDHRISTI_URL = "https://www.coredhristi.com/";
 
-/* -------------------------------------------------------------------------- */
-/* Timeline date marker                                                       */
-/* -------------------------------------------------------------------------- */
+ 
 const article = blog;
 function ArticleDate({ dateTime, dateLabel, year }) {
   return (
