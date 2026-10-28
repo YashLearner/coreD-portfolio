@@ -119,24 +119,6 @@ export const workflow = [
   },
 ];
 
-export const cases = [
-  {
-    name: "Retail chain",
-    stat: "3x",
-    text: "faster lead follow-up after switching to AI agents.",
-  },
-  {
-    name: "Education group",
-    stat: "40%",
-    text: "more admissions enquiries converted.",
-  },
-  {
-    name: "Logistics firm",
-    stat: "12 hrs",
-    text: "saved per week on manual data entry.",
-  },
-];
-
 
 // External platform links
 export const socialLinks = [
@@ -1095,12 +1077,6 @@ export const caseStudies = [
  
 ];
 
-
-export const posts = [
-  { t: 'How an AI agent based CRM works', d: 'A plain walk-through from lead capture to follow-up.' },
-  { t: 'CRM security checklist for small teams', d: 'Seven checks to run before you go live.' },
-  { t: 'When to move your CRM to the cloud', d: 'Cost, speed and risk, compared.' },
-]
 
 
 export const testimonials = [
