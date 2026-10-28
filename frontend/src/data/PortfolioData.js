@@ -15,79 +15,83 @@ export const navLinks = [
     label: "Services",
     href: "/services",
   },
-  {
+   {
     label: "See Our Work",
-    href: "/seeOurWork",
+    href: "/see-our-work",
+  },
+   {
+    label: "Contact",
+    href: "/contact"
   },
   {
     label: "Blogs",
     href: "/blog"
   },
   {
-    label: "Terms & Condition",
+    label: "Terms &Condition",
     href: "/termsCondition"
-  }
+  },
+   
+ 
+];
 
 
-]
-
-
-export const blog  = [
-  {
-    id: "future-of-ai-crm",
-    dateTime: "2026-10-21",
-    dateLabel: "OCT 21",
-    year: "2026",
-    category: "Future of AI",
-    readTime: "8 MIN READ",
-    title: "AI AGENTS IN THE NEXT FIVE YEARS",
-    excerpt:
-      "The next five years could fundamentally change how businesses operate, communicate, and manage customer relationships. AI agents are evolving beyond simple chatbots into systems that can assist with research, organise information, coordinate tasks, and support complex business workflows. In AI-powered CRM platforms, these agents could help identify promising leads, analyse customer interactions, recommend the next sales action, and personalise follow-ups according to customer needs. Businesses may also use intelligent automation to reduce repetitive administration, improve response times, and gain clearer insights from their customer data. However, successful adoption will require more than implementing new technology. Organisations must consider data privacy, security, reliability, and meaningful human oversight. Discover how businesses can prepare for this changing landscape, identify practical opportunities for AI adoption, and combine human expertise with intelligent systems to build more efficient operations, stronger customer relationships, and sustainable long-term growth.",
-  },
-  {
-    id: "customer-relationships",
-    dateTime: "2026-10-14",
-    dateLabel: "OCT 14",
-    year: "2026",
-    category: "Customer Experience",
-    readTime: "7 MIN READ",
-    title: "HOW AI AGENTS CAN TRANSFORM CUSTOMER RELATIONSHIPS",
-    excerpt:
-      "Building lasting customer relationships requires timely communication, a clear understanding of customer needs, and consistent service throughout the customer journey. AI-powered CRM agents can help teams bring these activities together by organising customer records, summarising previous conversations, identifying unanswered enquiries, and recommending relevant follow-up actions. Intelligent workflows may also help businesses personalise communication, prioritise urgent requests, and make customer information easier for sales and support teams to access. Instead of spending hours updating records and tracking routine activities, employees can focus more attention on solving problems, understanding customer expectations, and developing meaningful relationships. The goal is not to replace human interaction, but to support it with better information and more efficient processes. Explore how businesses can introduce AI into their customer management strategy, maintain appropriate human supervision, protect sensitive information, and create more consistent customer experiences that encourage satisfaction, trust, repeat purchases, and long-term loyalty.",
-  },
-  {
-    id: "ai-crm-revenue",
-    dateTime: "2026-10-07",
-    dateLabel: "OCT 07",
-    year: "2026",
-    category: "Business Growth",
-    readTime: "9 MIN READ",
-    title: "TURN CUSTOM AI CRM SOLUTIONS INTO REVENUE",
-    excerpt:
-      "Custom AI CRM solutions can create business opportunities for developers, agencies, startups, and entrepreneurs who understand real customer-management challenges. Businesses may need specialised systems for lead qualification, sales pipeline management, automated follow-ups, customer support, reporting, and internal operations. Instead of building a generic product, developers can identify a specific industry or recurring problem and create a solution that delivers measurable value. Potential revenue models include project-based development, custom CRM implementation, workflow integration, monthly subscriptions, and ongoing maintenance or support. A successful approach begins with understanding the target customer, validating demand, defining a clear solution, and demonstrating how the product saves time or improves business performance. Strong security, reliable integrations, and an easy-to-use interface can further strengthen the offering. Discover how to turn practical AI and CRM development skills into service opportunities, build long-term client relationships, price solutions around the value delivered, and develop sustainable business models without relying on unrealistic promises of guaranteed income.",
-  },
-  {
-    id: "intelligent-sales",
-    dateTime: "2026-09-30",
-    dateLabel: "SEP 30",
-    year: "2026",
-    category: "Sales Automation",
-    readTime: "7 MIN READ",
-    title: "BUILD A SMARTER SALES PIPELINE WITH AI",
-    excerpt:
-      "An effective sales pipeline helps a business understand where every opportunity stands, which customers need attention, and what actions may move a deal forward. Manual spreadsheets and disconnected tools can make this process difficult, especially when a team manages hundreds of leads and multiple conversations. AI-powered CRM systems can help centralise prospect information, summarise interactions, identify engagement patterns, and highlight opportunities that deserve closer attention. Automated reminders and follow-up workflows can reduce missed tasks, while pipeline dashboards can give managers a clearer view of sales activity and potential bottlenecks. AI-generated recommendations can support prioritisation, but sales teams should verify important information and apply their own judgement before taking action. Learn how to design a more organised sales process, define useful performance indicators, connect customer communication with CRM records, and use automation to reduce repetitive work. With the right processes in place, businesses can improve visibility, respond more consistently to prospects, and make better-informed decisions throughout the sales cycle.",
-  },
-  {
-    id: "connected-business",
-    dateTime: "2026-09-23",
-    dateLabel: "SEP 23",
-    year: "2026",
-    category: "AI Integrations",
-    readTime: "8 MIN READ",
-    title: "CONNECT AI AGENTS WITH YOUR BUSINESS WORKFLOWS",
-    excerpt:
-      "AI agents become more useful when they can work with the business systems and information employees already depend on. Connecting CRM platforms with communication tools, databases, scheduling systems, and internal applications can reduce repetitive data entry and help teams coordinate activities more consistently. Well-designed integrations may allow an agent to retrieve approved information, prepare a summary, update a permitted record, or recommend a next step within a defined workflow. However, connecting systems requires careful planning. Businesses need clear access permissions, secure handling of customer data, reliable error management, and safeguards against unauthorised actions. Sensitive updates and high-impact decisions may also require human approval. Discover how to identify suitable automation opportunities, map existing workflows, select the right integration approach, and test each step before deployment. By combining useful integrations with clear rules, monitoring, and ongoing improvement, organisations can create more connected operations while keeping their AI systems transparent, manageable, and aligned with business requirements.",
-  },
+export const blog = [
+  {
+    id: "future-of-ai-crm",
+    dateTime: "2026-10-21",
+    dateLabel: "OCT 21",
+    year: "2026",
+    category: "Future of AI",
+    readTime: "8 MIN READ",
+    title: "AI AGENTS IN THE NEXT FIVE YEARS",
+    excerpt:
+      "The next five years could fundamentally change how businesses operate, communicate, and manage customer relationships. AI agents are evolving beyond simple chatbots into systems that can assist with research, organise information, coordinate tasks, and support complex business workflows. In AI-powered CRM platforms, these agents could help identify promising leads, analyse customer interactions, recommend the next sales action, and personalise follow-ups according to customer needs. Businesses may also use intelligent automation to reduce repetitive administration, improve response times, and gain clearer insights from their customer data. However, successful adoption will require more than implementing new technology. Organisations must consider data privacy, security, reliability, and meaningful human oversight. Discover how businesses can prepare for this changing landscape, identify practical opportunities for AI adoption, and combine human expertise with intelligent systems to build more efficient operations, stronger customer relationships, and sustainable long-term growth.",
+  },
+  {
+    id: "customer-relationships",
+    dateTime: "2026-10-14",
+    dateLabel: "OCT 14",
+    year: "2026",
+    category: "Customer Experience",
+    readTime: "7 MIN READ",
+    title: "HOW AI AGENTS CAN TRANSFORM CUSTOMER RELATIONSHIPS",
+    excerpt:
+      "Building lasting customer relationships requires timely communication, a clear understanding of customer needs, and consistent service throughout the customer journey. AI-powered CRM agents can help teams bring these activities together by organising customer records, summarising previous conversations, identifying unanswered enquiries, and recommending relevant follow-up actions. Intelligent workflows may also help businesses personalise communication, prioritise urgent requests, and make customer information easier for sales and support teams to access. Instead of spending hours updating records and tracking routine activities, employees can focus more attention on solving problems, understanding customer expectations, and developing meaningful relationships. The goal is not to replace human interaction, but to support it with better information and more efficient processes. Explore how businesses can introduce AI into their customer management strategy, maintain appropriate human supervision, protect sensitive information, and create more consistent customer experiences that encourage satisfaction, trust, repeat purchases, and long-term loyalty.",
+  },
+  {
+    id: "ai-crm-revenue",
+    dateTime: "2026-10-07",
+    dateLabel: "OCT 07",
+    year: "2026",
+    category: "Business Growth",
+    readTime: "9 MIN READ",
+    title: "TURN CUSTOM AI CRM SOLUTIONS INTO REVENUE",
+    excerpt:
+      "Custom AI CRM solutions can create business opportunities for developers, agencies, startups, and entrepreneurs who understand real customer-management challenges. Businesses may need specialised systems for lead qualification, sales pipeline management, automated follow-ups, customer support, reporting, and internal operations. Instead of building a generic product, developers can identify a specific industry or recurring problem and create a solution that delivers measurable value. Potential revenue models include project-based development, custom CRM implementation, workflow integration, monthly subscriptions, and ongoing maintenance or support. A successful approach begins with understanding the target customer, validating demand, defining a clear solution, and demonstrating how the product saves time or improves business performance. Strong security, reliable integrations, and an easy-to-use interface can further strengthen the offering. Discover how to turn practical AI and CRM development skills into service opportunities, build long-term client relationships, price solutions around the value delivered, and develop sustainable business models without relying on unrealistic promises of guaranteed income.",
+  },
+  {
+    id: "intelligent-sales",
+    dateTime: "2026-09-30",
+    dateLabel: "SEP 30",
+    year: "2026",
+    category: "Sales Automation",
+    readTime: "7 MIN READ",
+    title: "BUILD A SMARTER SALES PIPELINE WITH AI",
+    excerpt:
+      "An effective sales pipeline helps a business understand where every opportunity stands, which customers need attention, and what actions may move a deal forward. Manual spreadsheets and disconnected tools can make this process difficult, especially when a team manages hundreds of leads and multiple conversations. AI-powered CRM systems can help centralise prospect information, summarise interactions, identify engagement patterns, and highlight opportunities that deserve closer attention. Automated reminders and follow-up workflows can reduce missed tasks, while pipeline dashboards can give managers a clearer view of sales activity and potential bottlenecks. AI-generated recommendations can support prioritisation, but sales teams should verify important information and apply their own judgement before taking action. Learn how to design a more organised sales process, define useful performance indicators, connect customer communication with CRM records, and use automation to reduce repetitive work. With the right processes in place, businesses can improve visibility, respond more consistently to prospects, and make better-informed decisions throughout the sales cycle.",
+  },
+  {
+    id: "connected-business",
+    dateTime: "2026-09-23",
+    dateLabel: "SEP 23",
+    year: "2026",
+    category: "AI Integrations",
+    readTime: "8 MIN READ",
+    title: "CONNECT AI AGENTS WITH YOUR BUSINESS WORKFLOWS",
+    excerpt:
+      "AI agents become more useful when they can work with the business systems and information employees already depend on. Connecting CRM platforms with communication tools, databases, scheduling systems, and internal applications can reduce repetitive data entry and help teams coordinate activities more consistently. Well-designed integrations may allow an agent to retrieve approved information, prepare a summary, update a permitted record, or recommend a next step within a defined workflow. However, connecting systems requires careful planning. Businesses need clear access permissions, secure handling of customer data, reliable error management, and safeguards against unauthorised actions. Sensitive updates and high-impact decisions may also require human approval. Discover how to identify suitable automation opportunities, map existing workflows, select the right integration approach, and test each step before deployment. By combining useful integrations with clear rules, monitoring, and ongoing improvement, organisations can create more connected operations while keeping their AI systems transparent, manageable, and aligned with business requirements.",
+  },
 ]
 
 
@@ -141,19 +145,20 @@ export const cases = [
 export const socialLinks = [
   {
     platform: "LinkedIn",
-    // url: "https://www.linkedin.com/",
+    url: "https://www.linkedin.com/company/coredhristi?trk=blended-typeahead",
     label: "Visit CoreD on LinkedIn",
   },
   {
     platform: "GitHub",
-    // url: "https://github.com/",
+    url: "https://github.com/krishanumishra778",
     label: "Visit CoreD on GitHub",
   },
   {
-    platform: "Website",
-    // url: "https://your-website.com",
-    label: "Visit the CoreD website",
+    platform: "Gmail",
+    url:"mailto:coredhristi@gmail.com",
+    label: "Contact CoreD on gmail",
   },
+
 ];
 
 
@@ -162,7 +167,7 @@ export const footerCopy = {
     "CoreD builds custom CRM platforms, AI-powered agents, and digital solutions that help businesses streamline operations and grow.",
 
   navigationTitle: "Navigation",
-  connectTitle: "Connect with us",
+  connectTitle: "CONNECT WITH US",
 
   copyrightNotice: "© 2026 CoreD. All rights reserved.",
   backToTop: "Back to top",
@@ -781,13 +786,13 @@ export const caseStudies = [
         label: "Sales Overview",
         caption: "Track overall sales performance, lead conversions, revenue metrics, and order trends at a glance.",
       },
-
       {
         src: "/Images/IndiganicFoods03.png",
         alt: "Indiganic Foods AI sales CRM showing AI calling workspace, automated voice call transcripts, customer interest tags, and follow-up triggers",
         label: "AI Calling Workspace",
         caption: "Review automated call outcomes, transcripts, customer interest context, and schedule follow-ups.",
       },
+
       {
         src: "/Images/IndiganicFoods01.png",
         alt: "Indiganic Foods AI sales CRM showing WhatsApp conversations, AI call outcomes, draft order summary, and staff approval workflow",
@@ -795,6 +800,7 @@ export const caseStudies = [
         caption:
           "Customer conversations, product catalogue sharing, and draft-order review.",
       },
+
     ],
 
     features: [
@@ -969,129 +975,129 @@ export const caseStudies = [
 
 
   {
-  id: "orbitOpportunityCRM",
-  client: "Orbit Opportunity & Media",
-  category: "AI Admissions & EdTech CRM",
+    id: "orbitOpportunityCRM",
+    client: "Orbit Opportunity & Media",
+    category: "AI Admissions & EdTech CRM",
 
-  shortDescription:
-    "An AI-enabled admissions, fee tracking, and learner progress CRM built to streamline enrollment and student operations.",
+    shortDescription:
+      "An AI-enabled admissions, fee tracking, and learner progress CRM built to streamline enrollment and student operations.",
 
-  title: "From Inquiry to Enrolment & Learner Retention.",
+    title: "From Inquiry to Enrolment & Learner Retention.",
 
-  summary:
-    "An integrated admissions and media CRM suite designed to manage student enquiries, track counsellor follow-ups, automate fee reminder workflows, and monitor active learner progress in real time.",
+    summary:
+      "An integrated admissions and media CRM suite designed to manage student enquiries, track counsellor follow-ups, automate fee reminder workflows, and monitor active learner progress in real time.",
 
-  duration: "",
-  industry: "EdTech & Professional Training",
-  stack: "",
+    duration: "",
+    industry: "EdTech & Professional Training",
+    stack: "",
 
-  problem: {
-    tag: "The Challenge",
+    problem: {
+      tag: "The Challenge",
 
-    heading: "Fragmented Enquiries, Manual Fee Follow-ups, and Disconnected Student Data.",
+      heading: "Fragmented Enquiries, Manual Fee Follow-ups, and Disconnected Student Data.",
 
-    paragraphs: [
-      "EdTech platforms and training institutes often struggle to coordinate new lead enquiries, live batch enrolments, counsellor tasks, and fee collections across separate systems. When prospective learner inquiries, attendance logs, and fee balances are managed independently, staff can miss urgent follow-up calls, overlook overdue installment dues, or delay sending essential live session broadcast links.",
+      paragraphs: [
+        "EdTech platforms and training institutes often struggle to coordinate new lead enquiries, live batch enrolments, counsellor tasks, and fee collections across separate systems. When prospective learner inquiries, attendance logs, and fee balances are managed independently, staff can miss urgent follow-up calls, overlook overdue installment dues, or delay sending essential live session broadcast links.",
 
-      "Managing educational operations requires clear distinction between lead status, fee reconciliation, and academic progress. Without a centralized workspace with automated safeguards, tracking active learners across multiple batches, issuing fee receipts, and scheduling counsellor re-attempts becomes uncoordinated and error-prone.",
+        "Managing educational operations requires clear distinction between lead status, fee reconciliation, and academic progress. Without a centralized workspace with automated safeguards, tracking active learners across multiple batches, issuing fee receipts, and scheduling counsellor re-attempts becomes uncoordinated and error-prone.",
+      ],
+
+      highlights: [
+        "Inbound student enquiries spread across webinars, website leads, and referrals",
+        "Manual fee collection tracking and unverified balance reconciliations",
+        "Uncoordinated counsellor call tasks and live session link approvals",
+        "Lack of centralized visibility into learner attendance and coursework progress",
+      ],
+    },
+
+    solution: {
+      tag: "Our Solution",
+
+      heading: "A Connected Admissions, Fee, and Learner Management Workspace.",
+      detailsHeading: "How the Platform Works",
+
+      paragraphs: [
+        "CoreD designed a customized Admissions & Media CRM for Orbit Opportunity that consolidates lead intake, counsellor workflows, and fee communications into a unified dashboard. The platform tracks weekly enrolments, funnel conversion stages, and priority enquiries, enabling counsellors to instantly trigger intro calls, send syllabi, or share fee payment links based on real-time prospect intent.",
+
+        "The communication workflow streamlines fee reconciliation and WhatsApp messaging with built-in governance safeguards. Staff can review auto-reconciled ledgers, verify pending balances, and inspect AI-drafted template previews before approving broadcast messages. Human authorization remains a strict requirement prior to dispatching reminders or timetable updates.",
+
+        "The learner tracking module gives educators and mentors granular insights into student performance. From attendance percentages and module completion rates to AI learning insights and automated audit logs, the system ensures seamless coordination from initial lead capture through graduation.",
+      ],
+
+      highlights: [
+        "Real-time admissions overview and enquiry funnel analytics",
+        "Priority lead queues with one-click counsellor actions",
+        "Automated fee collection ledgers with human-in-the-loop WhatsApp dispatch",
+        "Comprehensive learner directory tracking attendance, progress, and grades",
+        "Integrated live session timetable and broadcast link approval",
+      ],
+    },
+
+    screenshots: [
+      {
+        src: "/Images/OrbitOpportunity01.png",
+        alt: "Orbit Opportunity Admissions CRM dashboard showing new enquiries, weekly enrolment metrics, enquiry funnel stages, and priority lead tasks",
+        label: "Admissions Overview",
+        caption:
+          "Track enquiries, active enrolments, funnel conversion rates, priority counsellor tasks, and upcoming live sessions.",
+      },
+      {
+        src: "/Images/OrbitOpportunity02.png",
+        alt: "Orbit Opportunity CRM fees and communication workspace displaying fee ledgers, draft WhatsApp reminders, and multi-step governance flow",
+        label: "Fees & Invoices",
+        caption:
+          "Manage fee collections, outstanding balance ledgers, draft preview dispatchers, and automated compliance workflows.",
+      },
+      {
+        src: "/Images/OrbitOpportunity03.png",
+        alt: "Orbit Opportunity CRM learner management interface showing attendance, coursework progress, AI learning insights, and activity feeds",
+        label: "Learner's Dashboard",
+        caption:
+          "Monitor student attendance, module progress, academic assessment scores, mentor assignments, and recent activity logs.",
+      },
     ],
 
-    highlights: [
-      "Inbound student enquiries spread across webinars, website leads, and referrals",
-      "Manual fee collection tracking and unverified balance reconciliations",
-      "Uncoordinated counsellor call tasks and live session link approvals",
-      "Lack of centralized visibility into learner attendance and coursework progress",
+    features: [
+      {
+        title: "Admissions & Funnel Hub",
+        description:
+          "Track new enquiries, conversion funnel stages, weekly enrolments, and overall pipeline targets in real time.",
+      },
+      {
+        title: "Priority Action Routing",
+        description:
+          "Assign counsellor call tasks, schedule follow-ups, and dispatch course syllabi based on lead engagement.",
+      },
+      {
+        title: "Fee & Balance Ledger",
+        description:
+          "Monitor billed revenue, auto-reconciled bank collections, and outstanding installment dues across batches.",
+      },
+      {
+        title: "Governance-Backed Outreach",
+        description:
+          "Prepare, edit, and approve WhatsApp or email fee reminders with multi-step compliance rules before sending.",
+      },
+      {
+        title: "Learner Directory & Analytics",
+        description:
+          "View detailed student profiles with attendance rates, coursework completion percentages, and quiz scores.",
+      },
+      {
+        title: "AI Learning Insights",
+        description:
+          "Receive automated academic insights on student progress to assign targeted mentor follow-ups.",
+      },
     ],
-  },
 
-  solution: {
-    tag: "Our Solution",
+    results: [],
 
-    heading: "A Connected Admissions, Fee, and Learner Management Workspace.",
-    detailsHeading: "How the Platform Works",
+    resultsNote: "",
 
-    paragraphs: [
-      "CoreD designed a customized Admissions & Media CRM for Orbit Opportunity that consolidates lead intake, counsellor workflows, and fee communications into a unified dashboard. The platform tracks weekly enrolments, funnel conversion stages, and priority enquiries, enabling counsellors to instantly trigger intro calls, send syllabi, or share fee payment links based on real-time prospect intent.",
+    result:
+      "A comprehensive CRM suite that unifies student lead qualification, fee reconciliation, WhatsApp communications, and learner progress tracking into one clear operational workflow.",
+  }
 
-      "The communication workflow streamlines fee reconciliation and WhatsApp messaging with built-in governance safeguards. Staff can review auto-reconciled ledgers, verify pending balances, and inspect AI-drafted template previews before approving broadcast messages. Human authorization remains a strict requirement prior to dispatching reminders or timetable updates.",
-
-      "The learner tracking module gives educators and mentors granular insights into student performance. From attendance percentages and module completion rates to AI learning insights and automated audit logs, the system ensures seamless coordination from initial lead capture through graduation.",
-    ],
-
-    highlights: [
-      "Real-time admissions overview and enquiry funnel analytics",
-      "Priority lead queues with one-click counsellor actions",
-      "Automated fee collection ledgers with human-in-the-loop WhatsApp dispatch",
-      "Comprehensive learner directory tracking attendance, progress, and grades",
-      "Integrated live session timetable and broadcast link approval",
-    ],
-  },
-
-  screenshots: [
-    {
-      src: "/Images/OrbitOpportunity01.png",
-      alt: "Orbit Opportunity Admissions CRM dashboard showing new enquiries, weekly enrolment metrics, enquiry funnel stages, and priority lead tasks",
-      label: "Admissions Overview",
-      caption:
-        "Track enquiries, active enrolments, funnel conversion rates, priority counsellor tasks, and upcoming live sessions.",
-    },
-    {
-      src: "/Images/OrbitOpportunity02.png",
-      alt: "Orbit Opportunity CRM fees and communication workspace displaying fee ledgers, draft WhatsApp reminders, and multi-step governance flow",
-      label: "Fees & Invoices",
-      caption:
-        "Manage fee collections, outstanding balance ledgers, draft preview dispatchers, and automated compliance workflows.",
-    },
-    {
-      src: "/Images/OrbitOpportunity03.png",
-      alt: "Orbit Opportunity CRM learner management interface showing attendance, coursework progress, AI learning insights, and activity feeds",
-      label: "Learner's Dashboard",
-      caption:
-        "Monitor student attendance, module progress, academic assessment scores, mentor assignments, and recent activity logs.",
-    },
-  ],
-
-  features: [
-    {
-      title: "Admissions & Funnel Hub",
-      description:
-        "Track new enquiries, conversion funnel stages, weekly enrolments, and overall pipeline targets in real time.",
-    },
-    {
-      title: "Priority Action Routing",
-      description:
-        "Assign counsellor call tasks, schedule follow-ups, and dispatch course syllabi based on lead engagement.",
-    },
-    {
-      title: "Fee & Balance Ledger",
-      description:
-        "Monitor billed revenue, auto-reconciled bank collections, and outstanding installment dues across batches.",
-    },
-    {
-      title: "Governance-Backed Outreach",
-      description:
-        "Prepare, edit, and approve WhatsApp or email fee reminders with multi-step compliance rules before sending.",
-    },
-    {
-      title: "Learner Directory & Analytics",
-      description:
-        "View detailed student profiles with attendance rates, coursework completion percentages, and quiz scores.",
-    },
-    {
-      title: "AI Learning Insights",
-      description:
-        "Receive automated academic insights on student progress to assign targeted mentor follow-ups.",
-    },
-  ],
-
-  results: [],
-
-  resultsNote: "",
-
-  result:
-    "A comprehensive CRM suite that unifies student lead qualification, fee reconciliation, WhatsApp communications, and learner progress tracking into one clear operational workflow.",
-}
- 
 ];
 
 

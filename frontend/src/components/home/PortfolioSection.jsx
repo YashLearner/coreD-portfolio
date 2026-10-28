@@ -109,7 +109,7 @@ export default function PortfolioSection() {
                     className="group w-[min(340px,82vw)] shrink-0 rounded-[32px] bg-[#faf7f1] p-2 shadow-[0_10px_40px_rgba(15,23,42,0.08)] ring-1 ring-black/5 transition duration-300 hover:-translate-y-1 hover:shadow-[0_20px_50px_rgba(15,23,42,0.14)]"
                   >
                     {/* Image */}
-                    <div className="aspect-[4/4.1] w-full overflow-hidden rounded-[26px] bg-slate-100">
+                    <div className="aspect-[4/3] w-full overflow-hidden rounded-[26px] bg-slate-100">
                       <img
                         src={item.screenshots?.[0]?.src}
                         alt={item.screenshots?.[0]?.alt || item.client}

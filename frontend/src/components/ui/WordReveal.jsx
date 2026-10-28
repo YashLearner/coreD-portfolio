@@ -6,6 +6,84 @@ const REVEAL_SELECTOR =
 
 const INITIAL_CLASS = "global-reveal-init";
 const VISIBLE_CLASS = "global-reveal-visible";
+const WORD_CLASS = "global-reveal-word";
+
+// Wrap individual words while preserving existing HTML and whitespace.
+function wrapWords(element) {
+  if (element.matches("img")) return;
+
+  const walker = document.createTreeWalker(
+    element,
+    NodeFilter.SHOW_TEXT,
+    {
+      acceptNode(node) {
+        if (!node.nodeValue?.trim()) {
+          return NodeFilter.FILTER_REJECT;
+        }
+
+        // Avoid wrapping words more than once.
+        if (node.parentElement?.closest(`.${WORD_CLASS}`)) {
+          return NodeFilter.FILTER_REJECT;
+        }
+
+        return NodeFilter.FILTER_ACCEPT;
+      },
+    }
+  );
+
+  const textNodes = [];
+
+  while (walker.nextNode()) {
+    textNodes.push(walker.currentNode);
+  }
+
+  let wordIndex = 0;
+
+  textNodes.forEach((textNode) => {
+    const fragment = document.createDocumentFragment();
+    const gradientParent =
+      textNode.parentElement?.closest(".bg-clip-text");
+
+    const gradientStyles = gradientParent
+      ? window.getComputedStyle(gradientParent)
+      : null;
+    const parts = textNode.nodeValue.split(/(\s+)/);
+
+    parts.forEach((part) => {
+      if (!part) return;
+
+      // Keep whitespace outside the word spans so text can wrap normally.
+      if (/^\s+$/.test(part)) {
+        fragment.appendChild(document.createTextNode(part));
+        return;
+      }
+
+      const word = document.createElement("span");
+
+      word.className = WORD_CLASS;
+      word.textContent = part;
+
+      if (
+        gradientStyles &&
+        gradientStyles.backgroundImage !== "none"
+      ) {
+        word.style.backgroundImage = gradientStyles.backgroundImage;
+        word.style.backgroundClip = "text";
+        word.style.color = "transparent";
+      }
+
+      word.style.setProperty(
+        "--word-delay",
+        `${Math.min(wordIndex, 16) * 65}ms`
+      );
+
+      fragment.appendChild(word);
+      wordIndex += 1;
+    });
+
+    textNode.replaceWith(fragment);
+  });
+}
 
 export default function WordReveal() {
   useEffect(() => {
@@ -37,6 +115,8 @@ export default function WordReveal() {
 
       element.classList.add(INITIAL_CLASS);
       animatedElements.add(element);
+
+      wrapWords(element);
       observer.observe(element);
     };
 
@@ -67,10 +147,10 @@ export default function WordReveal() {
       }
     );
 
-    // Animate the current page.
+    // Reveal the current page.
     observeElements(root);
 
-    // Also detect content added when React Router changes pages.
+    // Detect content added during React Router navigation.
     const mutationObserver = new MutationObserver((mutations) => {
       mutations.forEach((mutation) => {
         mutation.addedNodes.forEach((node) => {
@@ -86,7 +166,7 @@ export default function WordReveal() {
       subtree: true,
     });
 
-    // Respect accessibility preferences if they change.
+    // Respect accessibility preferences.
     const handleMotionChange = (event) => {
       if (event.matches) {
         observer.disconnect();
@@ -116,6 +196,13 @@ export default function WordReveal() {
         element.classList.remove(
           INITIAL_CLASS,
           VISIBLE_CLASS
+        );
+      });
+
+      // Restore the original text nodes during cleanup.
+      root.querySelectorAll(`.${WORD_CLASS}`).forEach((word) => {
+        word.replaceWith(
+          document.createTextNode(word.textContent ?? "")
         );
       });
     };

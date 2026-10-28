@@ -181,6 +181,29 @@ export default function Contact() {
                 </p>
               </div>
             </div>
+
+            <div className="mt-8 border-t border-white/10 pt-6">
+              <p className="text-xs text-slate-300">
+                For business related query:{' '}
+                <a
+                  href="mailto:info@coredhristi.com"
+                  className="font-semibold  text-orange-400 hover:underline transition-colors"
+                >
+                  info@coredhristi.com
+                </a>
+              </p>
+
+              <p className="text-xs text-slate-300">
+                 Contact HR :{' '}
+                <a
+                  href="mailto:info@coredhristi.com"
+                  className="font-semibold text-orange-400 hover:underline transition-colors"
+                >
+                   carrers@cored.com
+                </a>
+              </p>
+            </div>
+
           </aside>
 
           {/* Contact form */}
@@ -347,11 +370,10 @@ export default function Contact() {
                 <p
                   role="status"
                   aria-live="polite"
-                  className={`rounded-xl border px-4 py-3 text-sm leading-6 ${
-                    status.type === "success"
-                      ? "border-emerald-200 bg-emerald-50 text-emerald-800"
-                      : "border-red-200 bg-red-50 text-red-700"
-                  }`}
+                  className={`rounded-xl border px-4 py-3 text-sm leading-6 ${status.type === "success"
+                    ? "border-emerald-200 bg-emerald-50 text-emerald-800"
+                    : "border-red-200 bg-red-50 text-red-700"
+                    }`}
                 >
                   {status.text}
                 </p>
