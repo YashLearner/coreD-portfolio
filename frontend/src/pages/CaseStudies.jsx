@@ -365,7 +365,7 @@ function ScreenshotLightbox({ shot, onClose }) {
           aria-label="Close preview"
           className="absolute right-4 top-4 rounded-full bg-slate-800 p-2 text-slate-400 hover:text-white hover:bg-slate-700 transition"
         >
-          <X className="w-5 h-5" />
+          <X className="w-5 h-5" onClick={onClose}/>
         </button>
 
         <h3
