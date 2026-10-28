@@ -1,7 +1,10 @@
 import { useEffect, useId, useRef, useState } from "react";
 import { Building2, Mail, MessageSquare, Send, Wrench, X } from "lucide-react";
 
-const GOOGLE_APPS_SCRIPT_URL = import.meta.env.VITE_GOOGLE_APPS_SCRIPT_URL;
+// const SCRIPT_URL = import.meta.env.VITE_QUOTATION_FORM_SCRIPT_URL;
+
+const SCRIPT_URL =
+  "https://script.google.com/macros/s/AKfycbyx8cYUZ4rOAJThLFLV4y9G7K8YikykDNNcO72hBZOvjr1RKxerU5HYJqe5K9V02aKGug/exec";
 
 const INITIAL_FORM = {
   fullName: "",
@@ -11,31 +14,27 @@ const INITIAL_FORM = {
   systems: "",
 };
 
-// Form ka data Google Apps Script (Google Sheet) par bhejta hai.
 async function sendToGoogleSheet(data) {
-  if (!GOOGLE_APPS_SCRIPT_URL) {
-    throw new Error("Backend URL missing. Please check your .env file.");
-  }
-
   const body = new URLSearchParams({
     formType: "quotation",
-    fullName: data.fullName,
-    businessEmail: data.businessEmail,
-    companyName: data.companyName,
-    requirements: data.requirements,
-    systems: data.existingSystems,
-    selectedService: `${data.service} · ${data.package}`,
+    FullName: data.fullName ?? "",
+    BusinessEmail: data.businessEmail ?? "",
+    CompanyName: data.companyName ?? "",
+    Requirements: data.requirements ?? "",
+    ExistingSystems: data.existingSystems ?? "",
   });
 
-  console.log("Sending quotation to:", GOOGLE_APPS_SCRIPT_URL);
-  console.log("Quotation payload:", body.toString());
-
-  // no-cors: response read nahi hota, lekin data Apps Script tak pahunch jata hai.
-  await fetch(GOOGLE_APPS_SCRIPT_URL, {
-    method: "POST",
-    mode: "no-cors",
-    body,
-  });
+  try {
+    await fetch(SCRIPT_URL, {
+      method: "POST",
+      mode: "no-cors",
+      body,
+    });
+    return true;
+  } catch (error) {
+    console.error("Quotation submission failed:", error);
+    throw error;
+  }
 }
 
 const inputClassName = [
@@ -45,7 +44,7 @@ const inputClassName = [
   "disabled:cursor-not-allowed disabled:opacity-60",
 ].join(" ");
 
-function FormField({ id, label, icon: Icon, children, note }) {
+function FormField({ id, label, icon: Icon, children }) {
   return (
     <div>
       <label
@@ -63,16 +62,13 @@ function FormField({ id, label, icon: Icon, children, note }) {
         ) : null}
         {children}
       </div>
-      {note ? (
-        <p className="mt-1.5 text-right text-[10px] text-[#777]">{note}</p>
-      ) : null}
     </div>
   );
 }
 
 export default function QuotationModal({ service, pkg, onClose }) {
   const [formData, setFormData] = useState(INITIAL_FORM);
-  const [feedback, setFeedback] = useState(null);
+  const [feedback, setFeedback] = useState(null); // { type: "success" | "error", text }
   const [submitting, setSubmitting] = useState(false);
   const dialogRef = useRef(null);
   const firstInputRef = useRef(null);
@@ -126,9 +122,13 @@ export default function QuotationModal({ service, pkg, onClose }) {
     event.preventDefault();
     if (submitting) return;
 
-    const clean = Object.fromEntries(
-      Object.entries(formData).map(([key, value]) => [key, value.trim()]),
-    );
+    const clean = {
+      fullName: formData.fullName.trim(),
+      businessEmail: formData.businessEmail.trim(),
+      companyName: formData.companyName.trim(),
+      requirements: formData.requirements.trim(),
+      systems: formData.systems.trim(),
+    };
 
     if (!clean.fullName || !clean.businessEmail || !clean.companyName) {
       setFeedback({
@@ -145,22 +145,19 @@ export default function QuotationModal({ service, pkg, onClose }) {
       return;
     }
 
-    const payload = {
-      serviceId: service.id,
-      service: service.label,
-      packageId: pkg.id,
-      package: pkg.packageName,
-      fullName: clean.fullName,
-      businessEmail: clean.businessEmail,
-      companyName: clean.companyName,
-      requirements: clean.requirements,
-      existingSystems: clean.systems,
-    };
-
     setSubmitting(true);
+    setFeedback(null);
+
     try {
-      // Hamesha seedha Google Sheet par bhejo (parent ke onSubmitRequest par depend nahi).
-      await sendToGoogleSheet(payload);
+      await sendToGoogleSheet({
+        service: service.label,
+        package: pkg.packageName,
+        fullName: clean.fullName,
+        businessEmail: clean.businessEmail,
+        companyName: clean.companyName,
+        requirements: clean.requirements,
+        existingSystems: clean.systems,
+      });
 
       setFeedback({
         type: "success",
@@ -171,10 +168,7 @@ export default function QuotationModal({ service, pkg, onClose }) {
       console.error("Quotation submit failed:", error);
       setFeedback({
         type: "error",
-        text:
-          error instanceof Error && error.message
-            ? error.message
-            : "We couldn't send your request. Please try again later.",
+        text: "We couldn't send your request. Please try again later.",
       });
     } finally {
       setSubmitting(false);
@@ -186,9 +180,7 @@ export default function QuotationModal({ service, pkg, onClose }) {
   const feedbackClass =
     feedback?.type === "success"
       ? "border-emerald-700/20 bg-emerald-50 text-emerald-800"
-      : feedback?.type === "error"
-        ? "border-red-700/20 bg-red-50 text-red-800"
-        : "border-amber-700/20 bg-amber-50 text-amber-900";
+      : "border-red-700/20 bg-red-50 text-red-800";
 
   return (
     <div
@@ -248,7 +240,11 @@ export default function QuotationModal({ service, pkg, onClose }) {
           </span>
         </div>
 
-        <form onSubmit={handleSubmit} className="space-y-4">
+        <form
+          onSubmit={handleSubmit}
+          onChange={handleChange}
+          className="space-y-4"
+        >
           <FormField
             id={`${formId}-fullName`}
             label="Full Name"
@@ -264,7 +260,7 @@ export default function QuotationModal({ service, pkg, onClose }) {
               required
               value={formData.fullName}
               onChange={handleChange}
-              placeholder="e.g. Alex Morgan"
+              placeholder="Krishanu Kaundilya"
               className={inputClassName}
             />
           </FormField>
@@ -283,7 +279,7 @@ export default function QuotationModal({ service, pkg, onClose }) {
               required
               value={formData.businessEmail}
               onChange={handleChange}
-              placeholder="alex@company.com"
+              placeholder="cored@company.com"
               className={inputClassName}
             />
           </FormField>
@@ -302,7 +298,7 @@ export default function QuotationModal({ service, pkg, onClose }) {
               required
               value={formData.companyName}
               onChange={handleChange}
-              placeholder="e.g. Acme Corp"
+              placeholder="companyName"
               className={inputClassName}
             />
           </FormField>
@@ -327,7 +323,7 @@ export default function QuotationModal({ service, pkg, onClose }) {
                 value={formData.requirements}
                 onChange={handleChange}
                 placeholder={service.form.requirementsPlaceholder}
-                className={`${inputClassName} min-h-24 resize-y pl-10`}
+                className={`${inputClassName} min-h-24 resize-y`}
               />
             </div>
             <p className="mt-1.5 text-right text-[10px] text-[#777]">
@@ -347,11 +343,12 @@ export default function QuotationModal({ service, pkg, onClose }) {
                 className="pointer-events-none absolute left-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-[#777]"
                 aria-hidden="true"
               />
-              <input
+              <textarea
                 id={systemsId}
                 name="systems"
                 type="text"
-                maxLength={500}
+                autoComplete="organization"
+                maxLength={2000}
                 value={formData.systems}
                 onChange={handleChange}
                 placeholder={service.form.systemsPlaceholder}

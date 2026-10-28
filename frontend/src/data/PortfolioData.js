@@ -15,24 +15,28 @@ export const navLinks = [
     label: "Services",
     href: "/services",
   },
-  {
+   {
     label: "See Our Work",
-    href: "/seeOurWork",
+    href: "/see-our-work",
+  },
+   {
+    label: "Contact",
+    href: "/contact"
   },
   {
     label: "Blogs",
     href: "/blog"
   },
   {
-    label: "Terms & Condition",
+    label: "Terms &Condition",
     href: "/termsCondition"
-  }
+  },
+   
+ 
+];
 
 
-]
-
-
-export const blog  = [
+export const blog = [
   {
     id: "future-of-ai-crm",
     dateTime: "2026-10-21",
@@ -91,7 +95,6 @@ export const blog  = [
 ]
 
 
-
 export const workflow = [
   {
     number: "01",
@@ -142,19 +145,20 @@ export const cases = [
 export const socialLinks = [
   {
     platform: "LinkedIn",
-    // url: "https://www.linkedin.com/",
+    url: "https://www.linkedin.com/company/coredhristi?trk=blended-typeahead",
     label: "Visit CoreD on LinkedIn",
   },
   {
     platform: "GitHub",
-    // url: "https://github.com/",
+    url: "https://github.com/krishanumishra778",
     label: "Visit CoreD on GitHub",
   },
   {
-    platform: "Website",
-    // url: "https://your-website.com",
-    label: "Visit the CoreD website",
+    platform: "Gmail",
+    url:"mailto:coredhristi@gmail.com",
+    label: "Contact CoreD on gmail",
   },
+
 ];
 
 
@@ -163,7 +167,7 @@ export const footerCopy = {
     "CoreD builds custom CRM platforms, AI-powered agents, and digital solutions that help businesses streamline operations and grow.",
 
   navigationTitle: "Navigation",
-  connectTitle: "Connect with us",
+  connectTitle: "CONNECT WITH US",
 
   copyrightNotice: "© 2026 CoreD. All rights reserved.",
   backToTop: "Back to top",
@@ -782,13 +786,13 @@ export const caseStudies = [
         label: "Sales Overview",
         caption: "Track overall sales performance, lead conversions, revenue metrics, and order trends at a glance.",
       },
-
       {
         src: "/Images/IndiganicFoods03.png",
         alt: "Indiganic Foods AI sales CRM showing AI calling workspace, automated voice call transcripts, customer interest tags, and follow-up triggers",
         label: "AI Calling Workspace",
         caption: "Review automated call outcomes, transcripts, customer interest context, and schedule follow-ups.",
       },
+
       {
         src: "/Images/IndiganicFoods01.png",
         alt: "Indiganic Foods AI sales CRM showing WhatsApp conversations, AI call outcomes, draft order summary, and staff approval workflow",
@@ -796,6 +800,7 @@ export const caseStudies = [
         caption:
           "Customer conversations, product catalogue sharing, and draft-order review.",
       },
+
     ],
 
     features: [
@@ -970,129 +975,129 @@ export const caseStudies = [
 
 
   {
-  id: "orbitOpportunityCRM",
-  client: "Orbit Opportunity & Media",
-  category: "AI Admissions & EdTech CRM",
+    id: "orbitOpportunityCRM",
+    client: "Orbit Opportunity & Media",
+    category: "AI Admissions & EdTech CRM",
 
-  shortDescription:
-    "An AI-enabled admissions, fee tracking, and learner progress CRM built to streamline enrollment and student operations.",
+    shortDescription:
+      "An AI-enabled admissions, fee tracking, and learner progress CRM built to streamline enrollment and student operations.",
 
-  title: "From Inquiry to Enrolment & Learner Retention.",
+    title: "From Inquiry to Enrolment & Learner Retention.",
 
-  summary:
-    "An integrated admissions and media CRM suite designed to manage student enquiries, track counsellor follow-ups, automate fee reminder workflows, and monitor active learner progress in real time.",
+    summary:
+      "An integrated admissions and media CRM suite designed to manage student enquiries, track counsellor follow-ups, automate fee reminder workflows, and monitor active learner progress in real time.",
 
-  duration: "",
-  industry: "EdTech & Professional Training",
-  stack: "",
+    duration: "",
+    industry: "EdTech & Professional Training",
+    stack: "",
 
-  problem: {
-    tag: "The Challenge",
+    problem: {
+      tag: "The Challenge",
 
-    heading: "Fragmented Enquiries, Manual Fee Follow-ups, and Disconnected Student Data.",
+      heading: "Fragmented Enquiries, Manual Fee Follow-ups, and Disconnected Student Data.",
 
-    paragraphs: [
-      "EdTech platforms and training institutes often struggle to coordinate new lead enquiries, live batch enrolments, counsellor tasks, and fee collections across separate systems. When prospective learner inquiries, attendance logs, and fee balances are managed independently, staff can miss urgent follow-up calls, overlook overdue installment dues, or delay sending essential live session broadcast links.",
+      paragraphs: [
+        "EdTech platforms and training institutes often struggle to coordinate new lead enquiries, live batch enrolments, counsellor tasks, and fee collections across separate systems. When prospective learner inquiries, attendance logs, and fee balances are managed independently, staff can miss urgent follow-up calls, overlook overdue installment dues, or delay sending essential live session broadcast links.",
 
-      "Managing educational operations requires clear distinction between lead status, fee reconciliation, and academic progress. Without a centralized workspace with automated safeguards, tracking active learners across multiple batches, issuing fee receipts, and scheduling counsellor re-attempts becomes uncoordinated and error-prone.",
+        "Managing educational operations requires clear distinction between lead status, fee reconciliation, and academic progress. Without a centralized workspace with automated safeguards, tracking active learners across multiple batches, issuing fee receipts, and scheduling counsellor re-attempts becomes uncoordinated and error-prone.",
+      ],
+
+      highlights: [
+        "Inbound student enquiries spread across webinars, website leads, and referrals",
+        "Manual fee collection tracking and unverified balance reconciliations",
+        "Uncoordinated counsellor call tasks and live session link approvals",
+        "Lack of centralized visibility into learner attendance and coursework progress",
+      ],
+    },
+
+    solution: {
+      tag: "Our Solution",
+
+      heading: "A Connected Admissions, Fee, and Learner Management Workspace.",
+      detailsHeading: "How the Platform Works",
+
+      paragraphs: [
+        "CoreD designed a customized Admissions & Media CRM for Orbit Opportunity that consolidates lead intake, counsellor workflows, and fee communications into a unified dashboard. The platform tracks weekly enrolments, funnel conversion stages, and priority enquiries, enabling counsellors to instantly trigger intro calls, send syllabi, or share fee payment links based on real-time prospect intent.",
+
+        "The communication workflow streamlines fee reconciliation and WhatsApp messaging with built-in governance safeguards. Staff can review auto-reconciled ledgers, verify pending balances, and inspect AI-drafted template previews before approving broadcast messages. Human authorization remains a strict requirement prior to dispatching reminders or timetable updates.",
+
+        "The learner tracking module gives educators and mentors granular insights into student performance. From attendance percentages and module completion rates to AI learning insights and automated audit logs, the system ensures seamless coordination from initial lead capture through graduation.",
+      ],
+
+      highlights: [
+        "Real-time admissions overview and enquiry funnel analytics",
+        "Priority lead queues with one-click counsellor actions",
+        "Automated fee collection ledgers with human-in-the-loop WhatsApp dispatch",
+        "Comprehensive learner directory tracking attendance, progress, and grades",
+        "Integrated live session timetable and broadcast link approval",
+      ],
+    },
+
+    screenshots: [
+      {
+        src: "/Images/OrbitOpportunity01.png",
+        alt: "Orbit Opportunity Admissions CRM dashboard showing new enquiries, weekly enrolment metrics, enquiry funnel stages, and priority lead tasks",
+        label: "Admissions Overview",
+        caption:
+          "Track enquiries, active enrolments, funnel conversion rates, priority counsellor tasks, and upcoming live sessions.",
+      },
+      {
+        src: "/Images/OrbitOpportunity02.png",
+        alt: "Orbit Opportunity CRM fees and communication workspace displaying fee ledgers, draft WhatsApp reminders, and multi-step governance flow",
+        label: "Fees & Invoices",
+        caption:
+          "Manage fee collections, outstanding balance ledgers, draft preview dispatchers, and automated compliance workflows.",
+      },
+      {
+        src: "/Images/OrbitOpportunity03.png",
+        alt: "Orbit Opportunity CRM learner management interface showing attendance, coursework progress, AI learning insights, and activity feeds",
+        label: "Learner's Dashboard",
+        caption:
+          "Monitor student attendance, module progress, academic assessment scores, mentor assignments, and recent activity logs.",
+      },
     ],
 
-    highlights: [
-      "Inbound student enquiries spread across webinars, website leads, and referrals",
-      "Manual fee collection tracking and unverified balance reconciliations",
-      "Uncoordinated counsellor call tasks and live session link approvals",
-      "Lack of centralized visibility into learner attendance and coursework progress",
+    features: [
+      {
+        title: "Admissions & Funnel Hub",
+        description:
+          "Track new enquiries, conversion funnel stages, weekly enrolments, and overall pipeline targets in real time.",
+      },
+      {
+        title: "Priority Action Routing",
+        description:
+          "Assign counsellor call tasks, schedule follow-ups, and dispatch course syllabi based on lead engagement.",
+      },
+      {
+        title: "Fee & Balance Ledger",
+        description:
+          "Monitor billed revenue, auto-reconciled bank collections, and outstanding installment dues across batches.",
+      },
+      {
+        title: "Governance-Backed Outreach",
+        description:
+          "Prepare, edit, and approve WhatsApp or email fee reminders with multi-step compliance rules before sending.",
+      },
+      {
+        title: "Learner Directory & Analytics",
+        description:
+          "View detailed student profiles with attendance rates, coursework completion percentages, and quiz scores.",
+      },
+      {
+        title: "AI Learning Insights",
+        description:
+          "Receive automated academic insights on student progress to assign targeted mentor follow-ups.",
+      },
     ],
-  },
 
-  solution: {
-    tag: "Our Solution",
+    results: [],
 
-    heading: "A Connected Admissions, Fee, and Learner Management Workspace.",
-    detailsHeading: "How the Platform Works",
+    resultsNote: "",
 
-    paragraphs: [
-      "CoreD designed a customized Admissions & Media CRM for Orbit Opportunity that consolidates lead intake, counsellor workflows, and fee communications into a unified dashboard. The platform tracks weekly enrolments, funnel conversion stages, and priority enquiries, enabling counsellors to instantly trigger intro calls, send syllabi, or share fee payment links based on real-time prospect intent.",
+    result:
+      "A comprehensive CRM suite that unifies student lead qualification, fee reconciliation, WhatsApp communications, and learner progress tracking into one clear operational workflow.",
+  }
 
-      "The communication workflow streamlines fee reconciliation and WhatsApp messaging with built-in governance safeguards. Staff can review auto-reconciled ledgers, verify pending balances, and inspect AI-drafted template previews before approving broadcast messages. Human authorization remains a strict requirement prior to dispatching reminders or timetable updates.",
-
-      "The learner tracking module gives educators and mentors granular insights into student performance. From attendance percentages and module completion rates to AI learning insights and automated audit logs, the system ensures seamless coordination from initial lead capture through graduation.",
-    ],
-
-    highlights: [
-      "Real-time admissions overview and enquiry funnel analytics",
-      "Priority lead queues with one-click counsellor actions",
-      "Automated fee collection ledgers with human-in-the-loop WhatsApp dispatch",
-      "Comprehensive learner directory tracking attendance, progress, and grades",
-      "Integrated live session timetable and broadcast link approval",
-    ],
-  },
-
-  screenshots: [
-    {
-      src: "/Images/OrbitOpportunity01.png",
-      alt: "Orbit Opportunity Admissions CRM dashboard showing new enquiries, weekly enrolment metrics, enquiry funnel stages, and priority lead tasks",
-      label: "Admissions Overview",
-      caption:
-        "Track enquiries, active enrolments, funnel conversion rates, priority counsellor tasks, and upcoming live sessions.",
-    },
-    {
-      src: "/Images/OrbitOpportunity02.png",
-      alt: "Orbit Opportunity CRM fees and communication workspace displaying fee ledgers, draft WhatsApp reminders, and multi-step governance flow",
-      label: "Fees & Invoices",
-      caption:
-        "Manage fee collections, outstanding balance ledgers, draft preview dispatchers, and automated compliance workflows.",
-    },
-    {
-      src: "/Images/OrbitOpportunity03.png",
-      alt: "Orbit Opportunity CRM learner management interface showing attendance, coursework progress, AI learning insights, and activity feeds",
-      label: "Learner's Dashboard",
-      caption:
-        "Monitor student attendance, module progress, academic assessment scores, mentor assignments, and recent activity logs.",
-    },
-  ],
-
-  features: [
-    {
-      title: "Admissions & Funnel Hub",
-      description:
-        "Track new enquiries, conversion funnel stages, weekly enrolments, and overall pipeline targets in real time.",
-    },
-    {
-      title: "Priority Action Routing",
-      description:
-        "Assign counsellor call tasks, schedule follow-ups, and dispatch course syllabi based on lead engagement.",
-    },
-    {
-      title: "Fee & Balance Ledger",
-      description:
-        "Monitor billed revenue, auto-reconciled bank collections, and outstanding installment dues across batches.",
-    },
-    {
-      title: "Governance-Backed Outreach",
-      description:
-        "Prepare, edit, and approve WhatsApp or email fee reminders with multi-step compliance rules before sending.",
-    },
-    {
-      title: "Learner Directory & Analytics",
-      description:
-        "View detailed student profiles with attendance rates, coursework completion percentages, and quiz scores.",
-    },
-    {
-      title: "AI Learning Insights",
-      description:
-        "Receive automated academic insights on student progress to assign targeted mentor follow-ups.",
-    },
-  ],
-
-  results: [],
-
-  resultsNote: "",
-
-  result:
-    "A comprehensive CRM suite that unifies student lead qualification, fee reconciliation, WhatsApp communications, and learner progress tracking into one clear operational workflow.",
-}
- 
 ];
 
 
@@ -1229,6 +1234,3 @@ export const termsSections = [
     contact: true,
   },
 ];
-
-
-
