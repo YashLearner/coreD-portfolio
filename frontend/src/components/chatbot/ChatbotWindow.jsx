@@ -325,18 +325,42 @@ export function ChatbotWindow({ onClose }) {
       } catch {
         reply = null;
       }
+      
+      
 
-      const resolvedReply = reply ?? assistantCopy.fallback;
-      const fallbackContent = assistantCopy.fallback?.content;
+      const fallbackMessages = [
+        assistantCopy.fallback?.content,
+        ...(assistantCopy.fallback?.alternatives ?? []),
+      ].filter(
+        (message) =>
+          typeof message === "string" && message.trim().length > 0
+      );
 
+      const getFallbackContent = () => {
+        if (fallbackMessages.length === 0) {
+          return "I don't have verified information on that yet.";
+        }
+
+        const randomIndex = Math.floor(
+          Math.random() * fallbackMessages.length
+        );
+
+        return fallbackMessages[randomIndex];
+      };
+
+      const resolvedReply = reply ?? {
+        ...assistantCopy.fallback,
+        content: getFallbackContent(),
+      };
+      
       // Detect whether the question received the fallback answer.
       const isUnanswered =
         !reply ||
         reply?.isFallback === true ||
         reply?.matched === false ||
         (
-          typeof fallbackContent === "string" &&
-          resolvedReply?.content === fallbackContent
+          typeof resolvedReply?.content === "string" &&
+          fallbackMessages.includes(resolvedReply.content)
         );
 
       // Save only unanswered questions to the cloud database.

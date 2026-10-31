@@ -52,6 +52,15 @@ export const assistantCopy = {
   fallback: {
     content:
       "I don't have verified information on that yet. I can help with what CoreD does, the Basic, Standard and Custom CRM options, how AI agents fit into a CRM, and how to discuss your requirements. For anything else, please use the Contact us option so the CoreD team can answer directly.",
+
+    alternatives: [
+      "I'm not fully sure about that, and I don't want to give you incorrect information. You can ask me about CoreD's CRM solutions, AI agents, or available plans. For other queries, please contact the CoreD team.",
+
+      "That's a good question! I don't have a verified answer for it right now. I can explain CoreD's CRM services, the Basic and Standard plans, or Custom CRM solutions. For further details, please reach out through Contact us.",
+
+      "I don't have enough confirmed information to answer that accurately. The CoreD team can help clarify your specific requirements. You can also ask me about our CRM options, AI-agent-based solutions, and custom CRM development."
+    ],
+
     action: "contact",
   },
   // faqId points at an entry below. If an id is ever removed, the label is
@@ -64,7 +73,7 @@ export const assistantCopy = {
     { faqId: "pricing", label: "How do I get pricing?" },
   ],
 };
-const existingKnowledgeBase  = [
+const existingKnowledgeBase = [
   /* ------------------------------ Conversation ----------------------------- */
   {
     id: "greeting",

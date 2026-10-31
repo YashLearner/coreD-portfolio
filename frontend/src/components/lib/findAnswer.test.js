@@ -63,7 +63,7 @@ describe("knowledge base", () => {
   });
 
   it("invents no prices, metrics, links, emails or markup", () => {
-    const answers = [...knowledgeBase.map((entry) => entry.answer), assistantCopy.fallback.content, assistantCopy.welcome];
+    const answers = [...knowledgeBase.map((entry) => entry.answer), assistantCopy.fallback.alternatives, assistantCopy.welcome];
     answers.forEach((rawAnswer) => {
       // "Adsmark01" is a real client name from the case studies, not a figure.
       const answer = rawAnswer.replaceAll("Adsmark01", "Adsmark");

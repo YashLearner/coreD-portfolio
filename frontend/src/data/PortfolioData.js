@@ -1210,3 +1210,109 @@ export const termsSections = [
     contact: true,
   },
 ];
+
+
+export const privacyPolicy = [
+  {
+    title: "Introduction",
+    paragraphs: [
+      "At CoreDhristi, we respect your privacy and are committed to protecting your personal information. This Privacy Policy explains how we collect, use, store, and handle information when you visit our website, submit an enquiry, or interact with our services."
+    ],
+  },
+  {
+    title: "Information We Collect",
+    paragraphs: [
+      "When you contact us or submit a project enquiry, we may collect information such as your name, company name, email address, phone number, selected service, budget range, and project description.",
+      "We may also collect basic technical information such as browser type, device information, IP address, and website usage data where applicable."
+    ],
+  },
+  {
+    title: "How We Use Your Information",
+    paragraphs: [
+      "We use the information collected to respond to enquiries, understand project requirements, provide service information, prepare proposals, communicate with potential clients, and improve our website and services.",
+      "We may also use relevant information for administrative, security, troubleshooting, and legal compliance purposes."
+    ],
+  },
+  {
+    title: "Contact Forms and Project Enquiries",
+    paragraphs: [
+      "Information submitted through our contact forms may be processed using email services, spreadsheets, form handling tools, or other business communication platforms.",
+      "We use this information to review your requirements and communicate with you regarding your enquiry. Submitting an enquiry does not automatically create a client relationship or paid service agreement."
+    ],
+  },
+  {
+    title: "Cookies and Website Analytics",
+    paragraphs: [
+      "Our website may use cookies, local storage, or similar technologies to support website functionality, improve user experience, and understand website usage.",
+      "Where analytics or tracking tools are implemented, they may collect technical and usage information according to their respective privacy policies."
+    ],
+  },
+  {
+    title: "AI, CRM and Automation Services",
+    paragraphs: [
+      "Our services may involve CRM platforms, AI agents, automation workflows, APIs, and third-party integrations. Information processed through these services depends on the specific project requirements and applicable agreements.",
+      "We aim to handle project information responsibly. Clients should avoid sharing unnecessary sensitive personal information, passwords, payment credentials, or confidential records through general enquiry forms."
+    ],
+  },
+  {
+    title: "Third-Party Services",
+    paragraphs: [
+      "We may rely on third-party providers for hosting, analytics, communication, form processing, cloud infrastructure, CRM functionality, and other technical services.",
+      "These providers may process information necessary to perform their services and are subject to their own terms, privacy policies, and applicable data protection requirements."
+    ],
+  },
+  {
+    title: "Data Sharing and Disclosure",
+    paragraphs: [
+      "We do not intend to sell personal information submitted through our website. Information may be shared with relevant service providers when necessary to operate our website, respond to enquiries, deliver agreed services, or comply with legal obligations.",
+      "We may also disclose information where required by applicable law or where reasonably necessary to protect our legal rights, website, or users."
+    ],
+  },
+  {
+    title: "Data Storage and Retention",
+    paragraphs: [
+      "Personal information may be stored using the systems and service providers involved in managing website enquiries and business communications.",
+      "We retain information only for as long as reasonably necessary for the purposes described in this policy, subject to applicable legal, contractual, and operational requirements."
+    ],
+  },
+  {
+    title: "Data Security",
+    paragraphs: [
+      "We take reasonable technical and organizational measures to protect information against unauthorized access, misuse, loss, or disclosure.",
+      "However, no internet transmission or electronic storage method can be guaranteed to be completely secure."
+    ],
+  },
+  {
+    title: "Your Privacy Rights",
+    paragraphs: [
+      "Depending on applicable laws, you may have the right to request access to, correction of, or deletion of your personal information, or to object to certain processing activities.",
+      "You may contact us to make a privacy-related request. We may need to verify your identity before processing certain requests."
+    ],
+  },
+  {
+    title: "External Links",
+    paragraphs: [
+      "Our website may contain links to third-party websites, platforms, or services. We are not responsible for the privacy practices, content, or security of external websites. We recommend reviewing their respective privacy policies."
+    ],
+  },
+  {
+    title: "Children's Privacy",
+    paragraphs: [
+      "Our website and services are not specifically directed toward children. We do not knowingly collect personal information from children in violation of applicable laws. If you believe a child has submitted personal information to us, please contact us."
+    ],
+  },
+  {
+    title: "Changes to This Privacy Policy",
+    paragraphs: [
+      "We may update this Privacy Policy from time to time to reflect changes in our website, services, technology, or applicable legal requirements.",
+      "Any updates will be published on this page along with a revised update date. We encourage visitors to review this page periodically."
+    ],
+  },
+  {
+    title: "Contact Us",
+    paragraphs: [
+      "If you have questions, concerns, or requests regarding this Privacy Policy or the handling of your personal information, please contact the CoreDhristi team through our Contact Us page."
+    ],
+    contact: true,
+  },
+];

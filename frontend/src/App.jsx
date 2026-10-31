@@ -10,6 +10,9 @@ import SeeOurWork from './pages/SeeOurWork.jsx'
 import CaseStudies from './pages/CaseStudies.jsx'
 import Blog from './pages/Blog.jsx'
 import TermsCondition from './pages/TermsCondition.jsx'
+
+import PrivacyPolicy from './pages/PrivacyPolicy.jsx'
+
 import WordReveal from './components/ui/WordReveal.jsx'
 import CustomCursor from './components/ui/CustomCurser.jsx'
 import { ChatbotWidget } from './components/chatbot/ChatbotWidget.jsx'
@@ -40,6 +43,7 @@ export default function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/reach-us" element={<Contact />} />
           <Route path="/termsCondition" element={<TermsCondition />} />
+          <Route path="/privacyPolicy" element={<PrivacyPolicy/>} />
         </Routes>
       </main>
       <Footer />
